@@ -1,5 +1,5 @@
 # 1. Project guidelines 
-We use guide line from [Ribot lab](https://github.com/ribot/android-guidelines/blob/master/project_and_code_guidelines.md) as base with some modifications
+We use guide line from [Ribot lab](https://github.com/ribot/android-guidelines/blob/master/project_and_code_guidelines.md) as base with some modifications. Will be updated in future to fit with our culture
 
 ## 1.1 Project structure
 
