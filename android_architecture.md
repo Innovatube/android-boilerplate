@@ -15,8 +15,7 @@
 The architecture of our Android apps is based on the [MVP](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93presenter) (Model View Presenter) pattern.
 
 * __View (UI layer)__: 
-    * Define an interface that your View (Activity, Fragment, View) is going to implement. The interface will exposes the method to
-    * Presenter to interact with.
+    * Define an interface that your View (Activity, Fragment, View) is going to implement. The interface will exposes the method to Presenter to interact with.
     * Your View implement the interface
     * Inject presenter to View
     * Attach View to presenter
