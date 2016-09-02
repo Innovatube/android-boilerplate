@@ -10,6 +10,7 @@ import com.innovatube.boilerplate.utils.InnovatubeUtils;
 
 import javax.inject.Inject;
 
+import io.realm.Realm;
 import retrofit2.Retrofit;
 import rx.Subscriber;
 import rx.Subscription;
@@ -24,13 +25,16 @@ public class CreateAccountPresenter extends BasePresenter<CreateAccountMvpView> 
 
     private final DataManager dataManager;
     private final Retrofit retrofit;
+    private final Realm realm;
 
     private Subscription subscription;
 
     @Inject
-    CreateAccountPresenter(DataManager dataManager, Retrofit retrofit) {
+    CreateAccountPresenter(DataManager dataManager, Retrofit retrofit, Realm realm) {
         this.dataManager = dataManager;
         this.retrofit = retrofit;
+        this.realm = realm;
+
     }
 
     @Override
@@ -86,7 +90,7 @@ public class CreateAccountPresenter extends BasePresenter<CreateAccountMvpView> 
                         getMvpView().showProgressDialog(false);
                         if (userId != null) {
                             saveUserId(userId.getUserId());
-                            dataManager.saveUserInfo(userId);
+                            dataManager.saveUserInfo(userId, realm);
                             getMvpView().redirectToHome();
                         }
 

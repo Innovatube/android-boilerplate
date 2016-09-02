@@ -9,6 +9,7 @@ import com.innovatube.boilerplate.data.remote.InnovatubeService;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
+import io.realm.Realm;
 import rx.Observable;
 
 /**
@@ -75,7 +76,7 @@ public class DataManager {
         return innovatubeService.createJobSeekerAccount(firstName, lastName, emailAddress, password, confirmPassword, dob, promotionCode);
     }
 
-    public void saveUserInfo(UserId userId) {
-        realmHelper.saveUserInfo(userId);
+    public void saveUserInfo(UserId userId, Realm realm) {
+        realmHelper.saveUserInfo(userId, realm);
     }
 }
