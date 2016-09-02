@@ -12,14 +12,14 @@ import com.innovatube.boilerplate.injection.component.DaggerActivityComponent;
  */
 public class BaseActivity extends AppCompatActivity {
 
-    ActivityComponent mActivityComponent;
+    ActivityComponent activityComponent;
 
     public ActivityComponent getActivityComponent() {
-        if (mActivityComponent == null) {
-            mActivityComponent = DaggerActivityComponent.builder()
+        if (activityComponent == null) {
+            activityComponent = DaggerActivityComponent.builder()
                     .applicationComponent(InnovatubeApplication.get(this).getComponent())
                     .build();
         }
-        return mActivityComponent;
+        return activityComponent;
     }
 }

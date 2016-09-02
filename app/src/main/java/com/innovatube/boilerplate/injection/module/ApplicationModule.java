@@ -3,6 +3,7 @@ package com.innovatube.boilerplate.injection.module;
 import android.app.Application;
 import android.content.Context;
 
+import com.innovatube.boilerplate.data.local.RealmHelper;
 import com.innovatube.boilerplate.data.remote.InnovatubeService;
 import com.innovatube.boilerplate.injection.ApplicationContext;
 
@@ -40,6 +41,11 @@ public class ApplicationModule {
     @Singleton
     InnovatubeService provideInnovatubeService(Retrofit retrofit) {
         return retrofit.create(InnovatubeService.class);
+    }
+
+    @Provides
+    RealmHelper provideRealmHelper() {
+        return new RealmHelper();
     }
 
     @Provides

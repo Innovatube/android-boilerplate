@@ -1,6 +1,8 @@
 package com.innovatube.boilerplate.ui.signup;
 
 
+import android.text.TextUtils;
+
 import com.innovatube.boilerplate.data.DataManager;
 import com.innovatube.boilerplate.data.model.UserId;
 import com.innovatube.boilerplate.ui.base.BasePresenter;
@@ -12,6 +14,7 @@ import retrofit2.Retrofit;
 import rx.Subscriber;
 import rx.Subscription;
 import rx.android.schedulers.AndroidSchedulers;
+import rx.functions.Func1;
 import rx.schedulers.Schedulers;
 
 /**
@@ -19,21 +22,21 @@ import rx.schedulers.Schedulers;
  */
 public class CreateAccountPresenter extends BasePresenter<CreateAccountMvpView> {
 
-    private final DataManager mDataManager;
-    private final Retrofit mRetrofit;
+    private final DataManager dataManager;
+    private final Retrofit retrofit;
 
-    private Subscription mSubscription;
+    private Subscription subscription;
 
     @Inject
     CreateAccountPresenter(DataManager dataManager, Retrofit retrofit) {
-        this.mDataManager = dataManager;
-        this.mRetrofit = retrofit;
+        this.dataManager = dataManager;
+        this.retrofit = retrofit;
     }
 
     @Override
     public void detachView() {
-        if (mSubscription != null) {
-            mSubscription.unsubscribe();
+        if (subscription != null) {
+            subscription.unsubscribe();
         }
         super.detachView();
     }
@@ -47,7 +50,7 @@ public class CreateAccountPresenter extends BasePresenter<CreateAccountMvpView> 
             String dob,
             String promotionCode) {
         getMvpView().showProgressDialog(true);
-        mSubscription = mDataManager.createAccount(
+        subscription = dataManager.createAccount(
                 firstName,
                 lastName,
                 emailAddress,
@@ -55,6 +58,12 @@ public class CreateAccountPresenter extends BasePresenter<CreateAccountMvpView> 
                 confirmPassword,
                 dob,
                 promotionCode)
+                .filter(new Func1<UserId, Boolean>() {
+                    @Override
+                    public Boolean call(UserId userId) {
+                        return !TextUtils.isEmpty(userId.getUserId().toString());
+                    }
+                })
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Subscriber<UserId>() {
@@ -66,7 +75,7 @@ public class CreateAccountPresenter extends BasePresenter<CreateAccountMvpView> 
                     @Override
                     public void onError(Throwable e) {
                         e.printStackTrace();
-                        String error = InnovatubeUtils.getError(e, mRetrofit);
+                        String error = InnovatubeUtils.getError(e, retrofit);
                         getMvpView().showProgressDialog(false);
                         getMvpView().showAlertDialog(error);
 
@@ -74,8 +83,10 @@ public class CreateAccountPresenter extends BasePresenter<CreateAccountMvpView> 
 
                     @Override
                     public void onNext(UserId userId) {
+                        getMvpView().showProgressDialog(false);
                         if (userId != null) {
                             saveUserId(userId.getUserId());
+                            dataManager.saveUserInfo(userId);
                             getMvpView().redirectToHome();
                         }
 
@@ -84,6 +95,6 @@ public class CreateAccountPresenter extends BasePresenter<CreateAccountMvpView> 
     }
 
     private void saveUserId(int userId) {
-        mDataManager.saveUserId(userId);
+        dataManager.saveUserId(userId);
     }
 }

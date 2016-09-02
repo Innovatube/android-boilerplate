@@ -12,15 +12,15 @@ import com.innovatube.boilerplate.injection.component.DaggerActivityComponent;
  */
 public class BaseFragment extends Fragment {
 
-    ActivityComponent mActivityComponent;
+    ActivityComponent activityComponent;
 
     public ActivityComponent getActivityComponent() {
-        if (mActivityComponent == null) {
-            mActivityComponent = DaggerActivityComponent.builder()
+        if (activityComponent == null) {
+            activityComponent = DaggerActivityComponent.builder()
                     .applicationComponent(InnovatubeApplication.get(getActivity()).getComponent())
                     .build();
         }
-        return mActivityComponent;
+        return activityComponent;
     }
 
 }

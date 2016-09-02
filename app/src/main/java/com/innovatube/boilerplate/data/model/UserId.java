@@ -3,8 +3,12 @@ package com.innovatube.boilerplate.data.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class UserId {
+import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
 
+public class UserId extends RealmObject {
+
+    @PrimaryKey
     @SerializedName("user_id")
     @Expose
     private Integer userId;

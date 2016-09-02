@@ -5,24 +5,24 @@ package com.innovatube.boilerplate.ui.base;
  */
 public class BasePresenter<V extends MvpView> implements Presenter<V> {
 
-    private V mMvpView;
+    private V mvpView;
 
     @Override
     public void attachView(V mvpView) {
-        mMvpView = mvpView;
+        this.mvpView = mvpView;
     }
 
     @Override
     public void detachView() {
-        mMvpView = null;
+        mvpView = null;
     }
 
     public boolean isViewAttached() {
-        return mMvpView != null;
+        return mvpView != null;
     }
 
     public V getMvpView() {
-        return mMvpView;
+        return mvpView;
     }
 
     public void checkViewAttached() {
