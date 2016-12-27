@@ -1,0 +1,19 @@
+ext{
+    compileSdkVersion = 25
+    buildToolsVersion = "25.0.2"
+    minSdkVersion ="15"
+    targetSdkVersion = "25"
+    supportLibraryVersion = "25.1.0"
+    retrofitVersion = "2.1.0"
+    okhttpVersion = "3.5.0"
+    daggerVersion = "2.8"
+    gsonVersion = "2.8.0"
+    rxAndroidVersion = "1.2.1"
+    butterKnifeVersion = "8.4.0"
+    mockitoVersion = "1.10.19"
+    stethoVersion = "1.4.2"
+    stethoRealmVersion = "2.0.0"
+    materialDatePicker = "3.0.0"
+    materialDialogVersion = "0.9.1.0"
+    jUnit4Version = "4.12"
+}
