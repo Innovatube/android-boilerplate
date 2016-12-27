@@ -9,16 +9,15 @@ import javax.inject.Singleton;
 /**
  * Created by TOIDV on 4/5/2016.
  */
-@Singleton
-public class PreferenceHelper {
+
+public class PreferenceDataSourceImpl implements PreferenceDataSource {
     private final UserPrefs mUserPrefs;
 
-
-    @Inject
-    public PreferenceHelper(UserPrefs userPrefs) {
+    public PreferenceDataSourceImpl(UserPrefs userPrefs) {
         this.mUserPrefs = userPrefs;
     }
 
+    @Override
     public UserPrefs getUserPrefs() {
         return mUserPrefs;
     }

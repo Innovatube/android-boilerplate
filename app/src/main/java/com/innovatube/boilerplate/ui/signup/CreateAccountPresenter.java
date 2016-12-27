@@ -3,7 +3,7 @@ package com.innovatube.boilerplate.ui.signup;
 
 import android.text.TextUtils;
 
-import com.innovatube.boilerplate.data.DataManager;
+import com.innovatube.boilerplate.data.InnovatubeRepository;
 import com.innovatube.boilerplate.data.model.UserId;
 import com.innovatube.boilerplate.ui.base.BasePresenter;
 import com.innovatube.boilerplate.utils.InnovatubeUtils;
@@ -23,15 +23,15 @@ import rx.schedulers.Schedulers;
  */
 public class CreateAccountPresenter extends BasePresenter<CreateAccountMvpView> {
 
-    private final DataManager dataManager;
+    private final InnovatubeRepository mInnovatubeRepository;
     private final Retrofit retrofit;
     private final Realm realm;
 
     private Subscription subscription;
 
     @Inject
-    CreateAccountPresenter(DataManager dataManager, Retrofit retrofit, Realm realm) {
-        this.dataManager = dataManager;
+    CreateAccountPresenter(InnovatubeRepository mInnovatubeRepository, Retrofit retrofit, Realm realm) {
+        this.mInnovatubeRepository = mInnovatubeRepository;
         this.retrofit = retrofit;
         this.realm = realm;
 
@@ -54,7 +54,7 @@ public class CreateAccountPresenter extends BasePresenter<CreateAccountMvpView> 
             String dob,
             String promotionCode) {
         getMvpView().showProgressDialog(true);
-        subscription = dataManager.createAccount(
+        subscription = mInnovatubeRepository.createAccount(
                 firstName,
                 lastName,
                 emailAddress,
@@ -90,7 +90,7 @@ public class CreateAccountPresenter extends BasePresenter<CreateAccountMvpView> 
                         getMvpView().showProgressDialog(false);
                         if (userId != null) {
                             saveUserId(userId.getUserId());
-                            dataManager.saveUserInfo(userId, realm);
+                            mInnovatubeRepository.saveUserInfo(userId, realm);
                             getMvpView().redirectToHome();
                         }
 
@@ -99,6 +99,6 @@ public class CreateAccountPresenter extends BasePresenter<CreateAccountMvpView> 
     }
 
     private void saveUserId(int userId) {
-        dataManager.saveUserId(userId);
+        mInnovatubeRepository.saveUserId(userId);
     }
 }

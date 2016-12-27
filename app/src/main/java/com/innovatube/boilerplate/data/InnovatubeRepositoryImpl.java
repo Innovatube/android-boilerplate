@@ -1,10 +1,10 @@
 package com.innovatube.boilerplate.data;
 
-import com.innovatube.boilerplate.data.local.PreferenceHelper;
-import com.innovatube.boilerplate.data.local.RealmHelper;
+import com.innovatube.boilerplate.data.local.LocalDataSource;
+import com.innovatube.boilerplate.data.local.PreferenceDataSource;
 import com.innovatube.boilerplate.data.model.UserId;
 import com.innovatube.boilerplate.data.prefs.UserPrefs;
-import com.innovatube.boilerplate.data.remote.InnovatubeService;
+import com.innovatube.boilerplate.data.remote.RemoteDataSource;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
@@ -16,48 +16,52 @@ import rx.Observable;
  * Created by TOIDV on 4/5/2016.
  */
 
-@Singleton
-public class DataManager {
-    private final InnovatubeService innovatubeService;
-    private final PreferenceHelper preferenceHelper;
-    private final RealmHelper realmHelper;
+public class InnovatubeRepositoryImpl implements InnovatubeRepository {
+    private final RemoteDataSource remoteDataSource;
+    private final PreferenceDataSource preferenceDataSource;
+    private final LocalDataSource localDataSource;
 
-    @Inject
-    public DataManager(InnovatubeService inploiService, PreferenceHelper preferenceHelper, RealmHelper realmHelper) {
-        this.innovatubeService = inploiService;
-        this.preferenceHelper = preferenceHelper;
-        this.realmHelper = realmHelper;
+
+    public InnovatubeRepositoryImpl(RemoteDataSource remoteDataSource,
+                                    PreferenceDataSource preferenceDataSource,
+                                    LocalDataSource localDataSource) {
+        this.remoteDataSource = remoteDataSource;
+        this.preferenceDataSource = preferenceDataSource;
+        this.localDataSource = localDataSource;
     }
 
+    @Override
     public boolean isLogin() {
-        UserPrefs userPrefs = preferenceHelper.getUserPrefs();
+        UserPrefs userPrefs = preferenceDataSource.getUserPrefs();
         return userPrefs.getUserId() > 0;
     }
 
 
     private String getToken() {
-        UserPrefs userPrefs = preferenceHelper.getUserPrefs();
+        UserPrefs userPrefs = preferenceDataSource.getUserPrefs();
         return userPrefs.getAccessToken();
     }
 
+    @Override
     public int getUserId() {
-        UserPrefs userPrefs = preferenceHelper.getUserPrefs();
+        UserPrefs userPrefs = preferenceDataSource.getUserPrefs();
         return userPrefs.getUserId();
 
     }
 
-
+    @Override
     public void saveUserId(int userId) {
-        UserPrefs userPrefs = preferenceHelper.getUserPrefs();
+        UserPrefs userPrefs = preferenceDataSource.getUserPrefs();
         userPrefs.setUserId(userId);
     }
 
+    @Override
     public void logout() {
         clearPreference();
     }
 
     private void clearPreference() {
-        UserPrefs userPrefs = preferenceHelper.getUserPrefs();
+        UserPrefs userPrefs = preferenceDataSource.getUserPrefs();
         userPrefs.setUserId(-1);
         userPrefs.setFirstName("");
         userPrefs.setLastName("");
@@ -66,6 +70,7 @@ public class DataManager {
         userPrefs.setEmail("");
     }
 
+    @Override
     public Observable<UserId> createAccount(String firstName,
                                             String lastName,
                                             String emailAddress,
@@ -73,10 +78,12 @@ public class DataManager {
                                             String confirmPassword,
                                             String dob,
                                             String promotionCode) {
-        return innovatubeService.createJobSeekerAccount(firstName, lastName, emailAddress, password, confirmPassword, dob, promotionCode);
+        return remoteDataSource.createJobSeekerAccount(firstName,
+                lastName, emailAddress, password, confirmPassword, dob, promotionCode);
     }
 
+    @Override
     public void saveUserInfo(UserId userId, Realm realm) {
-        realmHelper.saveUserInfo(userId, realm);
+        localDataSource.saveUserInfo(userId, realm);
     }
 }

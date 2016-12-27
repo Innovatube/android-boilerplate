@@ -12,8 +12,8 @@ import rx.functions.Func1;
 /**
  * Created by TOIDV on 8/18/2016.
  */
-@Singleton
-public class RealmHelper {
+
+public class LocalDataSourceImpl implements LocalDataSource {
 
     public Observable<RealmObject> getUserId(Realm realm) {
         return realm.where(UserId.class).findFirstAsync()

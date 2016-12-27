@@ -3,7 +3,8 @@ package com.innovatube.boilerplate.injection.component;
 import android.app.Application;
 import android.content.Context;
 
-import com.innovatube.boilerplate.data.DataManager;
+import com.innovatube.boilerplate.data.InnovatubeRepository;
+import com.innovatube.boilerplate.data.InnovatubeRepositoryImpl;
 import com.innovatube.boilerplate.data.remote.InnovatubeService;
 import com.innovatube.boilerplate.injection.ApplicationContext;
 import com.innovatube.boilerplate.injection.module.ApplicationModule;
@@ -29,9 +30,7 @@ public interface ApplicationComponent {
 
     Retrofit retrofit();
 
-    InnovatubeService inploiService();
-
-    DataManager dataManager();
+    InnovatubeRepository innovatubeRepository();
 
     Realm realm();
 

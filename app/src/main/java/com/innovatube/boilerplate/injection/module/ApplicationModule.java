@@ -3,8 +3,16 @@ package com.innovatube.boilerplate.injection.module;
 import android.app.Application;
 import android.content.Context;
 
-import com.innovatube.boilerplate.data.local.RealmHelper;
+import com.innovatube.boilerplate.data.InnovatubeRepository;
+import com.innovatube.boilerplate.data.InnovatubeRepositoryImpl;
+import com.innovatube.boilerplate.data.local.LocalDataSource;
+import com.innovatube.boilerplate.data.local.LocalDataSourceImpl;
+import com.innovatube.boilerplate.data.local.PreferenceDataSource;
+import com.innovatube.boilerplate.data.local.PreferenceDataSourceImpl;
+import com.innovatube.boilerplate.data.prefs.UserPrefs;
 import com.innovatube.boilerplate.data.remote.InnovatubeService;
+import com.innovatube.boilerplate.data.remote.RemoteDataSource;
+import com.innovatube.boilerplate.data.remote.RemoteDataSourceImpl;
 import com.innovatube.boilerplate.injection.ApplicationContext;
 
 import javax.inject.Singleton;
@@ -44,8 +52,8 @@ public class ApplicationModule {
     }
 
     @Provides
-    RealmHelper provideRealmHelper() {
-        return new RealmHelper();
+    LocalDataSource provideRealmHelper() {
+        return new LocalDataSourceImpl();
     }
 
     @Provides
@@ -61,4 +69,30 @@ public class ApplicationModule {
     }
 
 
+    @Provides
+    @Singleton
+    RemoteDataSource provideRemoteDataSource(InnovatubeService innovatubeService) {
+        return new RemoteDataSourceImpl(innovatubeService);
+    }
+
+    @Provides
+    @Singleton
+    UserPrefs provideUserPrefs( @ApplicationContext Context context) {
+        return new UserPrefs(context);
+    }
+
+    @Provides
+    @Singleton
+    PreferenceDataSource providePreferenceDataSource(UserPrefs userPrefs) {
+        return new PreferenceDataSourceImpl(userPrefs);
+    }
+
+    @Provides
+    @Singleton
+    InnovatubeRepository provideInnovatubeRepository(RemoteDataSource remoteDataSource,
+                                                     PreferenceDataSource preferenceDataSource,
+                                                     LocalDataSource localDataSource) {
+        return new InnovatubeRepositoryImpl(remoteDataSource,
+                preferenceDataSource, localDataSource);
+    }
 }
