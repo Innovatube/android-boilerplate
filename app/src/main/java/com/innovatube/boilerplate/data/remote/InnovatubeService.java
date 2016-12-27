@@ -33,7 +33,7 @@ public interface InnovatubeService {
 
 
     class Creator {
-        private static final String ENDPOINT = "https://stage-inploi-api.herokuapp.com/v1/";
+        private static final String ENDPOINT = "https://stageapi.inploi.me/v2/";
 
         public static Retrofit newRetrofitInstance() {
             HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
