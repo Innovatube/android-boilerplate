@@ -35,61 +35,61 @@ public class ApplicationModule {
     }
 
     @Provides
-    Application provideApplication() {
+    protected Application provideApplication() {
         return mApplication;
     }
 
     @Provides
     @ApplicationContext
-    Context provideApplicationContext() {
+    protected Context provideApplicationContext() {
         return mApplication;
     }
 
     @Provides
     @Singleton
-    InnovatubeService provideInnovatubeService(Retrofit retrofit) {
+    protected InnovatubeService provideInnovatubeService(Retrofit retrofit) {
         return retrofit.create(InnovatubeService.class);
     }
 
     @Provides
-    LocalDataSource provideRealmHelper() {
+    protected LocalDataSource provideRealmHelper() {
         return new LocalDataSourceImpl();
     }
 
     @Provides
     @Singleton
-    Retrofit provideRetrofitInstance() {
+    protected Retrofit provideRetrofitInstance() {
         return InnovatubeService.Creator.newRetrofitInstance();
     }
 
     @Provides
     @Singleton
-    Realm provideRealm() {
+    protected Realm provideRealm() {
         return Realm.getDefaultInstance();
     }
 
 
     @Provides
     @Singleton
-    RemoteDataSource provideRemoteDataSource(InnovatubeService innovatubeService) {
+    protected RemoteDataSource provideRemoteDataSource(InnovatubeService innovatubeService) {
         return new RemoteDataSourceImpl(innovatubeService);
     }
 
     @Provides
     @Singleton
-    UserPrefs provideUserPrefs( @ApplicationContext Context context) {
+    protected UserPrefs provideUserPrefs( @ApplicationContext Context context) {
         return new UserPrefs(context);
     }
 
     @Provides
     @Singleton
-    PreferenceDataSource providePreferenceDataSource(UserPrefs userPrefs) {
+    protected PreferenceDataSource providePreferenceDataSource(UserPrefs userPrefs) {
         return new PreferenceDataSourceImpl(userPrefs);
     }
 
     @Provides
     @Singleton
-    InnovatubeRepository provideInnovatubeRepository(RemoteDataSource remoteDataSource,
+    protected InnovatubeRepository provideInnovatubeRepository(RemoteDataSource remoteDataSource,
                                                      PreferenceDataSource preferenceDataSource,
                                                      LocalDataSource localDataSource) {
         return new InnovatubeRepositoryImpl(remoteDataSource,

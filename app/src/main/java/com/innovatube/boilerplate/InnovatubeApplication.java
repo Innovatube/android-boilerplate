@@ -2,6 +2,7 @@ package com.innovatube.boilerplate;
 
 import android.app.Application;
 import android.content.Context;
+import android.support.annotation.VisibleForTesting;
 
 import com.facebook.stetho.Stetho;
 import com.innovatube.boilerplate.injection.component.ApplicationComponent;
@@ -54,5 +55,8 @@ public class InnovatubeApplication extends Application {
 
     }
 
-
+    @VisibleForTesting
+    public void setApplicationComponent(ApplicationComponent applicationComponent) {
+        this.mApplicationComponent = applicationComponent;
+    }
 }

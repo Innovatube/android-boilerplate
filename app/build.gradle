@@ -14,6 +14,7 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -65,5 +66,18 @@ dependencies {
     testCompile "org.powermock:powermock-module-junit4:${powerMockVersion}"
     testCompile "org.powermock:powermock-api-mockito:${powerMockVersion}"
 
-
+    androidTestCompile "com.google.dexmaker:dexmaker:${dexMakerVersion}"
+    androidTestCompile "com.google.dexmaker:dexmaker-mockito:${dexMakerVersion}"
+    androidTestCompile "com.android.support.test:runner:${testRunnerVersion}"
+    androidTestCompile "com.android.support.test:rules:${testRunnerVersion}"
+    androidTestCompile "com.android.support.test.espresso:espresso-intents:${espressoVersion}"
+    androidTestCompile "com.android.support.test.espresso:espresso-core:${espressoVersion}"
+    androidTestCompile("com.android.support.test.espresso:espresso-contrib:${espressoVersion}") {
+        exclude module: 'support-annotations'
+        exclude module: 'recyclerview-v7'
+        exclude module: 'support-v4'
+        exclude group: 'com.android.support'
+    }
+    androidTestCompile "com.github.fabioCollini:DaggerMock:${daggerMockVersion}"
+    androidTestCompile "com.android.support:support-annotations:${supportLibraryVersion}"
 }
