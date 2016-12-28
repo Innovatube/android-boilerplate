@@ -1,5 +1,6 @@
 package com.innovatube.boilerplate.ui.signup;
 
+import android.os.SystemClock;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
@@ -73,7 +74,9 @@ public class CreateAccountActivityTest {
         onView(withText("OK")).perform(click());
         onView(withId(R.id.edt_promotion_code)).perform(typeText("123456"), closeSoftKeyboard());
         onView(withId(R.id.btn_join)).perform(click());
-        onView(withText("Create Account")).inRoot(isDialog()).check(matches(isDisplayed()));
+        SystemClock.sleep(100);
+        onView(withText("Create Account")).check(matches(isDisplayed()));
+        SystemClock.sleep(500);
         onView(withText("Hello World!")).check(matches(isDisplayed()));
     }
 }
