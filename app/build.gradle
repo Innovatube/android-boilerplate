@@ -61,5 +61,9 @@ dependencies {
 
 
     testCompile "junit:junit:${jUnit4Version}"
+    testCompile "org.mockito:mockito-core:${mockitoVersion}"
+    testCompile "org.powermock:powermock-module-junit4:${powerMockVersion}"
+    testCompile "org.powermock:powermock-api-mockito:${powerMockVersion}"
+
 
 }
