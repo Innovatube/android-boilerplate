@@ -35,7 +35,7 @@ import static org.mockito.Mockito.when;
  * Created by quanlt on 28/12/2016.
  */
 @RunWith(AndroidJUnit4.class)
-public class CreateAccountActivityTest {
+public class CreateAccountActivityMockTest {
 
     @Rule
     public EspressoDaggerMockRule daggerMockRule = new EspressoDaggerMockRule();
@@ -54,6 +54,7 @@ public class CreateAccountActivityTest {
                 .thenReturn(Observable.<UserId>error(new Exception("")));
         activityActivityTestRule.launchActivity(null);
         onView(withId(R.id.btn_join)).perform(click());
+        onView(withText("Create Account")).inRoot(isDialog()).check(matches(isDisplayed()));
         onView(withText(Consts.GENERIC_ERROR)).inRoot(isDialog()).check(matches(isDisplayed()));
     }
 
@@ -74,9 +75,9 @@ public class CreateAccountActivityTest {
         onView(withText("OK")).perform(click());
         onView(withId(R.id.edt_promotion_code)).perform(typeText("123456"), closeSoftKeyboard());
         onView(withId(R.id.btn_join)).perform(click());
-        SystemClock.sleep(100);
-        onView(withText("Create Account")).check(matches(isDisplayed()));
-        SystemClock.sleep(500);
+        onView(withText("Create Account")).inRoot(isDialog()).check(matches(isDisplayed()));
+        //it looks stupid but it wont work without this line
+        SystemClock.sleep(200);
         onView(withText("Hello World!")).check(matches(isDisplayed()));
     }
 }

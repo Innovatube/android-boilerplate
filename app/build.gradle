@@ -7,7 +7,6 @@ apply plugin: "realm-android"
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
-
     defaultConfig {
         applicationId "com.innovatube.boilerplate"
         minSdkVersion rootProject.ext.minSdkVersion
@@ -22,18 +21,30 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    productFlavors {
+        prod {
+        }
+        mock {
+        }
+    }
+    //remove mockRelease
+    android.variantFilter { variant ->
+        if(variant.buildType.name.equals('release')
+                && variant.getFlavors().get(0).name.equals('mock')) {
+            variant.setIgnore(true);
+        }
+    }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     compile "com.android.support:appcompat-v7:${supportLibraryVersion}"
     compile "com.android.support:design:${supportLibraryVersion}"
 
     // Dagger2 dependencies
     apt "com.google.dagger:dagger-compiler:${daggerVersion}"
     compile "com.google.dagger:dagger:${daggerVersion}"
-    provided "javax.annotation:jsr250-api:1.0"
+    provided 'javax.annotation:jsr250-api:1.0'
 
     // Setup Retrofit
     compile "com.squareup.retrofit2:retrofit:${retrofitVersion}"
@@ -43,11 +54,12 @@ dependencies {
 
     // RxAndroid
     compile "io.reactivex:rxandroid:${rxAndroidVersion}"
-
     // Setup material dialog for supporting android < 5.0
+
     compile("com.afollestad.material-dialogs:core:${materialDialogVersion}") {
         transitive = true
     }
+
 
     // Setup facebook steho for browse Realm object
     compile "com.facebook.stetho:stetho:${stethoVersion}"
@@ -60,19 +72,20 @@ dependencies {
     // Material DateTime Picker
     compile "com.wdullaer:materialdatetimepicker:${materialDatePicker}"
 
+    compile "com.android.support.test.espresso:espresso-idling-resource:$espressoVersion"
 
     testCompile "junit:junit:${jUnit4Version}"
     testCompile "org.mockito:mockito-core:${mockitoVersion}"
     testCompile "org.powermock:powermock-module-junit4:${powerMockVersion}"
     testCompile "org.powermock:powermock-api-mockito:${powerMockVersion}"
-
     androidTestCompile "com.google.dexmaker:dexmaker:${dexMakerVersion}"
     androidTestCompile "com.google.dexmaker:dexmaker-mockito:${dexMakerVersion}"
     androidTestCompile "com.android.support.test:runner:${testRunnerVersion}"
     androidTestCompile "com.android.support.test:rules:${testRunnerVersion}"
     androidTestCompile "com.android.support.test.espresso:espresso-intents:${espressoVersion}"
     androidTestCompile "com.android.support.test.espresso:espresso-core:${espressoVersion}"
-    androidTestCompile("com.android.support.test.espresso:espresso-contrib:${espressoVersion}") {
+    androidTestCompile("com.android.support.test.espresso:espresso-contrib:${espressoVersion}")
+    {
         exclude module: 'support-annotations'
         exclude module: 'recyclerview-v7'
         exclude module: 'support-v4'
