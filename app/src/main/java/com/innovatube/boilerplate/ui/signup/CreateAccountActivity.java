@@ -152,6 +152,6 @@ public class CreateAccountActivity extends BaseActivityWithDialog implements
     protected void setupDialogTitle() {
         String title = getString(R.string.title_activity_create_account);
         alertDialog.setTitle(title);
-        progressDialog.setTitle(title);
+        loadingDialog.setTitle(title);
     }
 }

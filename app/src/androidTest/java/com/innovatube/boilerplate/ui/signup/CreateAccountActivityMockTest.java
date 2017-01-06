@@ -1,15 +1,17 @@
 package com.innovatube.boilerplate.ui.signup;
 
-import android.os.SystemClock;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
 import com.innovatube.boilerplate.EspressoDaggerMockRule;
+import com.innovatube.boilerplate.LoadingProgressIdlingResource;
 import com.innovatube.boilerplate.R;
 import com.innovatube.boilerplate.consts.Consts;
 import com.innovatube.boilerplate.data.InnovatubeRepository;
 import com.innovatube.boilerplate.data.model.UserId;
+import com.innovatube.boilerplate.ui.base.LoadingDialog;
 
+import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,6 +22,8 @@ import java.util.concurrent.TimeUnit;
 import rx.Observable;
 
 import static android.support.test.espresso.Espresso.onView;
+import static android.support.test.espresso.Espresso.registerIdlingResources;
+import static android.support.test.espresso.Espresso.unregisterIdlingResources;
 import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.action.ViewActions.closeSoftKeyboard;
 import static android.support.test.espresso.action.ViewActions.typeText;
@@ -35,7 +39,7 @@ import static org.mockito.Mockito.when;
  * Created by quanlt on 28/12/2016.
  */
 @RunWith(AndroidJUnit4.class)
-public class CreateAccountActivityTest {
+public class CreateAccountActivityMockTest {
 
     @Rule
     public EspressoDaggerMockRule daggerMockRule = new EspressoDaggerMockRule();
@@ -43,9 +47,13 @@ public class CreateAccountActivityTest {
     @Rule
     public ActivityTestRule<CreateAccountActivity> activityActivityTestRule =
             new ActivityTestRule<>(CreateAccountActivity.class, true, false);
-
     @Mock
     InnovatubeRepository mMockInnovatubeRepository;
+
+    @Before
+    public void setUp() throws Exception {
+
+    }
 
     @Test
     public void testCreateAccountFailAndShowErrorDialog() throws Exception {
@@ -74,9 +82,11 @@ public class CreateAccountActivityTest {
         onView(withText("OK")).perform(click());
         onView(withId(R.id.edt_promotion_code)).perform(typeText("123456"), closeSoftKeyboard());
         onView(withId(R.id.btn_join)).perform(click());
-        SystemClock.sleep(100);
-        onView(withText("Create Account")).check(matches(isDisplayed()));
-        SystemClock.sleep(500);
+        onView(withText("Create Account")).inRoot(isDialog()).check(matches(isDisplayed()));
+        LoadingProgressIdlingResource idlingResource = new LoadingProgressIdlingResource(activityActivityTestRule.getActivity()
+                .getSupportFragmentManager(), LoadingDialog.TAG);
+        registerIdlingResources(idlingResource);
         onView(withText("Hello World!")).check(matches(isDisplayed()));
+        unregisterIdlingResources(idlingResource);
     }
 }

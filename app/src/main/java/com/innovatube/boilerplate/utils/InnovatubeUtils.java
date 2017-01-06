@@ -3,12 +3,11 @@ package com.innovatube.boilerplate.utils;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.os.Build;
 
 import com.afollestad.materialdialogs.MaterialDialog;
-import com.innovatube.boilerplate.BuildConfig;
 import com.innovatube.boilerplate.consts.Consts;
 import com.innovatube.boilerplate.data.model.ApiError;
+import com.innovatube.boilerplate.ui.base.LoadingDialog;
 
 import java.io.IOException;
 import java.lang.annotation.Annotation;
@@ -24,20 +23,9 @@ import retrofit2.adapter.rxjava.HttpException;
  */
 public class InnovatubeUtils {
 
-    public static MaterialDialog createProgress(Context context, String title) {
-        if (BuildConfig.DEBUG) {
-            return new MaterialDialog.Builder(context)
-                    .title(title)
-                    .content("Please wait")
-                    .progress(false, 0)
-                    .build();
-        }else {
-            return new MaterialDialog.Builder(context)
-                    .title(title)
-                    .content("Please wait")
-                    .progress(true, 0)
-                    .build();
-        }
+    public static LoadingDialog createProgress(Context context, String title) {
+        return new LoadingDialog(context, title);
+
     }
 
     public static MaterialDialog createAlertDialog(Context context, String title) {
