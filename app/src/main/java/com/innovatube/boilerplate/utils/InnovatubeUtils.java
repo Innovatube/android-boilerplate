@@ -25,19 +25,12 @@ import retrofit2.adapter.rxjava.HttpException;
 public class InnovatubeUtils {
 
     public static MaterialDialog createProgress(Context context, String title) {
-        if (BuildConfig.DEBUG) {
-            return new MaterialDialog.Builder(context)
-                    .title(title)
-                    .content("Please wait")
-                    .progress(false, 0)
-                    .build();
-        }else {
-            return new MaterialDialog.Builder(context)
-                    .title(title)
-                    .content("Please wait")
-                    .progress(true, 0)
-                    .build();
-        }
+        return new MaterialDialog.Builder(context)
+                .title(title)
+                .content("Please wait")
+                .progress(true, 0)
+                .build();
+
     }
 
     public static MaterialDialog createAlertDialog(Context context, String title) {

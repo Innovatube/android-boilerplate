@@ -59,6 +59,7 @@ dependencies {
 
     // Material DateTime Picker
     compile "com.wdullaer:materialdatetimepicker:${materialDatePicker}"
+    compile "com.android.support.test.espresso:espresso-idling-resource:$espressoVersion"
 
 
     testCompile "junit:junit:${jUnit4Version}"

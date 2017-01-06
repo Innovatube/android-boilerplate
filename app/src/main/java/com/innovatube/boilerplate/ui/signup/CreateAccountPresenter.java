@@ -6,6 +6,7 @@ import android.text.TextUtils;
 import com.innovatube.boilerplate.data.InnovatubeRepository;
 import com.innovatube.boilerplate.data.model.UserId;
 import com.innovatube.boilerplate.ui.base.BasePresenter;
+import com.innovatube.boilerplate.utils.EspressoIdlingResource;
 import com.innovatube.boilerplate.utils.InnovatubeUtils;
 
 import javax.inject.Inject;
@@ -54,6 +55,7 @@ public class CreateAccountPresenter extends BasePresenter<CreateAccountMvpView> 
             String dob,
             String promotionCode) {
         getMvpView().showProgressDialog(true);
+        EspressoIdlingResource.increment();
         subscription = mInnovatubeRepository.createAccount(
                 firstName,
                 lastName,
@@ -82,6 +84,7 @@ public class CreateAccountPresenter extends BasePresenter<CreateAccountMvpView> 
                         String error = InnovatubeUtils.getError(e, retrofit);
                         getMvpView().showProgressDialog(false);
                         getMvpView().showAlertDialog(error);
+                        EspressoIdlingResource.increment();
 
                     }
 
@@ -93,7 +96,7 @@ public class CreateAccountPresenter extends BasePresenter<CreateAccountMvpView> 
                             mInnovatubeRepository.saveUserInfo(userId, realm);
                             getMvpView().redirectToHome();
                         }
-
+                        EspressoIdlingResource.increment();
                     }
                 });
     }
