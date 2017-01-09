@@ -12,6 +12,8 @@ import com.wdullaer.materialdatetimepicker.date.YearPickerView;
 
 import org.hamcrest.Description;
 import org.hamcrest.Matcher;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -41,6 +43,12 @@ public class CreateAccountActivityRealTest {
             new ActivityTestRule<>(CreateAccountActivity.class);
     private LoadingProgressIdlingResource idlingResource;
 
+    @Before
+    public void setUp() throws Exception {
+        idlingResource = new LoadingProgressIdlingResource(activityActivityTestRule.getActivity()
+                .getSupportFragmentManager(), LoadingDialog.TAG);
+        registerIdlingResources(idlingResource);
+    }
 
     public void testCreateAccountFailAndShowErrorDialog() throws Exception {
         activityActivityTestRule.launchActivity(null);
@@ -49,7 +57,7 @@ public class CreateAccountActivityRealTest {
     }
 
     @Test
-    public void testCreateAccountSuccessAndGoToHome() throws Exception {
+    public void testCreateAccountWithInfoAndFailDueToProductionAPI() throws Exception {
         onView(withId(R.id.edt_first_name)).perform(typeText("Ethan"));
         onView(withId(R.id.edt_last_name)).perform(typeText("Le"));
         onView(withId(R.id.edt_email_address)).perform(typeText("ethan.le@innovatube.com"));
@@ -63,13 +71,6 @@ public class CreateAccountActivityRealTest {
         onView(withId(R.id.edt_promotion_code)).perform(typeText("1"), closeSoftKeyboard());
         onView(withId(R.id.btn_join)).perform(click());
         onView(withText("Create Account")).inRoot(isDialog()).check(matches(isDisplayed()));
-
-        idlingResource = new LoadingProgressIdlingResource(activityActivityTestRule.getActivity()
-                .getSupportFragmentManager(), LoadingDialog.TAG);
-        registerIdlingResources(idlingResource);
-
-        onView(withText("Create Account")).inRoot(isDialog()).check(matches(isDisplayed()));
-        unregisterIdlingResources(idlingResource);
     }
 
     public static Matcher<Object> withValue(final int value) {
@@ -86,6 +87,10 @@ public class CreateAccountActivityRealTest {
         };
     }
 
+    @After
+    public void tearDown() throws Exception {
+        unregisterIdlingResources(idlingResource);
 
+    }
 
 }
