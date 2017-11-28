@@ -68,25 +68,19 @@ pipeline {
     }
     stage('Upload to S3') {
       steps {
-         script {
-           withAWS(credentials: 'jenkinsci.aws', region: 'ap-southeast-1') {
-             s3Upload(file: 'app/build/outputs/apk/app-debug.apk', bucket: 'jenkinsci-delivery', path: "apk/${env.JOB_NAME}/${env.BUILD_NUMBER}/app-debug-${env.BUILD_NUMBER}.apk")
-             successful_message = "${successful_message}\nDebug APK: <https://s3-ap-southeast-1.amazonaws.com/jenkinsci-delivery/apk/${env.JOB_NAME}/${env.BUILD_NUMBER}/app-debug-${env.BUILD_NUMBER}.apk|app-debug-${env.BUILD_NUMBER}.apk>"
-           }
-         }
-      }
-      when {
-        expression {
-            return env.BRANCH_NAME == 'master'
+        script {
+          if (env.BRANCH_NAME == 'master') {
+            withAWS(credentials: 'jenkinsci.aws', region: 'ap-southeast-1') {
+              s3Upload(file: 'app-release-signed-aligned.apk', bucket: 'jenkinsci-delivery', path: "apk/${env.JOB_NAME}/${env.BUILD_NUMBER}/app-release-${env.BUILD_NUMBER}.apk")
+              successful_message = "${successful_message}\nRelease APK: <https://s3-ap-southeast-1.amazonaws.com/jenkinsci-delivery/apk/${env.JOB_NAME}/${env.BUILD_NUMBER}/app-release-${env.BUILD_NUMBER}.apk|app-release-${env.BUILD_NUMBER}.apk>"
+            }
+          } else {
+             withAWS(credentials: 'jenkinsci.aws', region: 'ap-southeast-1') {
+               s3Upload(file: 'app/build/outputs/apk/app-debug.apk', bucket: 'jenkinsci-delivery', path: "apk/${env.JOB_NAME}/${env.BUILD_NUMBER}/app-debug-${env.BUILD_NUMBER}.apk")
+               successful_message = "${successful_message}\nDebug APK: <https://s3-ap-southeast-1.amazonaws.com/jenkinsci-delivery/apk/${env.JOB_NAME}/${env.BUILD_NUMBER}/app-debug-${env.BUILD_NUMBER}.apk|app-debug-${env.BUILD_NUMBER}.apk>"
+             }
+          }
         }
-      }
-      steps {
-         script {
-           withAWS(credentials: 'jenkinsci.aws', region: 'ap-southeast-1') {
-             s3Upload(file: 'app-release-signed-aligned.apk', bucket: 'jenkinsci-delivery', path: "apk/${env.JOB_NAME}/${env.BUILD_NUMBER}/app-release-${env.BUILD_NUMBER}.apk")
-             successful_message = "${successful_message}\nRelease APK: <https://s3-ap-southeast-1.amazonaws.com/jenkinsci-delivery/apk/${env.JOB_NAME}/${env.BUILD_NUMBER}/app-release-${env.BUILD_NUMBER}.apk|app-release-${env.BUILD_NUMBER}.apk>"
-           }
-         }
       }
     }
   }
