@@ -60,10 +60,16 @@ android {
         versionName "1.0"
     }
     buildTypes {
+        debug {
+            minifyEnabled false
+            debuggable true
+            testCoverageEnabled true
+        }
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             debuggable false
+            testCoverageEnabled true
         }
     }
     testOptions {
