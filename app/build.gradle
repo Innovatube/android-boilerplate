@@ -3,6 +3,50 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.neenbedankt.android-apt'
 // For Realm
 apply plugin: 'realm-android'
+// For JaCoCo coverage report
+apply plugin: 'jacoco'
+// For Sonarqube
+apply plugin: 'org.sonarqube'
+
+sonarqube {
+    properties {
+        property 'sonar.host.url', 'http://jenkins.innovatube.com:8080'
+        property 'sonar.login', 'admin'
+        property 'sonar.password', 'admin'
+        property 'sonar.projectKey', 'android-boilerplate'
+        property 'sonar.projectName', 'android-boilerplate'
+        property 'sonar.projectVersion', '1.0'
+        property 'sonar.language', 'java'
+        property 'sonar.sources', 'src/main/java'
+        property 'sonar.tests', 'src/test/java'
+        property 'sonar.java.binaries', 'build'
+        property 'sonar.analysis.mode', 'publish'
+        property 'sonar.github.oauth', '845ba4392348a0d45810a6498be0aea4952014f3'
+        property 'sonar.github.repository', 'Innovatube/android-boilerplate'
+        property 'sonar.sourceEncoding', 'UTF-8'
+        property 'sonar.junit.reportPaths', 'build/test-results/testDebugUnitTest'
+        property 'sonar.jacoco.reportPaths', 'build/jacoco/testDebugUnitTest.exec'
+    }
+}
+
+task jacocoTestReport(type: JacocoReport, dependsOn: ['testDebugUnitTest', 'createDebugCoverageReport']) {
+
+    reports {
+        xml.enabled = true
+        html.enabled = true
+    }
+
+    def fileFilter = ['**/R.class', '**/R$*.class', '**/BuildConfig.*', '**/Manifest*.*', '**/*Test*.*', 'android/**/*.*']
+    def debugTree = fileTree(dir: "${buildDir}/intermediates/classes/debug", excludes: fileFilter)
+    def mainSrc = "${project.projectDir}/src/main/java"
+
+    sourceDirectories = files([mainSrc])
+    classDirectories = files([debugTree])
+    executionData = fileTree(dir: "$buildDir", includes: [
+            "jacoco/testDebugUnitTest.exec",
+            "outputs/code-coverage/connected/*coverage.ec"
+    ])
+}
 
 android {
     compileSdkVersion 24
@@ -17,8 +61,9 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable false
         }
     }
 }
