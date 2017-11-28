@@ -62,7 +62,7 @@ pipeline {
       steps {
             sh "rm -rf app-release-unsigned-aligned.apk"
             sh "rm -rf app-release-signed-aligned.apk"
-            sh "zipalign -v -p 4 app/build/outputs/apk/app-release-unsigned.apk app-release-unsigned-aligned.apk"
+            sh "/opt/android-sdk-linux/build-tools/23.0.3/zipalign -v -p 4 app/build/outputs/apk/app-release-unsigned.apk app-release-unsigned-aligned.apk"
             sh "apksigner sign --ks '${KEYSTORE}' --ks-key-alias ${KEY_ALIAS} --ks-pass pass:${KEYSTORE_PASSWORD} --key-pass pass:${KEY_PASSWORD}  --out app-release-signed-aligned.apk app-release-unsigned-aligned.apk"
       }
     }
