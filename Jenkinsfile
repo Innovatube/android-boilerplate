@@ -61,7 +61,7 @@ pipeline {
       }
       steps {
             sh "rm -rf app-release-signed.apk"
-            sh "apksigner sign --ks '${KEYSTORE}' --ks-key-alias ${KEY_ALIAS} --ks-pass pass:${KEYSTORE_PASSWORD} --key-pass pass:${KEY_PASSWORD}  --out app-release-signed.apk app/build/outputs/apk/app-release-unsigned.apk"
+            sh "/opt/android-sdk-linux/build-tools/26.0.2/apksigner sign --ks '${KEYSTORE}' --ks-key-alias ${KEY_ALIAS} --ks-pass pass:${KEYSTORE_PASSWORD} --key-pass pass:${KEY_PASSWORD}  --out app-release-signed.apk app/build/outputs/apk/app-release-unsigned.apk"
       }
     }
     stage('Upload to S3') {
