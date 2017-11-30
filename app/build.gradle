@@ -9,6 +9,7 @@ apply plugin: 'jacoco'
 apply plugin: 'org.sonarqube'
 
 sonarqube {
+    androidVariant 'fullDebug'
     properties {
         property 'sonar.host.url', 'http://jenkins.innovatube.com:8080'
         property 'sonar.login', 'admin'
