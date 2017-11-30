@@ -60,10 +60,8 @@ pipeline {
         }
       }
       steps {
-            sh "rm -rf app-release-unsigned-aligned.apk"
-            sh "rm -rf app-release-signed-aligned.apk"
-            sh "/opt/android-sdk-linux/build-tools/26.0.2/zipalign -v -p 4 app/build/outputs/apk/app-release-unsigned.apk app-release-unsigned-aligned.apk"
-            sh "/opt/android-sdk-linux/build-tools/26.0.2/apksigner sign --ks '${KEYSTORE}' --ks-key-alias ${KEY_ALIAS} --ks-pass pass:${KEYSTORE_PASSWORD} --key-pass pass:${KEY_PASSWORD}  --out app-release-signed-aligned.apk app-release-unsigned-aligned.apk"
+            sh "rm -rf app-release-signed.apk"
+            sh "/opt/android-sdk-linux/build-tools/26.0.2/apksigner sign --ks '${KEYSTORE}' --ks-key-alias ${KEY_ALIAS} --ks-pass pass:${KEYSTORE_PASSWORD} --key-pass pass:${KEY_PASSWORD}  --out app-release-signed.apk app/build/outputs/apk/app-release-unsigned.apk"
       }
     }
     stage('Upload to S3') {
@@ -71,7 +69,7 @@ pipeline {
         script {
           if (env.BRANCH_NAME == 'master') {
             withAWS(credentials: 'jenkinsci.aws', region: 'ap-southeast-1') {
-              s3Upload(file: 'app-release-signed-aligned.apk', bucket: 'jenkinsci-delivery', path: "apk/${env.JOB_NAME}/${env.BUILD_NUMBER}/app-release-${env.BUILD_NUMBER}.apk")
+              s3Upload(file: 'app-release-signed.apk', bucket: 'jenkinsci-delivery', path: "apk/${env.JOB_NAME}/${env.BUILD_NUMBER}/app-release-${env.BUILD_NUMBER}.apk")
               successful_message = "${successful_message}\nRelease APK: <https://s3-ap-southeast-1.amazonaws.com/jenkinsci-delivery/apk/${env.JOB_NAME}/${env.BUILD_NUMBER}/app-release-${env.BUILD_NUMBER}.apk|app-release-${env.BUILD_NUMBER}.apk>"
             }
           } else {
