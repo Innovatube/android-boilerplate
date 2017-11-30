@@ -11,9 +11,6 @@ apply plugin: 'org.sonarqube'
 sonarqube {
     androidVariant 'debug'
     properties {
-        property 'sonar.host.url', 'http://jenkins.innovatube.com:8080'
-        property 'sonar.login', 'admin'
-        property 'sonar.password', 'admin'
         property 'sonar.projectKey', 'android-boilerplate'
         property 'sonar.projectName', 'android-boilerplate'
         property 'sonar.projectVersion', '1.0'
