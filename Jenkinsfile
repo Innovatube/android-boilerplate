@@ -13,8 +13,8 @@ pipeline {
           },
           "Send Notification": {
             script {
-                sh 'printenv'
-                slackSend baseUrl: 'https://innovatube-ext.slack.com/services/hooks/jenkins-ci/', channel: 'ci', color: '#FFFF00', message: "STARTED: Job ${env.JOB_NAME} [${env.BUILD_NUMBER}]\n<${env.BUILD_URL}|Open>", teamDomain: 'Innovatube', token: '8i8EOjh62UJfsF070BX3PfCU'
+              sh 'printenv'
+              slackSend baseUrl: 'https://innovatube-ext.slack.com/services/hooks/jenkins-ci/', channel: 'ci', color: '#FFFF00', message: "STARTED: Job ${env.JOB_NAME} [${env.BUILD_NUMBER}]\n<${env.BUILD_URL}|Open>", teamDomain: 'Innovatube', token: '8i8EOjh62UJfsF070BX3PfCU'
             }
           }
         )
@@ -29,9 +29,7 @@ pipeline {
     stage('SonarQube analysis') {
       steps {
         script {
-          withSonarQubeEnv('SonarQube') {
-            sh './gradlew --info sonarqube'
-          }
+          sh './gradlew --info sonarqube'
         }
       }
     }
