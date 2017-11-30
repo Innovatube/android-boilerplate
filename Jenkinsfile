@@ -28,7 +28,7 @@ pipeline {
     }
     stage('SonarQube analysis') {
       steps {
-        sh './gradlew sonarqube'
+        sh './gradlew sonarqube -Dsonar.branch=${env.BRANCH_NAME}'
       }
     }
     stage('Build Debug') {
