@@ -7,7 +7,7 @@ import com.freevision.ibs.data.DataManager
 import com.freevision.ibs.data.prefs.PreferenceHelper
 import com.freevision.ibs.services.jobs.JobManagerInitializer
 import com.freevision.ibs.services.jobs.SchedulerJobService
-import com.freevision.ibs.services.networking.IbsApiService
+import com.freevision.ibs.services.networking.ExampleApiService
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -31,14 +31,14 @@ class AppModule {
 
     @Singleton
     @Provides
-    fun provideIbsApi(context: Context): IbsApiService {
-        return IbsApiService.create(context)
+    fun provideExampleApi(context: Context): ExampleApiService {
+        return ExampleApiService.create(context)
     }
 
     @Singleton
     @Provides
-    fun provideDataManager(prefs: SharedPreferences, ibsApi: IbsApiService): DataManager {
-        return DataManager(prefs, ibsApi)
+    fun provideDataManager(prefs: SharedPreferences, exampleApi: ExampleApiService): DataManager {
+        return DataManager(prefs, exampleApi)
     }
 
     @Singleton

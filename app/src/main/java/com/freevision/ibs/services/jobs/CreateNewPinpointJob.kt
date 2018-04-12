@@ -3,10 +3,7 @@ package com.freevision.ibs.services.jobs
 import com.birbit.android.jobqueue.Job
 import com.birbit.android.jobqueue.Params
 import com.birbit.android.jobqueue.RetryConstraint
-import com.freevision.ibs.services.networking.IbsApiService
 import com.freevision.ibs.services.networking.RemoteException
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.rxkotlin.subscribeBy
 
 /**
  * Created by thanhnguyen on 3/8/18.

@@ -8,4 +8,4 @@ import com.bumptech.glide.module.AppGlideModule
  */
 
 @GlideModule
-open class GlideApp: AppGlideModule()
+open class ExampleGlideApp: AppGlideModule()

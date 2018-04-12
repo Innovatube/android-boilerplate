@@ -36,10 +36,18 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    buildTypes.each {
-        it.buildConfigField 'String', 'API_BASE_URL', "\"http://building-surveyor-staging.gbu9j7efe4.us-east-1.elasticbeanstalk.com/api/v1\""
-        it.buildConfigField 'String', 'CLIENT_ID', "\"2\""
-        it.buildConfigField 'String', 'CLIENT_SECRET', "\"yBKylv5NE5voWPIatimbePAvvbRUL6QfYVxp6qm0\""
+    buildTypes {
+        release {
+            buildConfigField 'String', 'API_BASE_URL', "\"http://building-surveyor-production.us-east-1.elasticbeanstalk.com/api/v1\""
+            debuggable true
+        }
+        debug {
+            buildConfigField 'String', 'API_BASE_URL', "\"http://building-surveyor-env.us-east-1.elasticbeanstalk.com/api/v1\""
+        }
+        staging {
+            buildConfigField 'String', 'API_BASE_URL', "\"http://building-surveyor-staging.gbu9j7efe4.us-east-1.elasticbeanstalk.com/api/v1\""
+            debuggable true
+        }
     }
     lintOptions {
         abortOnError false

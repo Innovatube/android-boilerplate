@@ -3,7 +3,7 @@ package com.freevision.ibs.data
 import android.content.SharedPreferences
 import com.freevision.ibs.data.prefs.PreferenceHelper
 import com.freevision.ibs.data.prefs.PreferenceHelper.set
-import com.freevision.ibs.services.networking.IbsApiService
+import com.freevision.ibs.services.networking.ExampleApiService
 import com.vicpin.krealmextensions.Query
 import com.vicpin.krealmextensions.query
 import com.vicpin.krealmextensions.queryAsFlowable
@@ -19,7 +19,7 @@ import javax.inject.Singleton
 @Singleton
 open class DataManager
 @Inject
-constructor(private val prefs: SharedPreferences, private val ibsApi: IbsApiService) {
+constructor(private val prefs: SharedPreferences, private val exampleApi: ExampleApiService) {
     fun saveToken(token: String) {
         prefs[PreferenceHelper.TOKEN] = token
         prefs[PreferenceHelper.IS_LOGED_IN] = true

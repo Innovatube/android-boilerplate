@@ -19,9 +19,9 @@ import java.util.concurrent.TimeUnit
  * Created by anhtuan on 3/5/18.
  */
 
-interface IbsApiService {
+interface ExampleApiService {
     companion object Creator {
-        fun create(context: Context): IbsApiService {
+        fun create(context: Context): ExampleApiService {
             val loggingInterceptor = HttpLoggingInterceptor()
             if (BuildConfig.DEBUG) {
                 loggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
@@ -62,7 +62,7 @@ interface IbsApiService {
                     .addCallAdapterFactory(RxJava2CallAdapterFactory.createWithScheduler(Schedulers.io()))
                     .client(okHttpClient)
                     .build()
-                    .create(IbsApiService::class.java)
+                    .create(ExampleApiService::class.java)
         }
     }
 }
