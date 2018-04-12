@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Kotlin Boilerplate</string>
+    <string name="loading">Loading</string>
+</resources>
