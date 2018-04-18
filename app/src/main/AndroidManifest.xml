@@ -6,7 +6,7 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
-        android:name="com.freevision.ibs.App"
+        android:name=".App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -15,7 +15,7 @@
         android:theme="@style/MyTheme">
 
         <activity
-            android:name="com.freevision.ibs.view.gateway.GatewayActivity"
+            android:name=".view.gateway.GatewayActivity"
             android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,12 +25,11 @@
         </activity>
 
         <activity
-            android:name="com.freevision.ibs.view.example.ExampleActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/MyTheme.NoActionBar" />
+            android:name=".view.example.ExampleActivity"
+            android:screenOrientation="portrait" />
 
         <service
-            android:name="com.freevision.ibs.services.jobs.SchedulerJobService"
+            android:name=".services.jobs.SchedulerJobService"
             android:permission="android.permission.BIND_JOB_SERVICE" />
 
     </application>

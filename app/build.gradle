@@ -38,14 +38,14 @@ android {
     }
     buildTypes {
         release {
-            buildConfigField 'String', 'API_BASE_URL', "\"http://building-surveyor-production.us-east-1.elasticbeanstalk.com/api/v1\""
+            buildConfigField 'String', 'API_BASE_URL', "\"https://jsonplaceholder.typicode.com\""
             debuggable true
         }
         debug {
-            buildConfigField 'String', 'API_BASE_URL', "\"http://building-surveyor-env.us-east-1.elasticbeanstalk.com/api/v1\""
+            buildConfigField 'String', 'API_BASE_URL', "\"https://jsonplaceholder.typicode.com\""
         }
         staging {
-            buildConfigField 'String', 'API_BASE_URL', "\"http://building-surveyor-staging.gbu9j7efe4.us-east-1.elasticbeanstalk.com/api/v1\""
+            buildConfigField 'String', 'API_BASE_URL', "\"https://jsonplaceholder.typicode.com\""
             debuggable true
         }
     }
