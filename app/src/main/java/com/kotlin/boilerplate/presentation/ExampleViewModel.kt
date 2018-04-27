@@ -6,6 +6,7 @@ import com.kotlin.boilerplate.model.Comment
 import com.kotlin.boilerplate.model.NewComment
 import com.kotlin.boilerplate.model.Post
 import com.vicpin.krealmextensions.save
+import com.vicpin.krealmextensions.saveAll
 import io.reactivex.Completable
 import io.reactivex.Flowable
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -18,6 +19,9 @@ import io.reactivex.rxkotlin.subscribeBy
 class ExampleViewModel(val dataManager: DataManager) : BaseViewModel() {
     fun observerPosts(): Flowable<List<Post>> {
         dataManager.getPosts()
+                .flatMapCompletable { Completable.fromAction {
+                    it.saveAll()
+                } }
                 .subscribeBy(onError = {
                     it.printStackTrace()
                 }).addTo(disposables)
@@ -27,6 +31,9 @@ class ExampleViewModel(val dataManager: DataManager) : BaseViewModel() {
 
     fun observerComments(postId: Int): Flowable<List<Comment>> {
         dataManager.getComments(postId)
+                .flatMapCompletable { Completable.fromAction {
+                    it.saveAll()
+                } }
                 .subscribeBy(onError = {
                     it.printStackTrace()
                 }).addTo(disposables)

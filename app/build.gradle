@@ -117,6 +117,9 @@ dependencies {
 
     //Alerter
     implementation 'com.tapadoo.android:alerter:2.0.4'
+
+    //Material Dialogs
+    implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
 }
 repositories {
     mavenCentral()
