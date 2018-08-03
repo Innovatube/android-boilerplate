@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Boilerplate</string>
+    <string name="header_top">Top</string>
+    <string name="header_title_home">Home</string>
+    <string name="label_empty" />
+    <string name="like">Like</string>
+    <string name="review">Review</string>
+    <string name="content_description_done">Done</string>
+    <string name="dialog_quote_to_post_title">Post completed!</string>
+    <string name="button_ok">OK</string>
+    <string name="header_content_description_qr">Go to QR Code</string>
+    <string name="fab_camera_name">Photo</string>
+    <string name="fab_edit_name">Article</string>
+    <string name="fab_comment_name">Comment</string>
+    <string name="ok">OK</string>
+    <string name="label_load_failed">Fail to load</string>
+    <string name="label_retry">Retry</string>
+    <string name="android_boilerplate">Android Boilerplate</string>
+</resources>
