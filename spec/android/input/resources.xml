@@ -1,0 +1,10 @@
+<resources>
+  <string name="app_name">App Name</string>
+  <string name="facebook_app_id">12345</string>
+  <string name="login_activity_title">Login</string>
+  <string name="listar_fragment_title">List Car</string>
+  <string name="hello_blank_fragment">Hello blank fragment</string>
+  <string name="content">
+    The quick brown fox jump over the lazy dog
+  </string>
+</resources>

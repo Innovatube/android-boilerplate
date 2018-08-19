@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="callback"
+            type="com.innovatube.boilerplate.presentation.common.RefreshListener" />
+
+        <variable
+            name="isError"
+            type="Boolean" />
+
+        <variable
+            name="paddingBottom"
+            type="Float" />
+
+        <variable
+            name="message"
+            type="String" />
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="@{paddingBottom}"
+        android:visibility="@{isError ? View.VISIBLE : View.GONE, default = gone}"
+        tools:visibility="visible">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="194dp"
+            android:src="@drawable/icon_error" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="234dp"
+            android:padding="0dp"
+            android:text="@{message}"
+            android:textColor="@color/color_gray"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/errorLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="277dp"
+            android:background="@drawable/rounded_corner_button_border"
+            android:gravity="center"
+            android:minHeight="38dp"
+            android:minWidth="120dp"
+            android:onClick="@{() -> callback.onRefresh()}"
+            android:text="@string/label_retry"
+            android:textColor="@color/colorAccent"
+            android:textSize="14sp" />
+    </FrameLayout>
+</layout>

@@ -1,0 +1,20 @@
+/.bundle/
+/.yardoc
+/Gemfile.lock
+/_yardoc/
+/coverage/
+/doc/
+/pkg/
+/spec/reports/
+/tmp/
+
+# rspec failure tracking
+.rspec_status
+.DS_Store
+
+!packaging/
+packaging/*
+!packaging/bundler-config
+!packaging/wrapper.sh
+!packaging/wrapper.bat
+android-codegen-0.*

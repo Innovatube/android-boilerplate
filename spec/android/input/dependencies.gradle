@@ -1,0 +1,9 @@
+dependencies {
+    compile "com.android.support:appcompat-v7:${supportLibrariesVersion}"
+    compile "com.jakewharton:butterknife:${butterKnifeVersion}"
+    apt "com.jakewharton:butterknife-compiler:${butterKnifeVersion}"
+    compile "com.google.dagger:dagger:${dagger2Version}"
+    apt "com.google.dagger:dagger-compiler:${dagger2Version}"
+    compile "com.google.android.gms:play-services-auth:${playServiceVersion}"
+    compile "com.facebook.android:facebook-android-sdk:${facebookSdkVersion}"
+}

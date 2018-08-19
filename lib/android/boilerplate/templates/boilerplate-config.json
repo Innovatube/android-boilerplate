@@ -1,0 +1,69 @@
+{
+  "params": {
+    "directory": {
+      "message":
+        "Enter relative path lead to your desired folder? (your directory should not start with `/`, leave it empty to use current directory)"
+    },
+    "package_name": {
+      "message": "What is your package name? (default is com.innovatube.boilerplate)"
+    },
+    "app_name": {
+      "message": "What are you calling your app? (default is boilerplate)"
+    },
+    "compileSdkVersion": {
+      "message": "What is the compile sdk version? (default is 27)"
+    },
+    "buildToolsVersion": {
+      "message": "What is the build tools version? (default is 27.0.3)"
+    },
+    "minSdkVersion": {
+      "message":
+        "What is the minimum sdk you want to support? (default is 21)\n"
+    },
+    "targetSdkVersion": {
+      "message": "What is the target sdk version?(default is 27)"
+    },
+    "supportLibraryVersion": {
+      "message": "What is the support library version?(default is 27.1.1)"
+    },
+    "colorPrimary": {
+      "message": "Enter color code for colorPrimary?(default is #2980b9)"
+    },
+    "colorPrimaryDark": {
+      "message": "Enter color code for colorPrimaryDark?(default is #2980b9)"
+    },
+    "colorAccent": {
+      "message": "Enter color code for colorAccent?(default is #444444)"
+    }
+  },
+  "tasks": {
+    "copy_template_directory": [
+      {
+        "from": "<%= base_dir %>",
+        "to": "<%= target_dir %>",
+        "exclude": ["/java/"]
+      },
+      {
+        "from": "<%= base_dir %>/app/src/main/java/com/innovatube/boilerplate",
+        "to":
+          "<%= target_dir %>/app/src/main/java/<%= package_name.gsub('.','/') %>"
+      },
+      {
+        "from": "<%= base_dir %>/app/src/main/java/com/innovatube/boilerplate",
+        "to":
+          "<%= target_dir %>/app/src/test/java/<%= package_name.gsub('.','/') %>"
+      },
+      {
+        "from": "<%= base_dir %>/app/src/androidTest/java/com/innovatube/boilerplate",
+        "to":
+          "<%= target_dir %>/app/src/androidTest/java/<%= package_name.gsub('.','/') %>"
+      }
+    ],
+    "copy_template_file": [
+      {
+        "from": "<%= base_dir %>/.gitignore",
+        "to": "<%= target_dir %>/.gitignore"
+      }
+    ]
+  }
+}

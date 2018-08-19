@@ -1,0 +1,8 @@
+{
+  "library": "retrofit2",
+  "artifactId": "swagger-petstore-retrofit2-rx2",
+  "useRxJava": true,
+  "hideGenerationTimestamp": true,
+  "singleApiModel": true,
+  "serviceName": "Carbid"
+}

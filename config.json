@@ -1,0 +1,8 @@
+{
+  "directory": "output",
+  "package_name": "com.innovatube.carbid",
+  "app_name": "Carbid",
+  "target_sdk": 25,
+  "min_sdk": 16,
+  "rxVersion": "rxJava"
+}

@@ -1,0 +1,54 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'realm-android'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "<%= package_name %>"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+
+    compile "com.android.support:appcompat-v7:${supportLibrariesVersion}"
+    compile "com.android.support:design:${supportLibrariesVersion}"
+    compile "com.android.support:support-v4:${supportLibrariesVersion}"
+    compile "com.jakewharton:butterknife:${butterKnifeVersion}"
+    apt "com.jakewharton:butterknife-compiler:${butterKnifeVersion}"
+    compile "com.google.dagger:dagger:${dagger2Version}"
+    apt "com.google.dagger:dagger-compiler:${dagger2Version}"
+    compile "com.squareup.retrofit2:retrofit:${retrofit2Version}"
+    compile "com.squareup.retrofit2:converter-gson:${retrofit2Version}"
+    compile "com.squareup.retrofit2:adapter-rxjava2:${retrofit2Version}"
+    compile "com.squareup.okhttp3:logging-interceptor:${okHttpVersion}"
+    compile "io.reactivex.rxjava2:rxandroid:${rxAndroid2Version}"
+    compile "io.reactivex.rxjava2:rxjava:${rxJava2Version}"
+    compile "com.google.firebase:firebase-core:${playServiceVersion}"
+    compile "com.google.firebase:firebase-messaging:${playServiceVersion}"
+    compile("com.afollestad.material-dialogs:core:${materialDialogVersion}") {
+        transitive = true
+    }
+
+    testCompile "junit:junit:4.12"
+    provided "javax.annotation:jsr250-api:1.0"
+    compile "com.intuit.sdp:sdp-android:1.0.4"
+
+    androidTestCompile("com.android.support.test.espresso:espresso-core:2.2.2", {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+}
+apply plugin: "com.google.gms.google-services"

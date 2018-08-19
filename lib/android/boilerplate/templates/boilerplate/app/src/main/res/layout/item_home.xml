@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.text.TextUtils" />
+
+        <variable
+            name="article"
+            type="com.innovatube.boilerplate.domain.model.Article" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="91dp"
+        android:background="@drawable/selectable_drawable_ripple"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical">
+
+        <com.innovatube.boilerplate.presentation.view.RoundCornerImageView
+            android:id="@+id/img_article"
+            android:layout_width="85dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="3dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="3dp"
+            android:scaleType="centerCrop"
+            app:cornerRadius="3dp"
+            app:error="@{@drawable/innovatube}"
+            app:imageUrl="@{article.thumbnailImageUrl}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:roundedCorners="all"
+            tools:src="@drawable/innovatube" />
+
+        <TextView
+            android:id="@+id/tvArticle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="3dp"
+            android:ellipsize="end"
+            android:lineSpacingExtra="5sp"
+            android:maxLines="2"
+            android:minHeight="40dp"
+            android:minLines="2"
+            android:text="@{article.title}"
+            android:textColor="@color/color_mine_shaft"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/img_article"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgContributor"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="16dp"
+            app:error="@{@drawable/innovatube}"
+            app:imageUrl="@{article.contributor.imageUrl}"
+            app:layout_constraintBottom_toBottomOf="@+id/tvContributor"
+            app:layout_constraintEnd_toStartOf="@+id/tvContributor"
+            app:layout_constraintStart_toEndOf="@+id/img_article"
+            app:layout_constraintTop_toTopOf="@+id/tvContributor"
+            tools:src="@drawable/innovatube" />
+
+        <TextView
+            android:id="@+id/tvContributor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="6dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="2.5sp"
+            android:maxHeight="26dp"
+            android:maxLines="2"
+            android:maxWidth="180dp"
+            android:minHeight="26dp"
+            android:text="@{article.contributor.name + article.preSlashJobTitle() + article.preSlashAffiliation()}"
+            android:textColor="@color/color_gray"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/img_article"
+            app:layout_constraintTop_toBottomOf="@+id/tvArticle"
+            tools:ignore="SmallSp" />
+
+        <ImageView
+            android:layout_width="9dp"
+            android:layout_height="9dp"
+            android:layout_marginEnd="4dp"
+            android:src="@drawable/ic_favorite_border_black_24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvArticleLike"
+            app:layout_constraintEnd_toStartOf="@+id/tvArticleLike"
+            app:layout_constraintTop_toTopOf="@+id/tvArticleLike" />
+
+        <TextView
+            android:id="@+id/tvArticleLike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="9dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="29dp"
+            android:gravity="end"
+            android:text="@{Integer.toString(article.likeCount)}"
+            android:textColor="@color/color_gray"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvArticle"
+            tools:ignore="SmallSp"
+            tools:text="98" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:layout_marginStart="16dp"
+            android:background="@color/color_divider"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/img_article" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>
