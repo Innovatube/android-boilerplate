@@ -1,6 +1,5 @@
 package com.innovatube.boilerplate.presentation.main
 
-import android.arch.lifecycle.ViewModelProviders
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import com.innovatube.boilerplate.R
@@ -9,7 +8,6 @@ import com.innovatube.boilerplate.presentation.base.BaseActivity
 import com.innovatube.boilerplate.presentation.helper.FragmentHelper
 import com.innovatube.boilerplate.presentation.helper.Navigator
 import com.innovatube.boilerplate.presentation.home.HomeFragment
-import com.innovatube.boilerplate.util.di.ViewModelFactory
 import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
 
@@ -18,11 +16,9 @@ class MainActivity : BaseActivity() {
     @Inject
     lateinit var navigator: Navigator
     @Inject
-    lateinit var viewModelFactory: ViewModelFactory
-
-    private val mainViewModel: MainViewModel by lazy {
-        ViewModelProviders.of(this, viewModelFactory).get(MainViewModel::class.java)
-    }
+    lateinit var fragmentHelper: FragmentHelper
+    @Inject
+    lateinit var header: MainHeaderViewModel
 
     private val binding by lazy {
         DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
@@ -30,12 +26,15 @@ class MainActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding.viewModel = mainViewModel
+        component.inject(this)
+        binding.header = header
         setSupportActionBar(toolbar)
         fabMenu.setOnMenuButtonClickListener {
             fabMenu.toggle(true)
         }
         fabMenu.setClosedOnTouchOutside(true)
-        navigator.navigateToHomeFragment()
+        fragmentHelper.replaceFragment(HomeFragment.newInstance(), R.id.mainContent, false)
     }
+
+
 }
