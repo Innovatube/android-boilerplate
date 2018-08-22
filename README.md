@@ -61,3 +61,12 @@
 * [Architecture and Implementation](android_architecture.md)
 * [Git commit references](git_template.md)
 * [Support multi-language](https://medium.com/google-developer-experts/android-strings-xml-things-to-remember-c155025bb8bb#.t01sm5mi8)
+
+## Test 
+- To run the test
+    - `./gradlew test`
+## Code Status
+[![Build Status](https://circleci.com/gh/Innovatube/android-boilerplate.svg?style=svg)](https://circleci.com/gh/Innovatube/android-boilerplate)
+
+## License
+[MIT License](https://opensource.org/licenses/MIT).
