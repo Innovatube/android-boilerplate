@@ -2,7 +2,6 @@ package com.innovatube.boilerplate.presentation.home
 
 
 import android.arch.lifecycle.Observer
-import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,7 +10,6 @@ import com.innovatube.boilerplate.databinding.FragmentHomeBinding
 import com.innovatube.boilerplate.domain.model.Header
 import com.innovatube.boilerplate.presentation.base.BaseFragment
 import com.innovatube.boilerplate.presentation.home.adapter.HomePagerAdapter
-import com.innovatube.boilerplate.util.di.ViewModelFactory
 import kotlinx.android.synthetic.main.fragment_home.*
 import javax.inject.Inject
 
@@ -21,13 +19,10 @@ class HomeFragment : BaseFragment() {
     private lateinit var binding: FragmentHomeBinding
     private lateinit var homeAdapter: HomePagerAdapter
     @Inject
-    lateinit var viewModelFactory: ViewModelFactory
-
-    private val viewModel by lazy {
-        ViewModelProviders.of(this, viewModelFactory).get(HomeViewModel::class.java)
-    }
+    lateinit var viewModel: HomeViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        component.inject(this)
         binding = FragmentHomeBinding.inflate(inflater, container, false)
         binding.viewModel = viewModel
         return binding.root
