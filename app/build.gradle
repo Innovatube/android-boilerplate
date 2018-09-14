@@ -195,5 +195,12 @@ dependencies {
     implementation "com.orhanobut:hawk:2.0.1"
     implementation 'com.github.clans:fab:1.6.4'
 
+    //App Inspection Tool
+    debugImplementation 'com.willowtreeapps.hyperion:hyperion-core:0.9.24'
+    debugImplementation 'com.willowtreeapps.hyperion:hyperion-attr:0.9.24'
+    debugImplementation 'com.willowtreeapps.hyperion:hyperion-measurement:0.9.24'
+    debugImplementation 'com.willowtreeapps.hyperion:hyperion-crash:0.9.24'
+    debugImplementation 'com.willowtreeapps.hyperion:hyperion-recorder:0.9.24'
+    debugImplementation 'com.willowtreeapps.hyperion:hyperion-phoenix:0.9.24'
 }
 
