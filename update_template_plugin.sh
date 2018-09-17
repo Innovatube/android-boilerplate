@@ -36,7 +36,7 @@ find $DIR/boilerplate -type f | egrep -i ".xml" | xargs perl -pi -w -e 's/(?<=co
 echo "♻️ Removing old template"
 rm -rf $DIR/lib/android/boilerplate/templates/boilerplate
 
-echo "🏭 Coping template"
+echo "🏭 Copying template"
 cp -a boilerplate $DIR/lib/android/boilerplate/templates
 
 # cleaning up
