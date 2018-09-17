@@ -36,7 +36,7 @@ find $DIR/boilerplate -type f | egrep -i ".xml" | xargs perl -pi -w -e 's/(?<=co
 echo "♻️ Removing old template"
 rm -rf $codegen_template_directory/boilerplate
 
-echo "🏭 Coping template"
+echo "🏭 Copying template"
 cp -a boilerplate $codegen_template_directory
 
 # cleaning up
