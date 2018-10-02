@@ -32,7 +32,8 @@ echo "⚙️ Updating color code"
 find $DIR/boilerplate -type f | egrep -i ".xml" | xargs perl -pi -w -e 's/(?<=colorPrimary">).*(?=<\/color>)/<%= colorPrimary %>/g;'
 find $DIR/boilerplate -type f | egrep -i ".xml" | xargs perl -pi -w -e 's/(?<=colorPrimaryDark">).*(?=<\/color>)/<%= colorPrimaryDark %>/g;'
 find $DIR/boilerplate -type f | egrep -i ".xml" | xargs perl -pi -w -e 's/(?<=colorAccent">).*(?=<\/color>)/<%= colorAccent %>/g;'
-
+rm -rf boilerplate/update_template_plugin.sh
+rm -rf boilerplate/update_template.sh
 echo "♻️ Removing old template"
 rm -rf $codegen_template_directory/boilerplate
 
