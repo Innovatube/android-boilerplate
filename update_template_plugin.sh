@@ -44,5 +44,5 @@ echo "♻️ cleaning up"
 rm -rf boilerplate
 rm -rf boilerplate.zip
 rm -rf $DIR/lib/android/boilerplate/templates/boilerplate/update_template.sh
-
+rm -rf $DIR/lib/android/boilerplate/templates/boilerplate/update_template_plugin.sh
 echo "🍻 🍻 Due to the complexibility of ruby packaging, You must prepare new codegen version by yourself 🍻🍻"
