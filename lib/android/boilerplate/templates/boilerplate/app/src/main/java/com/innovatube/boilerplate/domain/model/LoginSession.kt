@@ -1,4 +1,4 @@
-package com.innovatube.boilerplate.domain.model
+package <%= package_name %>.domain.model
 
 data class LoginSession(val accessToken: String, val tokenType: String,
                         val expiresIn: Int, val refreshToken: String,

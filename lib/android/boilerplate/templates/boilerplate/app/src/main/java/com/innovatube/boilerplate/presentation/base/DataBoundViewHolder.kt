@@ -1,4 +1,4 @@
-package com.innovatube.boilerplate.presentation.base
+package <%= package_name %>.presentation.base
 
 import android.databinding.ViewDataBinding
 import android.support.v7.widget.RecyclerView

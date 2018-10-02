@@ -1,11 +1,11 @@
-package com.innovatube.boilerplate.util.di.components
+package <%= package_name %>.util.di.components
 
-import com.innovatube.boilerplate.presentation.home.HomeFragment
-import com.innovatube.boilerplate.presentation.home.top.FeatureFragment
-import com.innovatube.boilerplate.presentation.home.top.TopFragment
+import <%= package_name %>.presentation.home.HomeFragment
+import <%= package_name %>.presentation.home.top.FeatureFragment
+import <%= package_name %>.presentation.home.top.TopFragment
 import dagger.Subcomponent
-import com.innovatube.boilerplate.util.di.modules.FragmentModule
-import com.innovatube.boilerplate.util.di.scopes.FragmentScope
+import <%= package_name %>.util.di.modules.FragmentModule
+import <%= package_name %>.util.di.scopes.FragmentScope
 
 @FragmentScope
 @Subcomponent(modules = [(FragmentModule::class)])

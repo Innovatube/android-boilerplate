@@ -1,13 +1,13 @@
-package com.innovatube.boilerplate.presentation.main
+package <%= package_name %>.presentation.main
 
 import android.databinding.DataBindingUtil
 import android.os.Bundle
-import com.innovatube.boilerplate.R
-import com.innovatube.boilerplate.databinding.ActivityMainBinding
-import com.innovatube.boilerplate.presentation.base.BaseActivity
-import com.innovatube.boilerplate.presentation.helper.FragmentHelper
-import com.innovatube.boilerplate.presentation.helper.Navigator
-import com.innovatube.boilerplate.presentation.home.HomeFragment
+import <%= package_name %>.R
+import <%= package_name %>.databinding.ActivityMainBinding
+import <%= package_name %>.presentation.base.BaseActivity
+import <%= package_name %>.presentation.helper.FragmentHelper
+import <%= package_name %>.presentation.helper.Navigator
+import <%= package_name %>.presentation.home.HomeFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
 

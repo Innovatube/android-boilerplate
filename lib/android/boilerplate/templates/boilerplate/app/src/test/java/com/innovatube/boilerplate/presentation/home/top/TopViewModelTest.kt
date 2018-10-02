@@ -1,11 +1,11 @@
-package com.innovatube.boilerplate.presentation.home.top
+package <%= package_name %>.presentation.home.top
 
 import android.arch.core.executor.testing.InstantTaskExecutorRule
-import com.innovatube.boilerplate.UnitTest
-import com.innovatube.boilerplate.capture
-import com.innovatube.boilerplate.domain.model.Article
-import com.innovatube.boilerplate.domain.usecase.GetReviewAndLikeUseCase
-import com.innovatube.boilerplate.domain.usecase.GetTopArticlesUseCase
+import <%= package_name %>.UnitTest
+import <%= package_name %>.capture
+import <%= package_name %>.domain.model.Article
+import <%= package_name %>.domain.usecase.GetReviewAndLikeUseCase
+import <%= package_name %>.domain.usecase.GetTopArticlesUseCase
 import io.reactivex.functions.Consumer
 import junit.framework.Assert
 import org.junit.Before

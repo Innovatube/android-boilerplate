@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="com.innovatube.boilerplate.presentation.home.top.TopViewModel" />
+            type="<%= package_name %>.presentation.home.top.TopViewModel" />
     </data>
 
     <RelativeLayout

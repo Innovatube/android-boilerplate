@@ -1,4 +1,4 @@
-package com.innovatube.boilerplate.data.api.home.entity
+package <%= package_name %>.data.api.home.entity
 
 import android.arch.persistence.room.Entity
 import android.arch.persistence.room.PrimaryKey

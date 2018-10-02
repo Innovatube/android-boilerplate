@@ -1,9 +1,9 @@
-package com.innovatube.boilerplate.util.di.components
+package <%= package_name %>.util.di.components
 
-import com.innovatube.boilerplate.presentation.main.MainActivity
-import com.innovatube.boilerplate.util.di.modules.ActivityModule
-import com.innovatube.boilerplate.util.di.modules.FragmentModule
-import com.innovatube.boilerplate.util.di.scopes.ActivityScope
+import <%= package_name %>.presentation.main.MainActivity
+import <%= package_name %>.util.di.modules.ActivityModule
+import <%= package_name %>.util.di.modules.FragmentModule
+import <%= package_name %>.util.di.scopes.ActivityScope
 import dagger.Subcomponent
 
 @ActivityScope

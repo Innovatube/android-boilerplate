@@ -1,4 +1,4 @@
-package com.innovatube.boilerplate.presentation.helper
+package <%= package_name %>.presentation.helper
 
 import javax.inject.Inject
 

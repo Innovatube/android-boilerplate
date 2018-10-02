@@ -1,8 +1,8 @@
-package com.innovatube.boilerplate.domain.model
+package <%= package_name %>.domain.model
 
 import android.os.Parcel
 import android.os.Parcelable
-import com.innovatube.boilerplate.data.api.home.entity.ArticleFeatureEntity
+import <%= package_name %>.data.api.home.entity.ArticleFeatureEntity
 
 data class Header(
         val type: Type = Type.TOP,

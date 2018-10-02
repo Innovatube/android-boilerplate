@@ -70,4 +70,4 @@
 
 -keep class com.uphyca.** { *; }
 
--keep class com.innovatube.boilerplate.data.model.** { *; }
+-keep class <%= package_name %>.data.model.** { *; }

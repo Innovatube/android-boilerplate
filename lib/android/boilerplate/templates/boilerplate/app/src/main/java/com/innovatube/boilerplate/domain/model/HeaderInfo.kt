@@ -1,4 +1,4 @@
-package com.innovatube.boilerplate.domain.model
+package <%= package_name %>.domain.model
 
 data class HeaderInfo(
         var reviewCount: Long = 0,

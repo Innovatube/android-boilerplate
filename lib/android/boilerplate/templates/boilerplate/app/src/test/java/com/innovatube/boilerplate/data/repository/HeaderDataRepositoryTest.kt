@@ -1,12 +1,12 @@
-package com.innovatube.boilerplate.data.repository
+package <%= package_name %>.data.repository
 
-import com.innovatube.boilerplate.UnitTest
-import com.innovatube.boilerplate.data.api.home.entity.ArticleFeatureEntity
-import com.innovatube.boilerplate.data.api.home.entity.HeaderEntity
-import com.innovatube.boilerplate.data.mapper.HeaderMapper
-import com.innovatube.boilerplate.data.repository.datasource.HeaderDataStore
-import com.innovatube.boilerplate.domain.model.Header
-import com.innovatube.boilerplate.domain.repository.HeaderRepository
+import <%= package_name %>.UnitTest
+import <%= package_name %>.data.api.home.entity.ArticleFeatureEntity
+import <%= package_name %>.data.api.home.entity.HeaderEntity
+import <%= package_name %>.data.mapper.HeaderMapper
+import <%= package_name %>.data.repository.datasource.HeaderDataStore
+import <%= package_name %>.domain.model.Header
+import <%= package_name %>.domain.repository.HeaderRepository
 import io.reactivex.Flowable
 import org.hamcrest.CoreMatchers
 import org.hamcrest.MatcherAssert

@@ -1,12 +1,12 @@
-package com.innovatube.boilerplate
+package <%= package_name %>
 
 import android.app.Application
 import android.arch.lifecycle.Lifecycle
 import android.arch.lifecycle.LifecycleObserver
 import android.arch.lifecycle.OnLifecycleEvent
 import android.arch.lifecycle.ProcessLifecycleOwner
-import com.innovatube.boilerplate.util.di.components.ApplicationComponent
-import com.innovatube.boilerplate.util.di.components.DaggerApplicationComponent
+import <%= package_name %>.util.di.components.ApplicationComponent
+import <%= package_name %>.util.di.components.DaggerApplicationComponent
 import com.orhanobut.hawk.Hawk
 import io.reactivex.plugins.RxJavaPlugins
 import timber.log.Timber

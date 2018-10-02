@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="com.innovatube.boilerplate.presentation.home.HomeViewModel" />
+            type="<%= package_name %>.presentation.home.HomeViewModel" />
     </data>
 
     <LinearLayout

@@ -1,4 +1,4 @@
-package com.innovatube.boilerplate.presentation.home
+package <%= package_name %>.presentation.home
 
 
 import android.arch.lifecycle.Observer
@@ -6,10 +6,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.innovatube.boilerplate.databinding.FragmentHomeBinding
-import com.innovatube.boilerplate.domain.model.Header
-import com.innovatube.boilerplate.presentation.base.BaseFragment
-import com.innovatube.boilerplate.presentation.home.adapter.HomePagerAdapter
+import <%= package_name %>.databinding.FragmentHomeBinding
+import <%= package_name %>.domain.model.Header
+import <%= package_name %>.presentation.base.BaseFragment
+import <%= package_name %>.presentation.home.adapter.HomePagerAdapter
 import kotlinx.android.synthetic.main.fragment_home.*
 import javax.inject.Inject
 

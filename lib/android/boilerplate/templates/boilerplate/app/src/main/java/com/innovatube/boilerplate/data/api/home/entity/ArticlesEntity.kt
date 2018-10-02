@@ -1,7 +1,7 @@
-package com.innovatube.boilerplate.data.api.home.entity
+package <%= package_name %>.data.api.home.entity
 
 import com.google.gson.annotations.SerializedName
-import com.innovatube.boilerplate.data.api.common.entity.LinksEntity
+import <%= package_name %>.data.api.common.entity.LinksEntity
 
 data class ArticlesEntity(
         @SerializedName("_links") val links: LinksEntity,

@@ -1,6 +1,6 @@
-package com.innovatube.boilerplate.domain.usecase
+package <%= package_name %>.domain.usecase
 
-import com.innovatube.boilerplate.domain.SchedulerProvider
+import <%= package_name %>.domain.SchedulerProvider
 import io.reactivex.Single
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.functions.Consumer

@@ -1,8 +1,8 @@
-package com.innovatube.boilerplate.data.repository.datasource.remote
+package <%= package_name %>.data.repository.datasource.remote
 
-import com.innovatube.boilerplate.data.api.home.HomeApi
-import com.innovatube.boilerplate.data.api.home.entity.HeaderEntity
-import com.innovatube.boilerplate.data.repository.datasource.HeaderDataStore
+import <%= package_name %>.data.api.home.HomeApi
+import <%= package_name %>.data.api.home.entity.HeaderEntity
+import <%= package_name %>.data.repository.datasource.HeaderDataStore
 import io.reactivex.Flowable
 import javax.inject.Inject
 

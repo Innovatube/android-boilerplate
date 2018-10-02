@@ -1,15 +1,15 @@
-package com.innovatube.boilerplate.presentation.home.adapter
+package <%= package_name %>.presentation.home.adapter
 
 import android.content.Context
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentStatePagerAdapter
-import com.innovatube.boilerplate.R
-import com.innovatube.boilerplate.domain.model.Header
-import com.innovatube.boilerplate.domain.model.Header.Type.FEATURE
-import com.innovatube.boilerplate.domain.model.Header.Type.TOP
-import com.innovatube.boilerplate.presentation.home.top.FeatureFragment
-import com.innovatube.boilerplate.presentation.home.top.TopFragment
+import <%= package_name %>.R
+import <%= package_name %>.domain.model.Header
+import <%= package_name %>.domain.model.Header.Type.FEATURE
+import <%= package_name %>.domain.model.Header.Type.TOP
+import <%= package_name %>.presentation.home.top.FeatureFragment
+import <%= package_name %>.presentation.home.top.TopFragment
 
 class HomePagerAdapter(private val context: Context?, fm: FragmentManager, private val fragmentTitles: List<Header>) : FragmentStatePagerAdapter(fm) {
 

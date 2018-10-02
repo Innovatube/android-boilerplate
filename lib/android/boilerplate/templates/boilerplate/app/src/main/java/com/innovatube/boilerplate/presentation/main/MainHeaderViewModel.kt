@@ -1,4 +1,4 @@
-package com.innovatube.boilerplate.presentation.main
+package <%= package_name %>.presentation.main
 
 import android.databinding.BaseObservable
 import javax.inject.Inject

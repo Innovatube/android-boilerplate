@@ -1,4 +1,4 @@
-package com.innovatube.boilerplate.util.ext
+package <%= package_name %>.util.ext
 
 import java.text.SimpleDateFormat
 import java.util.*

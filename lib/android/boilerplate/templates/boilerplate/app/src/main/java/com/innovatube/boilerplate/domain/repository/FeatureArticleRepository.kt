@@ -1,6 +1,6 @@
-package com.innovatube.boilerplate.domain.repository
+package <%= package_name %>.domain.repository
 
-import com.innovatube.boilerplate.domain.model.Article
+import <%= package_name %>.domain.model.Article
 import io.reactivex.Single
 
 interface FeatureArticleRepository {

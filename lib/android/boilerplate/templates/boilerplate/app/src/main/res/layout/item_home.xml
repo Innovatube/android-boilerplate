@@ -9,7 +9,7 @@
 
         <variable
             name="article"
-            type="com.innovatube.boilerplate.domain.model.Article" />
+            type="<%= package_name %>.domain.model.Article" />
     </data>
 
     <android.support.constraint.ConstraintLayout
@@ -20,7 +20,7 @@
         android:focusable="true"
         android:orientation="vertical">
 
-        <com.innovatube.boilerplate.presentation.view.RoundCornerImageView
+        <<%= package_name %>.presentation.view.RoundCornerImageView
             android:id="@+id/img_article"
             android:layout_width="85dp"
             android:layout_height="match_parent"

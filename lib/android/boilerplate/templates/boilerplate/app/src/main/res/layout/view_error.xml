@@ -8,7 +8,7 @@
 
         <variable
             name="callback"
-            type="com.innovatube.boilerplate.presentation.common.RefreshListener" />
+            type="<%= package_name %>.presentation.common.RefreshListener" />
 
         <variable
             name="isError"

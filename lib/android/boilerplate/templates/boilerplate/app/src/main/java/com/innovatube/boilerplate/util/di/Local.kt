@@ -1,4 +1,4 @@
-package com.innovatube.boilerplate.util.di
+package <%= package_name %>.util.di
 
 import javax.inject.Qualifier
 

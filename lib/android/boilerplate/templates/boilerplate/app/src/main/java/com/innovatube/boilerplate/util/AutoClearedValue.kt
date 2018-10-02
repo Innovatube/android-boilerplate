@@ -1,4 +1,4 @@
-package com.innovatube.boilerplate.util
+package <%= package_name %>.util
 
 
 import android.arch.lifecycle.Lifecycle

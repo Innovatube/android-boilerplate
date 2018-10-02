@@ -1,6 +1,6 @@
-package com.innovatube.boilerplate.data.repository.datasource
+package <%= package_name %>.data.repository.datasource
 
-import com.innovatube.boilerplate.data.api.home.entity.HeaderEntity
+import <%= package_name %>.data.api.home.entity.HeaderEntity
 import io.reactivex.Flowable
 
 interface HeaderDataStore {

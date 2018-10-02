@@ -1,8 +1,8 @@
-package com.innovatube.boilerplate.domain.usecase
+package <%= package_name %>.domain.usecase
 
-import com.innovatube.boilerplate.UnitTest
-import com.innovatube.boilerplate.data.repository.FeatureArticleDataRepository
-import com.innovatube.boilerplate.domain.TestSchedulerProvider
+import <%= package_name %>.UnitTest
+import <%= package_name %>.data.repository.FeatureArticleDataRepository
+import <%= package_name %>.domain.TestSchedulerProvider
 import org.junit.Before
 import org.junit.Test
 import org.mockito.Mock

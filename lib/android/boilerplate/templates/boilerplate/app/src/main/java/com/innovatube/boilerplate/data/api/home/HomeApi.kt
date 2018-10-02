@@ -1,6 +1,6 @@
-package com.innovatube.boilerplate.data.api.home
+package <%= package_name %>.data.api.home
 
-import com.innovatube.boilerplate.data.api.home.entity.*
+import <%= package_name %>.data.api.home.entity.*
 import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Path

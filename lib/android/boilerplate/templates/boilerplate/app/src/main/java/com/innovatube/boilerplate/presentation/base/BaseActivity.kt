@@ -1,10 +1,10 @@
-package com.innovatube.boilerplate.presentation.base
+package <%= package_name %>.presentation.base
 
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.app.AppCompatDelegate
-import com.innovatube.boilerplate.InnovatubeApplication
-import com.innovatube.boilerplate.util.di.components.ActivityComponent
-import com.innovatube.boilerplate.util.di.modules.ActivityModule
+import <%= package_name %>.InnovatubeApplication
+import <%= package_name %>.util.di.components.ActivityComponent
+import <%= package_name %>.util.di.modules.ActivityModule
 
 
 abstract class BaseActivity : AppCompatActivity() {

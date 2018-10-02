@@ -1,4 +1,4 @@
-package com.innovatube.boilerplate.data.repository.datasource.storage
+package <%= package_name %>.data.repository.datasource.storage
 
 import com.google.gson.Gson
 import com.google.gson.JsonSyntaxException

@@ -1,4 +1,4 @@
-package com.innovatube.boilerplate.util.views
+package <%= package_name %>.util.views
 
 import android.databinding.BindingAdapter
 import android.graphics.drawable.Drawable

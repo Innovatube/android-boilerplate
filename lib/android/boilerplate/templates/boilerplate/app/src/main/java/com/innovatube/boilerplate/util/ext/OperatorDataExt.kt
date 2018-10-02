@@ -1,4 +1,4 @@
-package com.innovatube.boilerplate.util.ext
+package <%= package_name %>.util.ext
 
 import io.reactivex.Completable
 import io.reactivex.Single

@@ -1,4 +1,4 @@
-package com.innovatube.boilerplate.util.di.scopes
+package <%= package_name %>.util.di.scopes
 
 import javax.inject.Scope
 

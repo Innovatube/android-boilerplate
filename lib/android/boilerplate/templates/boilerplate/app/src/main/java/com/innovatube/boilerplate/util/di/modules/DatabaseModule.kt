@@ -1,8 +1,8 @@
-package com.innovatube.boilerplate.util.di.modules
+package <%= package_name %>.util.di.modules
 
 import android.content.Context
-import com.innovatube.boilerplate.data.repository.datasource.local.AppDatabase
-import com.innovatube.boilerplate.data.repository.datasource.local.HeaderDao
+import <%= package_name %>.data.repository.datasource.local.AppDatabase
+import <%= package_name %>.data.repository.datasource.local.HeaderDao
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton

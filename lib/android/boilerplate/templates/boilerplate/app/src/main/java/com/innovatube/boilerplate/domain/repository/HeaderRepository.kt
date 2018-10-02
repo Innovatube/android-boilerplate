@@ -1,8 +1,8 @@
-package com.innovatube.boilerplate.domain.repository
+package <%= package_name %>.domain.repository
 
-import com.innovatube.boilerplate.data.api.home.entity.HeaderEntity
-import com.innovatube.boilerplate.domain.model.Header
-import com.innovatube.boilerplate.domain.model.HeaderInfo
+import <%= package_name %>.data.api.home.entity.HeaderEntity
+import <%= package_name %>.domain.model.Header
+import <%= package_name %>.domain.model.HeaderInfo
 import io.reactivex.Flowable
 
 interface HeaderRepository {

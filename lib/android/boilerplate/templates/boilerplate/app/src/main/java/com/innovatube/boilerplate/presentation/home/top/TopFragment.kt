@@ -1,4 +1,4 @@
-package com.innovatube.boilerplate.presentation.home.top
+package <%= package_name %>.presentation.home.top
 
 import android.arch.lifecycle.Observer
 import android.os.Bundle
@@ -6,11 +6,11 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.innovatube.boilerplate.AppExecutors
-import com.innovatube.boilerplate.databinding.FragmentTopBinding
-import com.innovatube.boilerplate.presentation.base.BaseFragment
-import com.innovatube.boilerplate.presentation.helper.Navigator
-import com.innovatube.boilerplate.presentation.listener.EndlessRecyclerOnScrollListener
+import <%= package_name %>.AppExecutors
+import <%= package_name %>.databinding.FragmentTopBinding
+import <%= package_name %>.presentation.base.BaseFragment
+import <%= package_name %>.presentation.helper.Navigator
+import <%= package_name %>.presentation.listener.EndlessRecyclerOnScrollListener
 import kotlinx.android.synthetic.main.fragment_top.*
 import javax.inject.Inject
 

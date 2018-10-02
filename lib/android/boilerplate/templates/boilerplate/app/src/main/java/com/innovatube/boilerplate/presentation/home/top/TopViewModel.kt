@@ -1,12 +1,12 @@
-package com.innovatube.boilerplate.presentation.home.top
+package <%= package_name %>.presentation.home.top
 
 import android.arch.lifecycle.MutableLiveData
 import android.databinding.ObservableBoolean
 import android.databinding.ObservableField
-import com.innovatube.boilerplate.domain.model.Article
-import com.innovatube.boilerplate.domain.usecase.GetReviewAndLikeUseCase
-import com.innovatube.boilerplate.domain.usecase.GetTopArticlesUseCase
-import com.innovatube.boilerplate.presentation.common.RefreshListener
+import <%= package_name %>.domain.model.Article
+import <%= package_name %>.domain.usecase.GetReviewAndLikeUseCase
+import <%= package_name %>.domain.usecase.GetTopArticlesUseCase
+import <%= package_name %>.presentation.common.RefreshListener
 import io.reactivex.functions.Consumer
 import timber.log.Timber
 import java.text.NumberFormat

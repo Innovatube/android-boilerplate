@@ -1,7 +1,7 @@
-package com.innovatube.boilerplate.data.mapper
+package <%= package_name %>.data.mapper
 
-import com.innovatube.boilerplate.data.api.home.entity.ArticleEntity
-import com.innovatube.boilerplate.domain.model.Article
+import <%= package_name %>.data.api.home.entity.ArticleEntity
+import <%= package_name %>.domain.model.Article
 import javax.inject.Inject
 
 class ArticleMapper @Inject constructor() {

@@ -1,4 +1,4 @@
-package com.innovatube.boilerplate.utils
+package <%= package_name %>.utils
 
 import java.io.BufferedReader
 import java.io.File

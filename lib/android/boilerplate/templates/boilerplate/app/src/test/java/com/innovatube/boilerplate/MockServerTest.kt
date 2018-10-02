@@ -1,4 +1,4 @@
-package com.innovatube.boilerplate
+package <%= package_name %>
 
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory

@@ -1,13 +1,13 @@
-package com.innovatube.boilerplate.data.repository
+package <%= package_name %>.data.repository
 
-import com.innovatube.boilerplate.data.api.home.entity.HeaderEntity
-import com.innovatube.boilerplate.data.mapper.HeaderMapper
-import com.innovatube.boilerplate.data.repository.datasource.HeaderDataStore
-import com.innovatube.boilerplate.domain.model.Header
-import com.innovatube.boilerplate.domain.model.HeaderInfo
-import com.innovatube.boilerplate.domain.repository.HeaderRepository
-import com.innovatube.boilerplate.util.di.Local
-import com.innovatube.boilerplate.util.di.Remote
+import <%= package_name %>.data.api.home.entity.HeaderEntity
+import <%= package_name %>.data.mapper.HeaderMapper
+import <%= package_name %>.data.repository.datasource.HeaderDataStore
+import <%= package_name %>.domain.model.Header
+import <%= package_name %>.domain.model.HeaderInfo
+import <%= package_name %>.domain.repository.HeaderRepository
+import <%= package_name %>.util.di.Local
+import <%= package_name %>.util.di.Remote
 import io.reactivex.Flowable
 import javax.inject.Inject
 

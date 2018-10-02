@@ -1,12 +1,12 @@
-package com.innovatube.boilerplate.util.di.modules
+package <%= package_name %>.util.di.modules
 
-import com.innovatube.boilerplate.data.repository.datasource.HeaderDataStore
-import com.innovatube.boilerplate.data.repository.datasource.local.HeaderLocalDataSource
-import com.innovatube.boilerplate.data.repository.datasource.remote.HeaderRemoteDataSource
+import <%= package_name %>.data.repository.datasource.HeaderDataStore
+import <%= package_name %>.data.repository.datasource.local.HeaderLocalDataSource
+import <%= package_name %>.data.repository.datasource.remote.HeaderRemoteDataSource
 import dagger.Module
 import dagger.Provides
-import com.innovatube.boilerplate.util.di.Local
-import com.innovatube.boilerplate.util.di.Remote
+import <%= package_name %>.util.di.Local
+import <%= package_name %>.util.di.Remote
 import javax.inject.Singleton
 
 @Module

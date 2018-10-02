@@ -1,12 +1,12 @@
-package com.innovatube.boilerplate.data.mapper
+package <%= package_name %>.data.mapper
 
-import com.innovatube.boilerplate.MockServerTest
-import com.innovatube.boilerplate.data.api.home.HomeApi
-import com.innovatube.boilerplate.data.repository.FeatureArticleDataRepository
-import com.innovatube.boilerplate.data.repository.TopArticleDataRepository
-import com.innovatube.boilerplate.domain.repository.FeatureArticleRepository
-import com.innovatube.boilerplate.domain.repository.TopArticleRepository
-import com.innovatube.boilerplate.utils.TestUtils
+import <%= package_name %>.MockServerTest
+import <%= package_name %>.data.api.home.HomeApi
+import <%= package_name %>.data.repository.FeatureArticleDataRepository
+import <%= package_name %>.data.repository.TopArticleDataRepository
+import <%= package_name %>.domain.repository.FeatureArticleRepository
+import <%= package_name %>.domain.repository.TopArticleRepository
+import <%= package_name %>.utils.TestUtils
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
 import org.junit.After

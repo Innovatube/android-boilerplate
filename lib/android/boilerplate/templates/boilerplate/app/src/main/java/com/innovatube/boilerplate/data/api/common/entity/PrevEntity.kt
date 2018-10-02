@@ -1,4 +1,4 @@
-package com.innovatube.boilerplate.data.api.common.entity
+package <%= package_name %>.data.api.common.entity
 
 import com.google.gson.annotations.SerializedName
 

@@ -1,11 +1,11 @@
-package com.innovatube.boilerplate.data.repository.datasource.local
+package <%= package_name %>.data.repository.datasource.local
 
 import android.arch.persistence.room.Database
 import android.arch.persistence.room.Room
 import android.arch.persistence.room.RoomDatabase
 import android.arch.persistence.room.TypeConverters
 import android.content.Context
-import com.innovatube.boilerplate.data.api.home.entity.HeaderEntity
+import <%= package_name %>.data.api.home.entity.HeaderEntity
 
 @Database(entities = [HeaderEntity::class], version = 5)
 @TypeConverters(

@@ -1,8 +1,8 @@
-package com.innovatube.boilerplate.domain.usecase
+package <%= package_name %>.domain.usecase
 
-import com.innovatube.boilerplate.domain.SchedulerProvider
-import com.innovatube.boilerplate.domain.model.HeaderInfo
-import com.innovatube.boilerplate.domain.repository.HeaderRepository
+import <%= package_name %>.domain.SchedulerProvider
+import <%= package_name %>.domain.model.HeaderInfo
+import <%= package_name %>.domain.repository.HeaderRepository
 import io.reactivex.Flowable
 import javax.inject.Inject
 

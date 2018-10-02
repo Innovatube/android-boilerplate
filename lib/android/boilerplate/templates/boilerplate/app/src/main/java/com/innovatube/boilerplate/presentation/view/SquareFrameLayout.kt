@@ -1,4 +1,4 @@
-package com.innovatube.boilerplate.presentation.view
+package <%= package_name %>.presentation.view
 
 import android.content.Context
 import android.util.AttributeSet

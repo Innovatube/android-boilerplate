@@ -1,4 +1,4 @@
-package com.innovatube.boilerplate.presentation.view
+package <%= package_name %>.presentation.view
 
 import android.content.Context
 import android.graphics.Canvas
@@ -6,7 +6,7 @@ import android.graphics.Path
 import android.graphics.RectF
 import android.support.v7.widget.AppCompatImageView
 import android.util.AttributeSet
-import com.innovatube.boilerplate.R
+import <%= package_name %>.R
 
 
 class RoundCornerImageView : AppCompatImageView {

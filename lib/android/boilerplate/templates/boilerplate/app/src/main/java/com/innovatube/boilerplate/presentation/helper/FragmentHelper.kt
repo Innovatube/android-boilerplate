@@ -1,8 +1,8 @@
-package com.innovatube.boilerplate.presentation.helper
+package <%= package_name %>.presentation.helper
 
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
-import com.innovatube.boilerplate.R
+import <%= package_name %>.R
 import javax.inject.Inject
 
 class FragmentHelper @Inject constructor(private val fragmentManager: FragmentManager) {

@@ -8,11 +8,11 @@
 
         <variable
             name="viewModel"
-            type="com.innovatube.boilerplate.presentation.main.MainViewModel" />
+            type="<%= package_name %>.presentation.main.MainViewModel" />
 
         <variable
             name="header"
-            type="com.innovatube.boilerplate.presentation.main.MainHeaderViewModel" />
+            type="<%= package_name %>.presentation.main.MainHeaderViewModel" />
     </data>
 
     <RelativeLayout

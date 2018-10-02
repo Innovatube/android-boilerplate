@@ -1,4 +1,4 @@
-package com.innovatube.boilerplate
+package <%= package_name %>
 
 import org.mockito.ArgumentCaptor
 

@@ -1,15 +1,15 @@
-package com.innovatube.boilerplate.data.mapper
+package <%= package_name %>.data.mapper
 
-import com.innovatube.boilerplate.MockServerTest
-import com.innovatube.boilerplate.data.api.home.HomeApi
-import com.innovatube.boilerplate.data.api.home.entity.HeaderEntity
-import com.innovatube.boilerplate.data.repository.HeaderDataRepository
-import com.innovatube.boilerplate.data.repository.datasource.local.HeaderDao
-import com.innovatube.boilerplate.data.repository.datasource.local.HeaderLocalDataSource
-import com.innovatube.boilerplate.data.repository.datasource.remote.HeaderRemoteDataSource
-import com.innovatube.boilerplate.domain.model.Header
-import com.innovatube.boilerplate.domain.repository.HeaderRepository
-import com.innovatube.boilerplate.utils.TestUtils
+import <%= package_name %>.MockServerTest
+import <%= package_name %>.data.api.home.HomeApi
+import <%= package_name %>.data.api.home.entity.HeaderEntity
+import <%= package_name %>.data.repository.HeaderDataRepository
+import <%= package_name %>.data.repository.datasource.local.HeaderDao
+import <%= package_name %>.data.repository.datasource.local.HeaderLocalDataSource
+import <%= package_name %>.data.repository.datasource.remote.HeaderRemoteDataSource
+import <%= package_name %>.domain.model.Header
+import <%= package_name %>.domain.repository.HeaderRepository
+import <%= package_name %>.utils.TestUtils
 import io.reactivex.Flowable
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer

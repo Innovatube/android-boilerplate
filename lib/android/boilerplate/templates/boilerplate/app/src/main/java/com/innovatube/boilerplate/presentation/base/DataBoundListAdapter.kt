@@ -1,10 +1,10 @@
-package com.innovatube.boilerplate.presentation.base
+package <%= package_name %>.presentation.base
 
 import android.databinding.ViewDataBinding
 import android.support.v7.recyclerview.extensions.AsyncDifferConfig
 import android.support.v7.util.DiffUtil
 import android.view.ViewGroup
-import com.innovatube.boilerplate.AppExecutors
+import <%= package_name %>.AppExecutors
 
 abstract class DataBoundListAdapter<T, V : ViewDataBinding>(
         appExecutors: AppExecutors,

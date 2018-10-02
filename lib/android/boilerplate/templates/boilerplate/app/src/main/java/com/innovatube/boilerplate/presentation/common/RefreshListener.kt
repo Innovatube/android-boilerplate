@@ -1,4 +1,4 @@
-package com.innovatube.boilerplate.presentation.common
+package <%= package_name %>.presentation.common
 
 interface RefreshListener {
     fun onRefresh()

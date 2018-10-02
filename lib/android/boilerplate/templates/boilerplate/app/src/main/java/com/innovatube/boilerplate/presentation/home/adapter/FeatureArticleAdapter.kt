@@ -1,15 +1,15 @@
-package com.innovatube.boilerplate.presentation.home.adapter
+package <%= package_name %>.presentation.home.adapter
 
 import android.databinding.DataBindingUtil
 import android.support.v7.util.DiffUtil
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import com.innovatube.boilerplate.AppExecutors
-import com.innovatube.boilerplate.BR
-import com.innovatube.boilerplate.R
-import com.innovatube.boilerplate.databinding.ItemHomeBinding
-import com.innovatube.boilerplate.domain.model.Article
-import com.innovatube.boilerplate.presentation.base.DataBoundListAdapter
+import <%= package_name %>.AppExecutors
+import <%= package_name %>.BR
+import <%= package_name %>.R
+import <%= package_name %>.databinding.ItemHomeBinding
+import <%= package_name %>.domain.model.Article
+import <%= package_name %>.presentation.base.DataBoundListAdapter
 
 
 class FeatureArticleAdapter(

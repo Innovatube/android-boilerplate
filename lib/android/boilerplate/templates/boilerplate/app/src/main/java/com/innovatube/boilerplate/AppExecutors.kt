@@ -1,4 +1,4 @@
-package com.innovatube.boilerplate
+package <%= package_name %>
 
 import android.os.Handler
 import android.os.Looper

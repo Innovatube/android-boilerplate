@@ -1,10 +1,10 @@
-package com.innovatube.boilerplate.util.di.modules
+package <%= package_name %>.util.di.modules
 
 
-import com.innovatube.boilerplate.data.repository.*
-import com.innovatube.boilerplate.domain.AppSchedulerProvider
-import com.innovatube.boilerplate.domain.SchedulerProvider
-import com.innovatube.boilerplate.domain.repository.*
+import <%= package_name %>.data.repository.*
+import <%= package_name %>.domain.AppSchedulerProvider
+import <%= package_name %>.domain.SchedulerProvider
+import <%= package_name %>.domain.repository.*
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton

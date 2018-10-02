@@ -7,7 +7,7 @@
 
         <variable
             name="article"
-            type="com.innovatube.boilerplate.domain.model.Article" />
+            type="<%= package_name %>.domain.model.Article" />
     </data>
 
     <LinearLayout

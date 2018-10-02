@@ -1,7 +1,7 @@
-package com.innovatube.boilerplate.data.repository.datasource.local
+package <%= package_name %>.data.repository.datasource.local
 
 import android.arch.persistence.room.*
-import com.innovatube.boilerplate.data.api.home.entity.HeaderEntity
+import <%= package_name %>.data.api.home.entity.HeaderEntity
 import io.reactivex.Flowable
 
 

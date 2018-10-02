@@ -1,4 +1,4 @@
-package com.innovatube.boilerplate.presentation.listener
+package <%= package_name %>.presentation.listener
 
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView

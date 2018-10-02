@@ -1,4 +1,4 @@
-package com.innovatube.boilerplate.domain
+package <%= package_name %>.domain
 
 import io.reactivex.Scheduler
 import io.reactivex.schedulers.Schedulers

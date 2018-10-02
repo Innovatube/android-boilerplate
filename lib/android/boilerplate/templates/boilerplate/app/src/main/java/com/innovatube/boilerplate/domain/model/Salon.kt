@@ -1,4 +1,4 @@
-package com.innovatube.boilerplate.domain.model
+package <%= package_name %>.domain.model
 
 import android.os.Parcel
 import android.os.Parcelable

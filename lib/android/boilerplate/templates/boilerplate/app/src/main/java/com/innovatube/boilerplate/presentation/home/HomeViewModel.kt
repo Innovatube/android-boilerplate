@@ -1,9 +1,9 @@
-package com.innovatube.boilerplate.presentation.home
+package <%= package_name %>.presentation.home
 
 import android.arch.lifecycle.MutableLiveData
 import android.content.Context
-import com.innovatube.boilerplate.domain.model.Header
-import com.innovatube.boilerplate.domain.usecase.GetHeadersUseCase
+import <%= package_name %>.domain.model.Header
+import <%= package_name %>.domain.usecase.GetHeadersUseCase
 import io.reactivex.functions.Consumer
 import timber.log.Timber
 import javax.inject.Inject

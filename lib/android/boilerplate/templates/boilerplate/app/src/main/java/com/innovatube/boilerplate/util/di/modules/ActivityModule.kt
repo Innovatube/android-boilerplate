@@ -1,4 +1,4 @@
-package com.innovatube.boilerplate.util.di.modules
+package <%= package_name %>.util.di.modules
 
 import android.content.Context
 import android.support.v4.app.FragmentManager

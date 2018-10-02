@@ -1,7 +1,7 @@
-package com.innovatube.boilerplate.data.repository.datasource.storage
+package <%= package_name %>.data.repository.datasource.storage
 
-import com.innovatube.boilerplate.domain.model.Credential
-import com.innovatube.boilerplate.domain.model.LoginSession
+import <%= package_name %>.domain.model.Credential
+import <%= package_name %>.domain.model.LoginSession
 import javax.inject.Inject
 
 class StorageMediator @Inject constructor(private val hawkWrapper: HawkWrapper) {

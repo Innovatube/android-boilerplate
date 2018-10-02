@@ -1,4 +1,4 @@
-package com.innovatube.boilerplate.util.di.modules
+package <%= package_name %>.util.di.modules
 
 
 import android.app.Activity

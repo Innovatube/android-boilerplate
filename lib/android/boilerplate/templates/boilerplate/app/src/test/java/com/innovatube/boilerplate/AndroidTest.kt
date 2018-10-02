@@ -1,8 +1,8 @@
-package com.innovatube.boilerplate
+package <%= package_name %>
 
 import android.app.Application
 import android.content.Context
-import com.innovatube.boilerplate.presentation.base.BaseActivity
+import <%= package_name %>.presentation.base.BaseActivity
 import org.junit.runner.RunWith
 import org.mockito.Mockito.mock
 import org.robolectric.RobolectricTestRunner

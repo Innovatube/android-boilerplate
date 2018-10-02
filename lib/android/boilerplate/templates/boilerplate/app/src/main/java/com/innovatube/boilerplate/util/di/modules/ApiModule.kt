@@ -1,10 +1,10 @@
-package com.innovatube.boilerplate.util.di.modules
+package <%= package_name %>.util.di.modules
 
 import android.content.Context
-import com.innovatube.boilerplate.BuildConfig
-import com.innovatube.boilerplate.R
-import com.innovatube.boilerplate.data.api.home.HomeApi
-import com.innovatube.boilerplate.data.repository.datasource.storage.StorageMediator
+import <%= package_name %>.BuildConfig
+import <%= package_name %>.R
+import <%= package_name %>.data.api.home.HomeApi
+import <%= package_name %>.data.repository.datasource.storage.StorageMediator
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient

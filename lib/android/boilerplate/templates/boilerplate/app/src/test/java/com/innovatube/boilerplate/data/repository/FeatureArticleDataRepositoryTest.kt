@@ -1,12 +1,12 @@
-package com.innovatube.boilerplate.data.repository
+package <%= package_name %>.data.repository
 
-import com.innovatube.boilerplate.UnitTest
-import com.innovatube.boilerplate.data.api.common.entity.LinksEntity
-import com.innovatube.boilerplate.data.api.home.HomeApi
-import com.innovatube.boilerplate.data.api.home.entity.ArticleEntity
-import com.innovatube.boilerplate.data.api.home.entity.ArticlesEntity
-import com.innovatube.boilerplate.data.mapper.ArticleMapper
-import com.innovatube.boilerplate.domain.model.Article
+import <%= package_name %>.UnitTest
+import <%= package_name %>.data.api.common.entity.LinksEntity
+import <%= package_name %>.data.api.home.HomeApi
+import <%= package_name %>.data.api.home.entity.ArticleEntity
+import <%= package_name %>.data.api.home.entity.ArticlesEntity
+import <%= package_name %>.data.mapper.ArticleMapper
+import <%= package_name %>.domain.model.Article
 import io.reactivex.Single
 import junit.framework.Assert
 import org.junit.Before

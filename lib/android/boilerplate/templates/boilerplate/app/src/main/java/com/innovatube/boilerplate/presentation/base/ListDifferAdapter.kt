@@ -1,4 +1,4 @@
-package com.innovatube.boilerplate.presentation.base
+package <%= package_name %>.presentation.base
 
 import android.support.v7.recyclerview.extensions.AsyncDifferConfig
 import android.support.v7.recyclerview.extensions.AsyncListDiffer
