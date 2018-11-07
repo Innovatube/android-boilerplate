@@ -124,6 +124,12 @@ android {
             }
         }
     }
+
+    android {
+        lintOptions {
+            xmlReport true
+        }
+    }
 }
 
 dependencies {
