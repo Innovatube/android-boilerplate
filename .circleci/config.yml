@@ -23,6 +23,7 @@ jobs:
       - run:
           name: Run Tests
           command: ./gradlew lint test
+      - run: bundle exec danger --verbose
       - run:
           name: Build apk
           command: ./gradlew :app:assembleDebug
