@@ -27,7 +27,7 @@ has_github_issue_in_pr_body = github.pr_body.match /(#\d+)/
 
 if !declared_trivial && !declared_feature
 	if has_github_issue_in_pr_title
-		message("Github Issue: <a href='https://github.com/Innovatube/android-boilerplate/issues/#{has_github_issue_in_pr_title[1]}'>https://github.com/Innovatube/android-boilerplate/issues/#{has_github_issue_in_pr_title[1]}</a>")
+		message("Github Issue: <a href='https://github.com/Innovatube/android-boilerplate/issues/{has_github_issue_in_pr_title[1]}'>https://github.com/Innovatube/android-boilerplate/issues/{has_github_issue_in_pr_title[1]}</a>")
 	elsif has_github_issue_in_pr_body
 		warn("The title of this PR does not include the Github's issue id.")
 	else
