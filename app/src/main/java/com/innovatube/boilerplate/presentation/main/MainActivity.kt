@@ -26,14 +26,15 @@ class MainActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        component.inject(this)
-        binding.header = header
-        setSupportActionBar(toolbar)
-        fabMenu.setOnMenuButtonClickListener {
-            fabMenu.toggle(true)
-        }
-        fabMenu.setClosedOnTouchOutside(true)
-        fragmentHelper.replaceFragment(HomeFragment.newInstance(), R.id.mainContent, false)
+        // FIXME testing android lint
+    component.inject(this)
+    binding.header = header
+    setSupportActionBar(toolbar)
+    fabMenu.setOnMenuButtonClickListener {
+        fabMenu.toggle(true)
+    }
+    fabMenu.setClosedOnTouchOutside(true)
+    fragmentHelper.replaceFragment(HomeFragment.newInstance(), R.id.mainContent, false)
     }
 
 
