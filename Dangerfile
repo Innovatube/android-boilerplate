@@ -25,16 +25,15 @@ warn("This PR is too big. You should divide this PR into smaller PRs.") if git.l
 has_github_issue_in_pr_title = github.pr_title.match /(#\d+)/
 has_github_issue_in_pr_body = github.pr_body.match /(#\d+)/
 
-github_issue_number_title = has_github_issue_in_pr_title.match /(\d+)/
-github_issue_number_body = has_github_issue_in_pr_body.match /(\d+)/
-
 if !declared_trivial && !declared_feature
 	if has_github_issue_in_pr_title
+	    github_issue_number_title = has_github_issue_in_pr_title[1].match /(\d+)/
 		message("Github Issue: <a href='https://github.com/Innovatube/android-boilerplate/issues/#{github_issue_number_title[1]}'>https://github.com/Innovatube/android-boilerplate/issues/#{github_issue_number_title[1]}</a>")
 	elsif has_github_issue_in_pr_body
-		warn("The title of this PR does not include the Github's issue number.")
+	    github_issue_number_body = has_github_issue_in_pr_body[1].match /(\d+)/
+		message("Github Issue: <a href='https://github.com/Innovatube/android-boilerplate/issues/#{github_issue_number_body[1]}'>https://github.com/Innovatube/android-boilerplate/issues/#{github_issue_number_body[1]}</a>")
 	else
-		warn("The Github's issue number not found. Please write Github's issue number on this PR title. ")
+		warn("The Github's issue number not found. Please write Github's issue number on this PR title or body. ")
 	end
 end
 
