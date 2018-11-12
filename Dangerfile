@@ -1,3 +1,6 @@
+# github comment settings
+github.dismiss_out_of_range_messages
+
 declared_trivial = github.pr_title.include? "#trivial"
 declared_feature = github.pr_title.include? "#feature"
 declared_wip = github.pr_labels.include?("WIP")
@@ -46,10 +49,12 @@ has_assignee = github.pr_json["assignee"] != nil
 warn("No Assign", sticky: false) unless has_assignee
 
 # Findbugs
-findbugs.gradle_module = "app"
-findbugs.gradle_task = "app:findbugs"
-findbugs.report_file = "app/build/reports/findbugs/findbugs.xml"
-findbugs.report
+#findbugs.gradle_module = "app"
+#findbugs.gradle_task = "app:findbugs"
+#findbugs.report_file = "app/build/reports/findbugs/findbugs.xml"
+#findbugs.report
+checkstyle_format.base_path = Dir.pwd
+checkstyle_format.report 'app/build/reports/detekt/detekt-checkstyle.xml'
 
 # ktlint
 github.dismiss_out_of_range_messages

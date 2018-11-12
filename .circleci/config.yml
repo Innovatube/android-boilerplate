@@ -33,6 +33,12 @@ jobs:
           name: Findbugs
           command: ./gradlew findbugs
       - run:
+          name: Bundle Install
+          command: bundle check || bundle install
+      - run: bundle exec danger --verbose
+      - store_artifacts:
+          path: "app/build/reports"
+      - run:
           name: Build apk
           command: ./gradlew :app:assembleDebug
       - store_artifacts:
@@ -43,7 +49,4 @@ jobs:
           destination: reports
       - store_test_results:
           path: app/build/test-results
-      - run:
-          name: Bundle Install
-          command: bundle check || bundle install
-      - run: bundle exec danger --verbose
+
