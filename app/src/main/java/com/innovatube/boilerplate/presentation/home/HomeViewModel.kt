@@ -29,8 +29,5 @@ class HomeViewModel @Inject constructor(
 
     fun destroy() {
         headersUseCase.dispose()
-
     }
-
-
 }

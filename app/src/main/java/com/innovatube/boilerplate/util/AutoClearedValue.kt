@@ -1,6 +1,5 @@
 package com.innovatube.boilerplate.util
 
-
 import android.arch.lifecycle.Lifecycle
 import android.arch.lifecycle.LifecycleObserver
 import android.arch.lifecycle.OnLifecycleEvent

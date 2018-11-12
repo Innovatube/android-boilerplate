@@ -15,6 +15,5 @@ class GetFeatureArticlesUseCase @Inject constructor(
         return featureArticleRepository.featureArticles(param.featureArticleId, param.pageNumber)
     }
 
-
     class Param(val featureArticleId: Long, val pageNumber: Int)
 }

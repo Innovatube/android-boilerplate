@@ -11,5 +11,4 @@ import dagger.Subcomponent
 interface ActivityComponent {
     fun plus(module: FragmentModule): FragmentComponent
     fun inject(mainActivity: MainActivity)
-
 }

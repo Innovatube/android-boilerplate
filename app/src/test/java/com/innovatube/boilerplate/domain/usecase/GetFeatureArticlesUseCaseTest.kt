@@ -16,7 +16,6 @@ class GetFeatureArticlesUseCaseTest : UnitTest() {
     @Mock
     private lateinit var testSchedulerProvider: TestSchedulerProvider
 
-
     @Before
     @Throws(Exception::class)
     fun setup() {

@@ -17,15 +17,12 @@ fun Activity.setFullScreen() {
     window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
 }
 
-
 fun Activity.exitFullScreen(color: Int = 0) {
     window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_VISIBLE
     if (color != 0) {
         window.statusBarColor = color
     }
-
 }
-
 
 fun Activity.getStatusBar(): Int {
     return window.statusBarColor

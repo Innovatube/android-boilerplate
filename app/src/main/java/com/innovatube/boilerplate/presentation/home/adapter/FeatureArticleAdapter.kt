@@ -11,7 +11,6 @@ import com.innovatube.boilerplate.databinding.ItemHomeBinding
 import com.innovatube.boilerplate.domain.model.Article
 import com.innovatube.boilerplate.presentation.base.DataBoundListAdapter
 
-
 class FeatureArticleAdapter(
         appExecutors: AppExecutors,
         private val onItemClick: ((Article) -> Unit)?
@@ -25,7 +24,6 @@ class FeatureArticleAdapter(
             override fun areItemsTheSame(oldItem: Article, newItem: Article): Boolean {
                 return oldItem == newItem
             }
-
         }
 ) {
     override fun createBinding(parent: ViewGroup, viewType: Int): ItemHomeBinding {

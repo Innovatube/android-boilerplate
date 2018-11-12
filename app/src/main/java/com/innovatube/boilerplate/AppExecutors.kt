@@ -1,5 +1,6 @@
 package com.innovatube.boilerplate
 
+import android.animation.Animator
 import android.os.Handler
 import android.os.Looper
 import java.util.concurrent.Executor
@@ -38,5 +39,32 @@ open class AppExecutors(
         override fun execute(command: Runnable) {
             mainThreadHandler.post(command)
         }
+    }
+
+    fun Animator.addListener(
+            onEnd: ((animator: Animator) -> Unit)? = null,
+            onStart: ((animator: Animator) -> Unit)? = null,
+            onCancel: ((animator: Animator) -> Unit)? = null,
+            onRepeat: ((animator: Animator) -> Unit)? = null
+    ): Animator.AnimatorListener {
+        val listener = object : Animator.AnimatorListener {
+            override fun onAnimationRepeat(animator: Animator) {
+                onRepeat?.invoke(animator)
+            }
+
+            override fun onAnimationEnd(animator: Animator) {
+                onEnd?.invoke(animator)
+            }
+
+            override fun onAnimationCancel(animator: Animator) {
+                onCancel?.invoke(animator)
+            }
+
+            override fun onAnimationStart(animator: Animator) {
+                onStart?.invoke(animator)
+            }
+        }
+        addListener(listener)
+        return listener
     }
 }

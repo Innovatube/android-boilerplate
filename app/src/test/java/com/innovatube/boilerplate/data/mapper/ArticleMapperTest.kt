@@ -10,7 +10,8 @@ import com.innovatube.boilerplate.utils.TestUtils
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
 import org.junit.After
-import org.junit.Assert.*
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertNotNull
 import org.junit.Before
 import org.junit.Test
 
@@ -22,7 +23,6 @@ class ArticleMapperTest : MockServerTest() {
     private lateinit var featureArticleRepository: FeatureArticleRepository
     private lateinit var mockWebServer: MockWebServer
 
-
     @Before
     fun setUp() {
         mockWebServer = MockWebServer()
@@ -32,7 +32,6 @@ class ArticleMapperTest : MockServerTest() {
         topArticleRepository = TopArticleDataRepository(homeApi, articleMapper)
         featureArticleRepository = FeatureArticleDataRepository(homeApi, articleMapper)
     }
-
 
     @After
     @Throws(Exception::class)
@@ -54,11 +53,9 @@ class ArticleMapperTest : MockServerTest() {
         assertEquals("/articles/top/hairsalon/1", mockWebServer.takeRequest().path)
         assertNotNull(result)
 
-
         assertEquals(14, result.size)
         assertEquals("Duis autem vel eum iriure dolor", result[0].title)
     }
-
 
     @Test
     fun transformFeatureArticles() {
@@ -74,9 +71,7 @@ class ArticleMapperTest : MockServerTest() {
         assertEquals("/articles/features/hairsalon/1/1", mockWebServer.takeRequest().path)
         assertNotNull(result)
 
-
         assertEquals(14, result.size)
         assertEquals("Duis autem vel eum iriure dolor", result[0].title)
     }
-
 }

@@ -13,9 +13,10 @@ import java.text.NumberFormat
 import java.util.*
 import javax.inject.Inject
 
-
-class TopViewModel @Inject constructor(private val useCase: GetTopArticlesUseCase,
-                                       private val getReviewAndLikeUseCase: GetReviewAndLikeUseCase) : RefreshListener {
+class TopViewModel @Inject constructor(
+        private val useCase: GetTopArticlesUseCase,
+        private val getReviewAndLikeUseCase: GetReviewAndLikeUseCase
+) : RefreshListener {
 
     val isLoading = ObservableBoolean()
     val isError = ObservableBoolean()

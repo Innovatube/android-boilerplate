@@ -4,7 +4,6 @@ import android.arch.persistence.room.*
 import com.innovatube.boilerplate.data.api.home.entity.HeaderEntity
 import io.reactivex.Flowable
 
-
 @Dao
 interface HeaderDao {
     @get:Query("SELECT * FROM HeaderEntity")

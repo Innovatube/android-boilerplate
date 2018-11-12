@@ -1,6 +1,5 @@
 package com.innovatube.boilerplate.presentation.home
 
-
 import android.arch.lifecycle.Observer
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -12,7 +11,6 @@ import com.innovatube.boilerplate.presentation.base.BaseFragment
 import com.innovatube.boilerplate.presentation.home.adapter.HomePagerAdapter
 import kotlinx.android.synthetic.main.fragment_home.*
 import javax.inject.Inject
-
 
 class HomeFragment : BaseFragment() {
     private var currentIndex: Int = 0
@@ -48,7 +46,6 @@ class HomeFragment : BaseFragment() {
         viewModel.destroy()
         super.onDestroy()
     }
-
 
     companion object {
         fun newInstance(): HomeFragment {

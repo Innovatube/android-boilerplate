@@ -21,5 +21,4 @@ abstract class MockServerTest : UnitTest() {
                 .build()
                 .create(clazz)
     }
-
 }

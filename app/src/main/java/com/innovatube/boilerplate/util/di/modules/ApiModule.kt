@@ -41,7 +41,6 @@ class ApiModule {
         return client.build()
     }
 
-
     @Provides
     @Singleton
     fun provideHomeApi(context: Context, client: OkHttpClient): HomeApi {

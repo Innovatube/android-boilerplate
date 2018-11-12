@@ -28,11 +28,9 @@ class FeatureViewModelTest : UnitTest() {
     @Captor
     private lateinit var callbackOnError: ArgumentCaptor<Consumer<Throwable>>
 
-
     @Before
     fun setUp() {
         featureViewModel = FeatureViewModel(getFeatureArticlesUseCase)
-
     }
 
     @Test

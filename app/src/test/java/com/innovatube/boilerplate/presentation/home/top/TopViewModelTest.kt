@@ -26,11 +26,9 @@ class TopViewModelTest : UnitTest() {
     @Captor
     private lateinit var callbackOnError: ArgumentCaptor<Consumer<Throwable>>
 
-
     @Before
     fun setUp() {
         topViewModel = TopViewModel(getTopArticleUseCase, getReviewAndLikeUseCase)
-
     }
 
     @Test
@@ -58,5 +56,4 @@ class TopViewModelTest : UnitTest() {
         Assert.assertTrue(topViewModel.isError.get())
         Assert.assertNull(topViewModel.articles.value)
     }
-
 }

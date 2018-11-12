@@ -26,7 +26,6 @@ class HeaderDataRepository @Inject constructor(
         headerLocalDataSource.save(headerEntity)
     }
 
-
     override fun headers(): Flowable<List<Header>> {
         val top = Header(Header.Type.TOP)
         return Flowable.mergeDelayError(
@@ -42,6 +41,5 @@ class HeaderDataRepository @Inject constructor(
                     headers.addAll(mapper.transform(it))
                     return@map headers
                 }
-
     }
 }

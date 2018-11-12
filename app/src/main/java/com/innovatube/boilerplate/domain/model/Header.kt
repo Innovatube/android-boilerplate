@@ -21,10 +21,8 @@ data class Header(
             articleFeatureEntity.id
     )
 
-
     enum class Type : Parcelable {
         TOP, FEATURE;
-
 
         override fun writeToParcel(parcel: Parcel, flags: Int) {
             parcel.writeInt(ordinal)
@@ -65,7 +63,4 @@ data class Header(
             return arrayOfNulls(size)
         }
     }
-
-
 }
-

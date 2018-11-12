@@ -8,7 +8,6 @@ import com.google.gson.annotations.SerializedName
 import com.innovatube.boilerplate.data.api.common.entity.LinksEntity
 import com.innovatube.boilerplate.data.repository.datasource.local.HeaderTypeConverter
 
-
 @Entity(tableName = "HeaderEntity")
 data class HeaderEntity(
         @Ignore

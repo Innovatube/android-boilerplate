@@ -26,7 +26,6 @@ class TopRecyclerViewAdapter(
             override fun areItemsTheSame(oldItem: Article, newItem: Article): Boolean {
                 return oldItem == newItem
             }
-
         }
 ) {
     override fun createBinding(parent: ViewGroup, viewType: Int): ViewDataBinding {
@@ -47,7 +46,6 @@ class TopRecyclerViewAdapter(
                 binding.root.setOnClickListener { onItemClick?.invoke(item) }
             }
         }
-
     }
 
     override fun getItemViewType(position: Int): Int {

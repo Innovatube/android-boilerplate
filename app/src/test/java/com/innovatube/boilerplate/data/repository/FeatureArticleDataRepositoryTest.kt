@@ -25,7 +25,6 @@ class FeatureArticleDataRepositoryTest : UnitTest() {
     @Mock
     private lateinit var articlesEntity: ArticlesEntity
 
-
     @Before
     fun setUp() {
         featureArticleDataRepository = FeatureArticleDataRepository(homeApi, mapper)
@@ -54,7 +53,6 @@ class FeatureArticleDataRepositoryTest : UnitTest() {
         testObserver.awaitTerminalEvent()
         testObserver.assertError(response)
     }
-
 
     @Test
     fun featureArticles_success() {

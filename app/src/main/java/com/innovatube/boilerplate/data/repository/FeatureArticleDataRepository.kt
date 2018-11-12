@@ -21,5 +21,4 @@ class FeatureArticleDataRepository @Inject constructor(
                 }
                 .toList()
     }
-
 }

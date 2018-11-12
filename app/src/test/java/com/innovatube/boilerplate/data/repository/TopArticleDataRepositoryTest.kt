@@ -30,7 +30,6 @@ class TopArticleDataRepositoryTest : UnitTest() {
     @Mock
     private lateinit var articlesEntity: ArticlesEntity
 
-
     @Before
     fun setUp() {
         topArticleDataRepository = TopArticleDataRepository(homeApi, mapper)

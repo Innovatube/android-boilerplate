@@ -39,6 +39,4 @@ class HomePagerAdapter(private val context: Context?, fm: FragmentManager, priva
             FEATURE -> fragmentTitles[position % fragmentTitles.size].label
         }
     }
-
-
 }

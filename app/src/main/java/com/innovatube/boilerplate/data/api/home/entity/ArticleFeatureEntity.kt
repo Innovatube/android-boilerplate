@@ -12,5 +12,3 @@ data class ArticleFeatureEntity(
         @SerializedName("order") var order: Long,
         @SerializedName("start_datetime") var startDatetime: String
 )
-
-

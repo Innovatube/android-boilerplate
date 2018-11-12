@@ -40,6 +40,5 @@ class InnovatubeApplication : Application(), LifecycleObserver {
 
     @OnLifecycleEvent(Lifecycle.Event.ON_START)
     fun onAppForegrounded() {
-
     }
 }

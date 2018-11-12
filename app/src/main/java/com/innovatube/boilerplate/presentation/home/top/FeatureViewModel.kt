@@ -36,5 +36,4 @@ class FeatureViewModel @Inject constructor(private val useCase: GetFeatureArticl
         this.articles.value = emptyList()
         loadArticles(featureArticleId)
     }
-
 }

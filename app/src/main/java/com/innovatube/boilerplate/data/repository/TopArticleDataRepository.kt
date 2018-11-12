@@ -20,8 +20,5 @@ class TopArticleDataRepository @Inject constructor(
                     mapper.transform(it)
                 }
                 .toList()
-
     }
-
-
 }

@@ -24,5 +24,4 @@ interface ApplicationComponent {
 
         fun build(): ApplicationComponent
     }
-
 }

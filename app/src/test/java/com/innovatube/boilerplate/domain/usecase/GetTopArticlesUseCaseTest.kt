@@ -3,7 +3,6 @@ package com.innovatube.boilerplate.domain.usecase
 import com.innovatube.boilerplate.UnitTest
 import com.innovatube.boilerplate.domain.TestSchedulerProvider
 import com.innovatube.boilerplate.domain.repository.TopArticleRepository
-import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Test
 import org.mockito.Mock
@@ -15,7 +14,6 @@ class GetTopArticlesUseCaseTest : UnitTest() {
     private lateinit var topArticleRepository: TopArticleRepository
     @Mock
     private lateinit var testSchedulerProvider: TestSchedulerProvider
-
 
     @Before
     @Throws(Exception::class)

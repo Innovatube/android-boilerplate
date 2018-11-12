@@ -15,7 +15,6 @@ class HeaderTypeConverter {
         }
 
         val listType = object : TypeToken<List<ArticleFeatureEntity>>() {
-
         }.type
 
         return gson.fromJson<List<ArticleFeatureEntity>>(data, listType)

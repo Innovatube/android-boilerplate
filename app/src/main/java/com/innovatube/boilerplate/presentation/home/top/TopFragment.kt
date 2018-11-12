@@ -9,7 +9,6 @@ import android.view.ViewGroup
 import com.innovatube.boilerplate.AppExecutors
 import com.innovatube.boilerplate.databinding.FragmentTopBinding
 import com.innovatube.boilerplate.presentation.base.BaseFragment
-import com.innovatube.boilerplate.presentation.helper.Navigator
 import com.innovatube.boilerplate.presentation.listener.EndlessRecyclerOnScrollListener
 import kotlinx.android.synthetic.main.fragment_top.*
 import javax.inject.Inject
@@ -25,8 +24,11 @@ class TopFragment : BaseFragment() {
     lateinit var appExecutors: AppExecutors
     private var adapter: TopRecyclerViewAdapter? = null
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+            inflater: LayoutInflater,
+            container: ViewGroup?,
+            savedInstanceState: Bundle?
+    ): View? {
         component.inject(this)
         binding = FragmentTopBinding.inflate(inflater, container, false)
         binding.viewModel = viewModel
@@ -38,7 +40,6 @@ class TopFragment : BaseFragment() {
         rvArticle.layoutManager = layoutManager
         if (adapter == null) {
             adapter = TopRecyclerViewAdapter(appExecutors) {
-
             }
         }
         rvArticle.adapter = adapter
@@ -59,14 +60,12 @@ class TopFragment : BaseFragment() {
                 adapter?.submitList(it)
             }
         })
-
     }
 
     override fun onDestroy() {
         viewModel.destroy()
         super.onDestroy()
     }
-
 
     companion object {
         fun newInstance() = TopFragment()

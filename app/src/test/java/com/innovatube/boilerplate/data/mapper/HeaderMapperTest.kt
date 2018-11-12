@@ -14,7 +14,8 @@ import io.reactivex.Flowable
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
 import org.junit.After
-import org.junit.Assert.*
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertNotNull
 import org.junit.Before
 import org.junit.Test
 import org.mockito.Mock
@@ -33,7 +34,6 @@ class HeaderMapperTest : MockServerTest() {
     @Mock
     private lateinit var headerEntity: HeaderEntity
 
-
     @Before
     fun setUp() {
         mockWebServer = MockWebServer()
@@ -44,7 +44,6 @@ class HeaderMapperTest : MockServerTest() {
         headerLocalDataSource = HeaderLocalDataSource(dao)
         repository = HeaderDataRepository(headerRemoteDataSource, headerLocalDataSource, headerMapper)
     }
-
 
     @After
     @Throws(Exception::class)

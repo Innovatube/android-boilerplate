@@ -4,7 +4,6 @@ import android.os.Parcel
 import android.os.Parcelable
 import com.innovatube.boilerplate.data.api.home.entity.ArticleEntity
 
-
 data class Article(
         val answerCount: String = "",
         val contributor: Contributor = Contributor(),
@@ -37,7 +36,6 @@ data class Article(
             entity.title,
             entity.url
     )
-
 
     fun preSlashJobTitle(): String {
         return if (!contributor.jobTitle.isEmpty()) " / " + contributor.jobTitle

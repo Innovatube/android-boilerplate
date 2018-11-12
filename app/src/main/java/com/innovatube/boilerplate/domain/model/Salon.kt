@@ -3,7 +3,6 @@ package com.innovatube.boilerplate.domain.model
 import android.os.Parcel
 import android.os.Parcelable
 
-
 data class Salon(
         val id: String,
         val name: String,

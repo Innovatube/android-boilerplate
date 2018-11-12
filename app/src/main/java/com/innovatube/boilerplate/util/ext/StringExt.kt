@@ -8,7 +8,6 @@ fun String.isEmailValid(): Boolean {
     return Patterns.EMAIL_ADDRESS.matcher(this).matches()
 }
 
-
 fun String.toAge(pattern: String = "yyyy-MM-dd", suffix: String = "歳"): String {
     val format = SimpleDateFormat(pattern, Locale.JAPAN)
     try {
@@ -22,14 +21,15 @@ fun String.toAge(pattern: String = "yyyy-MM-dd", suffix: String = "歳"): String
         }
 
         return age.toString() + suffix
-
     } catch (e: Exception) {
         e.printStackTrace()
         return suffix
     }
 }
 
-fun String.toDate(dateFormat: SimpleDateFormat
-                  = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.JAPAN)): Date {
+fun String.toDate(
+        dateFormat: SimpleDateFormat =
+                SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.JAPAN)
+): Date {
     return dateFormat.parse(this)
 }
