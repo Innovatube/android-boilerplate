@@ -18,7 +18,7 @@ open class AppExecutors(
     @Inject
     constructor() : this(
             Executors.newSingleThreadExecutor(),
-            Executors.newFixedThreadPool(3),
+       Executors.newFixedThreadPool(3),
             MainThreadExecutor()
     )
 
@@ -26,45 +26,19 @@ open class AppExecutors(
         return diskIO
     }
 
-    fun networkIO(): Executor {
+    fun networkIO(): Executor
+    {
         return networkIO
     }
 
-    fun mainThread(): Executor {
+    fun mainThread(): Executor
+    {
         return mainThread
     }
 
-    private class MainThreadExecutor : Executor {
-        private val mainThreadHandler = Handler(Looper.getMainLooper())
+    private class MainThreadExecutor : Executor { private val mainThreadHandler = Handler(Looper.getMainLooper())
         override fun execute(command: Runnable) {
             mainThreadHandler.post(command)
         }
-    }
-
-    fun Animator.addListener(
-            onEnd: ((animator: Animator) -> Unit)? = null,
-            onStart: ((animator: Animator) -> Unit)? = null,
-            onCancel: ((animator: Animator) -> Unit)? = null,
-            onRepeat: ((animator: Animator) -> Unit)? = null
-    ): Animator.AnimatorListener {
-        val listener = object : Animator.AnimatorListener {
-            override fun onAnimationRepeat(animator: Animator) {
-                onRepeat?.invoke(animator)
-            }
-
-            override fun onAnimationEnd(animator: Animator) {
-                onEnd?.invoke(animator)
-            }
-
-            override fun onAnimationCancel(animator: Animator) {
-                onCancel?.invoke(animator)
-            }
-
-            override fun onAnimationStart(animator: Animator) {
-                onStart?.invoke(animator)
-            }
-        }
-        addListener(listener)
-        return listener
     }
 }

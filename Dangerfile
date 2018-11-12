@@ -50,9 +50,6 @@ warn("No Assign", sticky: false) unless has_assignee
 return unless status_report[:errors].length.zero? && status_report[:warnings].length.zero?
 message("LGTM :+1:\nWaiting for your review!\n@toidv")
 
-android_lint.lint
-
-
 # Android Lint
 android_lint.gradle_task = "app:lintDevRelease"
 android_lint.report_file = "app/build/reports/lint-results.xml"
@@ -75,6 +72,7 @@ checkstyle_format.report 'app/build/reports/detekt/detekt-checkstyle.xml'
 
 # AndroidLint
 android_lint.report_file = "app/build/reports/lint-results.xml"
+android_lint.lint
 android_lint.skip_gradle_task = true
 android_lint.severity = "Error"
 android_lint.lint(inline_mode: true)
