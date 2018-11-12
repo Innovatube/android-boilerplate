@@ -24,6 +24,15 @@ jobs:
           name: Run Tests
           command: ./gradlew lint test
       - run:
+          name: Ktlint
+          command: ./gradlew ktlint
+      - run:
+          name: DeteKt
+          command: ./gradlew detektCheck
+      - run:
+          name: Findbugs
+          command: ./gradlew findbugs
+      - run:
           name: Build apk
           command: ./gradlew :app:assembleDebug
       - store_artifacts:

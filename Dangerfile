@@ -45,16 +45,9 @@ warn("Please Write qa check lists.") if has_qa_check_lists && !declared_trivial
 has_assignee = github.pr_json["assignee"] != nil
 warn("No Assign", sticky: false) unless has_assignee
 
-
 # Menthon when passed all checks
 return unless status_report[:errors].length.zero? && status_report[:warnings].length.zero?
 message("LGTM :+1:\nWaiting for your review!\n@toidv")
-
-# Android Lint
-android_lint.gradle_task = "app:lintDevRelease"
-android_lint.report_file = "app/build/reports/lint-results.xml"
-android_lint.filtering = true
-android_lint.lint(inline_mode: true)
 
 # Findbugs
 findbugs.gradle_module = "app"

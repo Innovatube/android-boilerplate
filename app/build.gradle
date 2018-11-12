@@ -222,5 +222,19 @@ dependencies {
 }
 
 
+detekt {
+    version = "1.0.0.RC8"
+    profile("main") {
+        input = "$projectDir"
+        filters = ".*test.*,.*/resources/.*,.*/tmp/.*"
+        output = "${project.buildDir}/reports/detekt.xml"
+        parallel = true
+    }
+}
+
+
+
+
+
 
 
