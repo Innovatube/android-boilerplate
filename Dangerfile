@@ -45,15 +45,11 @@ warn("Please Write qa check lists.") if has_qa_check_lists && !declared_trivial
 has_assignee = github.pr_json["assignee"] != nil
 warn("No Assign", sticky: false) unless has_assignee
 
-# Menthon when passed all checks
-return unless status_report[:errors].length.zero? && status_report[:warnings].length.zero?
-message("LGTM :+1:\nWaiting for your review!\n@toidv")
-
 # Findbugs
 findbugs.gradle_module = "app"
 findbugs.gradle_task = "app:findbugs"
 findbugs.report_file = "app/build/reports/findbugs/findbugs.xml"
-findbugs.report(true)
+findbugs.report
 
 # ktlint
 github.dismiss_out_of_range_messages
@@ -69,3 +65,8 @@ android_lint.report_file = "app/build/reports/lint-results.xml"
 android_lint.skip_gradle_task = true
 android_lint.severity = "Error"
 android_lint.lint(inline_mode: true)
+
+# Menthon when passed all checks
+return unless status_report[:errors].length.zero? && status_report[:warnings].length.zero?
+message("LGTM :+1:\nWaiting for your review!\n@toidv")
+
