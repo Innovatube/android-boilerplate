@@ -53,7 +53,7 @@ message("LGTM :+1:\nWaiting for your review!\n@toidv")
 findbugs.gradle_module = "app"
 findbugs.gradle_task = "app:findbugs"
 findbugs.report_file = "app/build/reports/findbugs/findbugs.xml"
-findbugs.report
+findbugs.report(true)
 
 # ktlint
 github.dismiss_out_of_range_messages
@@ -61,11 +61,11 @@ checkstyle_format.base_path = Dir.pwd
 checkstyle_format.report 'app/build/reports/ktlint/ktlint-checkstyle-report.xml'
 
 # detekt
+checkstyle_format.base_path = Dir.pwd
 checkstyle_format.report 'app/build/reports/detekt/detekt-checkstyle.xml'
 
 # AndroidLint
 android_lint.report_file = "app/build/reports/lint-results.xml"
-android_lint.lint
 android_lint.skip_gradle_task = true
 android_lint.severity = "Error"
 android_lint.lint(inline_mode: true)

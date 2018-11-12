@@ -27,7 +27,7 @@ jobs:
           name: Ktlint
           command: ./gradlew ktlint
       - run:
-          name: DeteKt
+          name: Detedanger-checkstyle_formatKt
           command: ./gradlew detektCheck
       - run:
           name: Findbugs
