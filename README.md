@@ -39,6 +39,8 @@
 ## Coding Rule
 * Should use Kotlin on new project
 * Use Clean Architecture
+* We use automatic code review bot (danger) to adopt Ktlint, Findbugs, detekt, AndroidLint static analysis tool, so please make sure fix all warning before requesting review
+    * [Config Android Studio](https://github.com/Innovatube/android-boilerplate/wiki/Config-Android-Studio)
 * Use Functional Reactive Style (Observable/Flowable/Single/Compleable) to communicate between Domain/Data/Presentation layer 
 * Use DI(Dagger2) to provide instance/object
 * Write unit tests for usecase, repository, mapper at least.
