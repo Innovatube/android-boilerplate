@@ -15,10 +15,10 @@ abstract class MockServerTest : UnitTest() {
 
     protected fun <T> createApiClient(clazz: Class<T>, baseUrl: String): T {
         return Retrofit.Builder()
-                .baseUrl(baseUrl)
-                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                .addConverterFactory(GsonConverterFactory.create())
-                .build()
-                .create(clazz)
+            .baseUrl(baseUrl)
+            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(clazz)
     }
 }

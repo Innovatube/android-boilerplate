@@ -42,7 +42,8 @@ class HeaderMapperTest : MockServerTest() {
         headerMapper = HeaderMapper()
         headerRemoteDataSource = HeaderRemoteDataSource(homeApi)
         headerLocalDataSource = HeaderLocalDataSource(dao)
-        repository = HeaderDataRepository(headerRemoteDataSource, headerLocalDataSource, headerMapper)
+        repository =
+                HeaderDataRepository(headerRemoteDataSource, headerLocalDataSource, headerMapper)
     }
 
     @After
@@ -57,9 +58,9 @@ class HeaderMapperTest : MockServerTest() {
         val dummy = TestUtils.getStringFromPath(this, "success_headers.json")
 
         val mockResponse = MockResponse()
-                .setResponseCode(200)
-                .setHeader("Content-Type", "application/json")
-                .setBody(dummy)
+            .setResponseCode(200)
+            .setHeader("Content-Type", "application/json")
+            .setBody(dummy)
         mockWebServer.enqueue(mockResponse)
 
         val result = repository.headers().blockingFirst()

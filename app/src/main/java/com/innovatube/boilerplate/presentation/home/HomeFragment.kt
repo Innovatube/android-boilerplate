@@ -19,7 +19,11 @@ class HomeFragment : BaseFragment() {
     @Inject
     lateinit var viewModel: HomeViewModel
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         component.inject(this)
         binding = FragmentHomeBinding.inflate(inflater, container, false)
         binding.viewModel = viewModel

@@ -37,14 +37,16 @@ class TopArticleDataRepositoryTest : UnitTest() {
 
     @Test
     fun getTopArticles_callFromApi() {
-        BDDMockito.given(homeApi.getTopArticles(BDDMockito.anyInt())).willReturn(Single.just(articlesEntity))
+        BDDMockito.given(homeApi.getTopArticles(BDDMockito.anyInt()))
+            .willReturn(Single.just(articlesEntity))
         topArticleDataRepository.topArticles(BDDMockito.anyInt())
         Mockito.verify<HomeApi>(homeApi).getTopArticles(BDDMockito.anyInt())
     }
 
     @Test
     fun getTopArticles_complete() {
-        BDDMockito.given(homeApi.getTopArticles(BDDMockito.anyInt())).willReturn(Single.just(articlesEntity))
+        BDDMockito.given(homeApi.getTopArticles(BDDMockito.anyInt()))
+            .willReturn(Single.just(articlesEntity))
         val testObserver = topArticleDataRepository.topArticles(1).test()
         testObserver.awaitTerminalEvent()
         testObserver.assertComplete()
@@ -53,7 +55,8 @@ class TopArticleDataRepositoryTest : UnitTest() {
     @Test
     fun getTopArticles_fail() {
         val response = Throwable("Error response")
-        BDDMockito.given(homeApi.getTopArticles(BDDMockito.anyInt())).willReturn(Single.error(response))
+        BDDMockito.given(homeApi.getTopArticles(BDDMockito.anyInt()))
+            .willReturn(Single.error(response))
         val testObserver = topArticleDataRepository.topArticles(1).test()
         testObserver.awaitTerminalEvent()
         testObserver.assertError(response)

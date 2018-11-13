@@ -32,7 +32,8 @@ class HeaderDataRepositoryTest : UnitTest() {
 
     @Before
     fun setup() {
-        headerRepository = HeaderDataRepository(headerLocalDataSource, headerRemoteDataSource, headerMapper)
+        headerRepository =
+                HeaderDataRepository(headerLocalDataSource, headerRemoteDataSource, headerMapper)
     }
 
     @Before
@@ -49,11 +50,15 @@ class HeaderDataRepositoryTest : UnitTest() {
         BDDMockito.given(dataSource.headers()).willReturn(Flowable.error(Error("Not available")))
     }
 
-    private fun setHeadersAvailable(dataSource: HeaderDataStore, headerEntity: HeaderEntity? = null) {
+    private fun setHeadersAvailable(
+        dataSource: HeaderDataStore,
+        headerEntity: HeaderEntity? = null
+    ) {
         if (headerEntity == null) {
             BDDMockito.given(dataSource.headers()).willReturn(Flowable.never())
         } else {
-            BDDMockito.given(dataSource.headers()).willReturn(Flowable.just(headerEntity).concatWith(Flowable.never()))
+            BDDMockito.given(dataSource.headers())
+                .willReturn(Flowable.just(headerEntity).concatWith(Flowable.never()))
         }
     }
 

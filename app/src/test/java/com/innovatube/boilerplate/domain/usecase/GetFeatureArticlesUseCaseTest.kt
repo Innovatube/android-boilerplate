@@ -20,8 +20,9 @@ class GetFeatureArticlesUseCaseTest : UnitTest() {
     @Throws(Exception::class)
     fun setup() {
         getFeatureArticlesUseCase = GetFeatureArticlesUseCase(
-                testSchedulerProvider,
-                featureArticleRepository)
+            testSchedulerProvider,
+            featureArticleRepository
+        )
     }
 
     @Test

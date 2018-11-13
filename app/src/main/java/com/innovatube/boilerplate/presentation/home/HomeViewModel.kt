@@ -9,8 +9,8 @@ import timber.log.Timber
 import javax.inject.Inject
 
 class HomeViewModel @Inject constructor(
-        val context: Context,
-        private val headersUseCase: GetHeadersUseCase
+    val context: Context,
+    private val headersUseCase: GetHeadersUseCase
 ) {
 
     var headers: MutableLiveData<List<Header>> = MutableLiveData()
@@ -18,13 +18,14 @@ class HomeViewModel @Inject constructor(
     fun getHeaders() {
 
         headersUseCase.execute(
-                Consumer {
-                    headers.value = it
-                },
-                Consumer {
-                    Timber.e(it)
-                },
-                null)
+            Consumer {
+                headers.value = it
+            },
+            Consumer {
+                Timber.e(it)
+            },
+            null
+        )
     }
 
     fun destroy() {

@@ -25,9 +25,9 @@ class TopFragment : BaseFragment() {
     private var adapter: TopRecyclerViewAdapter? = null
 
     override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
         component.inject(this)
         binding = FragmentTopBinding.inflate(inflater, container, false)

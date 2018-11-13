@@ -12,14 +12,14 @@ import io.reactivex.Flowable
 import javax.inject.Inject
 
 class HeaderDataRepository @Inject constructor(
-        @Local private val headerLocalDataSource: HeaderDataStore,
-        @Remote private val headerRemoteDataSource: HeaderDataStore,
-        private val mapper: HeaderMapper
+    @Local private val headerLocalDataSource: HeaderDataStore,
+    @Remote private val headerRemoteDataSource: HeaderDataStore,
+    private val mapper: HeaderMapper
 ) : HeaderRepository {
 
     override fun getLikeAndReviewInfo(): Flowable<HeaderInfo> {
         return headerLocalDataSource.headers()
-                .map { header -> HeaderInfo(header.reviewCount, header.likeCount) }
+            .map { header -> HeaderInfo(header.reviewCount, header.likeCount) }
     }
 
     override fun save(headerEntity: HeaderEntity) {
@@ -29,17 +29,17 @@ class HeaderDataRepository @Inject constructor(
     override fun headers(): Flowable<List<Header>> {
         val top = Header(Header.Type.TOP)
         return Flowable.mergeDelayError(
-                headerLocalDataSource.headers(),
-                headerRemoteDataSource.headers()
-                        .doOnNext { headerEntity ->
-                            save(headerEntity)
-                        })
-                .map { it.articleFeatures }
-                .distinct()
-                .map {
-                    val headers = mutableListOf(top)
-                    headers.addAll(mapper.transform(it))
-                    return@map headers
-                }
+            headerLocalDataSource.headers(),
+            headerRemoteDataSource.headers()
+                .doOnNext { headerEntity ->
+                    save(headerEntity)
+                })
+            .map { it.articleFeatures }
+            .distinct()
+            .map {
+                val headers = mutableListOf(top)
+                headers.addAll(mapper.transform(it))
+                return@map headers
+            }
     }
 }

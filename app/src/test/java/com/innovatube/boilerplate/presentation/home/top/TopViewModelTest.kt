@@ -11,7 +11,11 @@ import junit.framework.Assert
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
-import org.mockito.*
+import org.mockito.ArgumentCaptor
+import org.mockito.ArgumentMatchers
+import org.mockito.Captor
+import org.mockito.Mock
+import org.mockito.Mockito
 
 class TopViewModelTest : UnitTest() {
     @get:Rule
@@ -35,7 +39,11 @@ class TopViewModelTest : UnitTest() {
     fun getArticles_success() {
         val article = Article(title = "Article title", url = "url")
         topViewModel.loadArticles()
-        Mockito.verify(getTopArticleUseCase).execute(capture(callbackOnSuccess), capture(callbackOnError), ArgumentMatchers.anyInt())
+        Mockito.verify(getTopArticleUseCase).execute(
+            capture(callbackOnSuccess),
+            capture(callbackOnError),
+            ArgumentMatchers.anyInt()
+        )
         Assert.assertTrue(topViewModel.isLoading.get())
         Assert.assertFalse(topViewModel.isError.get())
         callbackOnSuccess.value.accept(listOf(article))
@@ -48,7 +56,11 @@ class TopViewModelTest : UnitTest() {
     @Test
     fun getArticles_fail() {
         topViewModel.loadArticles()
-        Mockito.verify(getTopArticleUseCase).execute(capture(callbackOnSuccess), capture(callbackOnError), ArgumentMatchers.anyInt())
+        Mockito.verify(getTopArticleUseCase).execute(
+            capture(callbackOnSuccess),
+            capture(callbackOnError),
+            ArgumentMatchers.anyInt()
+        )
         Assert.assertTrue(topViewModel.isLoading.get())
         Assert.assertFalse(topViewModel.isError.get())
         callbackOnError.value.accept(Exception())

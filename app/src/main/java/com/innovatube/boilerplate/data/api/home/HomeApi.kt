@@ -17,7 +17,7 @@ interface HomeApi {
 
     @GET("articles/features/hairsalon/{featureArticleId}/{page}")
     fun getFeatureArticles(
-            @Path("featureArticleId") featureArticleId: Long,
-            @Path("page") page: Int
+        @Path("featureArticleId") featureArticleId: Long,
+        @Path("page") page: Int
     ): Single<ArticlesEntity>
 }

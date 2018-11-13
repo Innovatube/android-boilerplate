@@ -187,7 +187,7 @@ dependencies {
     testImplementation "org.robolectric:robolectric:3.8"
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    testImplementation 'com.squareup.okhttp3:mockwebserver:3.9.1'
+    testImplementation 'com.squareup.okhttp3:mockwebserver:3.10.0'
     testImplementation "android.arch.core:core-testing:1.1.1"
 
     implementation 'com.afollestad.material-dialogs:core:0.9.6.0'

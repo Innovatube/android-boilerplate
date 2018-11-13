@@ -7,7 +7,7 @@ import io.reactivex.Flowable
 import javax.inject.Inject
 
 class HeaderRemoteDataSource @Inject constructor(
-        private val homeApi: HomeApi
+    private val homeApi: HomeApi
 ) : HeaderDataStore {
     override fun save(headerEntity: HeaderEntity) {
         throw UnsupportedOperationException()
@@ -15,6 +15,6 @@ class HeaderRemoteDataSource @Inject constructor(
 
     override fun headers(): Flowable<HeaderEntity> {
         return homeApi.getHeaders("hairsalon")
-                .toFlowable()
+            .toFlowable()
     }
 }

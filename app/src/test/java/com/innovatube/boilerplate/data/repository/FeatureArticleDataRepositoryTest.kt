@@ -11,7 +11,11 @@ import io.reactivex.Single
 import junit.framework.Assert
 import org.junit.Before
 import org.junit.Test
-import org.mockito.*
+import org.mockito.ArgumentMatchers
+import org.mockito.BDDMockito
+import org.mockito.Mock
+import org.mockito.Mockito
+import org.mockito.Spy
 
 class FeatureArticleDataRepositoryTest : UnitTest() {
 
@@ -32,14 +36,24 @@ class FeatureArticleDataRepositoryTest : UnitTest() {
 
     @Test
     fun featureArticles_callFromApi() {
-        BDDMockito.given(homeApi.getFeatureArticles(BDDMockito.anyLong(), ArgumentMatchers.anyInt())).willReturn(Single.just(articlesEntity))
+        BDDMockito.given(
+            homeApi.getFeatureArticles(
+                BDDMockito.anyLong(),
+                ArgumentMatchers.anyInt()
+            )
+        ).willReturn(Single.just(articlesEntity))
         featureArticleDataRepository.featureArticles(1, 1)
         Mockito.verify<HomeApi>(homeApi).getFeatureArticles(1, 1)
     }
 
     @Test
     fun featureArticles_complete() {
-        BDDMockito.given(homeApi.getFeatureArticles(BDDMockito.anyLong(), ArgumentMatchers.anyInt())).willReturn(Single.just(articlesEntity))
+        BDDMockito.given(
+            homeApi.getFeatureArticles(
+                BDDMockito.anyLong(),
+                ArgumentMatchers.anyInt()
+            )
+        ).willReturn(Single.just(articlesEntity))
         val testObserver = featureArticleDataRepository.featureArticles(1, 1).test()
         testObserver.awaitTerminalEvent()
         testObserver.assertComplete()
@@ -48,7 +62,12 @@ class FeatureArticleDataRepositoryTest : UnitTest() {
     @Test
     fun featureArticles_fail() {
         val response = Throwable("Error productEntity")
-        BDDMockito.given(homeApi.getFeatureArticles(BDDMockito.anyLong(), ArgumentMatchers.anyInt())).willReturn(Single.error(response))
+        BDDMockito.given(
+            homeApi.getFeatureArticles(
+                BDDMockito.anyLong(),
+                ArgumentMatchers.anyInt()
+            )
+        ).willReturn(Single.error(response))
         val testObserver = featureArticleDataRepository.featureArticles(1, 1).test()
         testObserver.awaitTerminalEvent()
         testObserver.assertError(response)

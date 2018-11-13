@@ -5,20 +5,21 @@ import android.os.Parcelable
 import com.innovatube.boilerplate.data.api.home.entity.ArticleFeatureEntity
 
 data class Header(
-        val type: Type = Type.TOP,
-        val label: String? = null,
-        val featureId: Long = 0
+    val type: Type = Type.TOP,
+    val label: String? = null,
+    val featureId: Long = 0
 ) : Parcelable {
 
     constructor(parcel: Parcel) : this(
-            parcel.readParcelable(Type::class.java.classLoader),
-            parcel.readString(),
-            parcel.readLong())
+        parcel.readParcelable(Type::class.java.classLoader),
+        parcel.readString(),
+        parcel.readLong()
+    )
 
     constructor(articleFeatureEntity: ArticleFeatureEntity) : this(
-            Type.FEATURE,
-            articleFeatureEntity.label,
-            articleFeatureEntity.id
+        Type.FEATURE,
+        articleFeatureEntity.label,
+        articleFeatureEntity.id
     )
 
     enum class Type : Parcelable {

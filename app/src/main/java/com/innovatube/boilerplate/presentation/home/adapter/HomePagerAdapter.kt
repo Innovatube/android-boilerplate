@@ -11,7 +11,11 @@ import com.innovatube.boilerplate.domain.model.Header.Type.TOP
 import com.innovatube.boilerplate.presentation.home.top.FeatureFragment
 import com.innovatube.boilerplate.presentation.home.top.TopFragment
 
-class HomePagerAdapter(private val context: Context?, fm: FragmentManager, private val fragmentTitles: List<Header>) : FragmentStatePagerAdapter(fm) {
+class HomePagerAdapter(
+    private val context: Context?,
+    fm: FragmentManager,
+    private val fragmentTitles: List<Header>
+) : FragmentStatePagerAdapter(fm) {
 
     override fun getItem(position: Int): Fragment {
         val header = fragmentTitles[getRealPosition(position)]

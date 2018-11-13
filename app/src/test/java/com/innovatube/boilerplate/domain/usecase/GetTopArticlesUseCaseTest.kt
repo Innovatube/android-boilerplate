@@ -19,8 +19,9 @@ class GetTopArticlesUseCaseTest : UnitTest() {
     @Throws(Exception::class)
     fun setup() {
         getTopArticlesUseCase = GetTopArticlesUseCase(
-                testSchedulerProvider,
-                topArticleRepository)
+            testSchedulerProvider,
+            topArticleRepository
+        )
     }
 
     @Test

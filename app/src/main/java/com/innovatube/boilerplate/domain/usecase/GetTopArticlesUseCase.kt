@@ -7,8 +7,8 @@ import io.reactivex.Single
 import javax.inject.Inject
 
 class GetTopArticlesUseCase @Inject constructor(
-        schedulerProvider: SchedulerProvider,
-        private val topArticleRepository: TopArticleRepository
+    schedulerProvider: SchedulerProvider,
+    private val topArticleRepository: TopArticleRepository
 ) : SequentialUseCase<Int, List<Article>>(schedulerProvider) {
 
     public override fun buildUseCaseSingle(param: Int): Single<List<Article>> {

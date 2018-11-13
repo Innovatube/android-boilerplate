@@ -41,9 +41,9 @@ class FeatureFragment : BaseFragment() {
     }
 
     override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
         component.inject(this)
         binding = FragmentFeatureBinding.inflate(inflater, container, false)
@@ -56,7 +56,7 @@ class FeatureFragment : BaseFragment() {
         rvArticle.layoutManager = layoutManager
         if (adapter == null) {
             adapter = FeatureArticleAdapter(
-                    appExecutors
+                appExecutors
             ) {
             }
         }

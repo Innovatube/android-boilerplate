@@ -44,9 +44,9 @@ class ArticleMapperTest : MockServerTest() {
         val dummy = TestUtils.getStringFromPath(this, "success_articles_top_hairsalon_1.json")
 
         val mockResponse = MockResponse()
-                .setResponseCode(200)
-                .setHeader("Content-Type", "application/json")
-                .setBody(dummy)
+            .setResponseCode(200)
+            .setHeader("Content-Type", "application/json")
+            .setBody(dummy)
         mockWebServer.enqueue(mockResponse)
 
         val result = topArticleRepository.topArticles(1).blockingGet()
@@ -59,12 +59,13 @@ class ArticleMapperTest : MockServerTest() {
 
     @Test
     fun transformFeatureArticles() {
-        val dummy = TestUtils.getStringFromPath(this, "success_articles_features_hairsalon_1_1.json")
+        val dummy =
+            TestUtils.getStringFromPath(this, "success_articles_features_hairsalon_1_1.json")
 
         val mockResponse = MockResponse()
-                .setResponseCode(200)
-                .setHeader("Content-Type", "application/json")
-                .setBody(dummy)
+            .setResponseCode(200)
+            .setHeader("Content-Type", "application/json")
+            .setBody(dummy)
         mockWebServer.enqueue(mockResponse)
 
         val result = featureArticleRepository.featureArticles(1, 1).blockingGet()

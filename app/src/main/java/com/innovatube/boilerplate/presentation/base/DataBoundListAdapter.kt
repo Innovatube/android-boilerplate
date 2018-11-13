@@ -7,12 +7,12 @@ import android.view.ViewGroup
 import com.innovatube.boilerplate.AppExecutors
 
 abstract class DataBoundListAdapter<T, V : ViewDataBinding>(
-        appExecutors: AppExecutors,
-        diffCallback: DiffUtil.ItemCallback<T>
+    appExecutors: AppExecutors,
+    diffCallback: DiffUtil.ItemCallback<T>
 ) : ListDifferAdapter<T, DataBoundViewHolder<V>>(
-        AsyncDifferConfig.Builder<T>(diffCallback)
-                .setBackgroundThreadExecutor(appExecutors.diskIO())
-                .build()
+    AsyncDifferConfig.Builder<T>(diffCallback)
+        .setBackgroundThreadExecutor(appExecutors.diskIO())
+        .build()
 ) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DataBoundViewHolder<V> {
         val binding = createBinding(parent, viewType)

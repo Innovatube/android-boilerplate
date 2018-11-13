@@ -5,36 +5,37 @@ import android.os.Parcelable
 import com.innovatube.boilerplate.data.api.home.entity.ArticleEntity
 
 data class Article(
-        val answerCount: String = "",
-        val contributor: Contributor = Contributor(),
-        val likeCount: Int = 0,
-        val metaTags: List<MetaTag>? = listOf(),
-        val publishedAt: String = "",
-        val thumbnailImageUrl: String = "",
-        val title: String = "",
-        val url: String = ""
+    val answerCount: String = "",
+    val contributor: Contributor = Contributor(),
+    val likeCount: Int = 0,
+    val metaTags: List<MetaTag>? = listOf(),
+    val publishedAt: String = "",
+    val thumbnailImageUrl: String = "",
+    val title: String = "",
+    val url: String = ""
 ) : QuoteArticle {
     constructor(parcel: Parcel) : this(
-            parcel.readString(),
-            parcel.readParcelable(Contributor::class.java.classLoader),
-            parcel.readInt(),
-            parcel.createTypedArrayList(MetaTag),
-            parcel.readString(),
-            parcel.readString(),
-            parcel.readString(),
-            parcel.readString())
+        parcel.readString(),
+        parcel.readParcelable(Contributor::class.java.classLoader),
+        parcel.readInt(),
+        parcel.createTypedArrayList(MetaTag),
+        parcel.readString(),
+        parcel.readString(),
+        parcel.readString(),
+        parcel.readString()
+    )
 
     constructor(entity: ArticleEntity) : this(
-            entity.answerCount,
-            Contributor(entity.contributor),
-            entity.likeCount,
-            entity.metaTags?.map { it ->
-                MetaTag(it!!)
-            },
-            entity.publishedAt,
-            entity.thumbnailImageUrl,
-            entity.title,
-            entity.url
+        entity.answerCount,
+        Contributor(entity.contributor),
+        entity.likeCount,
+        entity.metaTags?.map { it ->
+            MetaTag(it!!)
+        },
+        entity.publishedAt,
+        entity.thumbnailImageUrl,
+        entity.title,
+        entity.url
     )
 
     fun preSlashJobTitle(): String {

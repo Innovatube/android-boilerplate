@@ -9,10 +9,10 @@ class FragmentHelper @Inject constructor(private val fragmentManager: FragmentMa
 
     @JvmOverloads
     fun replaceFragment(
-            fragment: Fragment,
-            containerId: Int,
-            addToBackStack: Boolean = true,
-            customAnimations: Int = WITHOUT_ANIMATION
+        fragment: Fragment,
+        containerId: Int,
+        addToBackStack: Boolean = true,
+        customAnimations: Int = WITHOUT_ANIMATION
 
     ) {
         val transaction = fragmentManager.beginTransaction()
