@@ -1,10 +1,8 @@
 #!/bin/bash
-# setup current directory
+# setup directory
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-
-# get required path
-read -e -p "🤔 Enter codegen folder: " codegen_folder
-codegen_template_directory="${codegen_folder}/lib/app/boilerplate/templates/"
+current_branch_name="$(git name-rev --name-only HEAD)"
+git fetch
 
 # remove old resources
 rm -rf boilerplate
@@ -13,6 +11,8 @@ rm -rf boilerplate.zip
 # archive template
 git archive -o boilerplate.zip HEAD
 
+# switch branch 
+git checkout feature/codegen
 # extract new template
 cd $DIR
 mkdir boilerplate && unzip -qq boilerplate.zip -d boilerplate
@@ -32,17 +32,17 @@ echo "⚙️ Updating color code"
 find $DIR/boilerplate -type f | egrep -i ".xml" | xargs perl -pi -w -e 's/(?<=colorPrimary">).*(?=<\/color>)/<%= colorPrimary %>/g;'
 find $DIR/boilerplate -type f | egrep -i ".xml" | xargs perl -pi -w -e 's/(?<=colorPrimaryDark">).*(?=<\/color>)/<%= colorPrimaryDark %>/g;'
 find $DIR/boilerplate -type f | egrep -i ".xml" | xargs perl -pi -w -e 's/(?<=colorAccent">).*(?=<\/color>)/<%= colorAccent %>/g;'
-rm -rf boilerplate/update_template_plugin.sh
-rm -rf boilerplate/update_template.sh
+
 echo "♻️ Removing old template"
-rm -rf $codegen_template_directory/boilerplate
+rm -rf $DIR/lib/android/boilerplate/templates/boilerplate
 
 echo "🏭 Copying template"
-cp -a boilerplate $codegen_template_directory
+cp -a boilerplate $DIR/lib/android/boilerplate/templates
 
 # cleaning up
 echo "♻️ cleaning up"
 rm -rf boilerplate
 rm -rf boilerplate.zip
-
-echo "🍻 🍻 All set! 🍻🍻"
+rm -rf $DIR/lib/android/boilerplate/templates/boilerplate/update_template.sh
+rm -rf $DIR/lib/android/boilerplate/templates/boilerplate/update_template_plugin.sh
+echo "🍻 🍻 Due to the complexibility of ruby packaging, You must prepare new codegen version by yourself 🍻🍻"

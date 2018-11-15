@@ -131,7 +131,7 @@ dependencies {
 
     // kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.core:core-ktx:0.3'
+    //implementation 'androidx.core:core-ktx:1.0.0'
 
     // Support Library
     implementation "com.android.support:appcompat-v7:$rootProject.support_lib_version"
@@ -153,22 +153,22 @@ dependencies {
     kapt "com.google.dagger:dagger-android-processor:$dagger_version"
 
     // Utility
-    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
-    implementation 'io.reactivex.rxjava2:rxjava:2.1.14'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.2'
 
     // Network
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
-    implementation 'com.google.code.gson:gson:2.8.2'
+    implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'com.squareup.okhttp3:logging-interceptor:3.10.0'
 
     // View
-    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     implementation 'de.hdodenhof:circleimageview:2.1.0'
 
     // Debug
-    implementation 'com.jakewharton.timber:timber:4.6.1'
+    implementation 'com.jakewharton.timber:timber:4.7.1'
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
     releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
 
@@ -178,25 +178,38 @@ dependencies {
     testImplementation "org.robolectric:robolectric:3.8"
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    testImplementation 'com.squareup.okhttp3:mockwebserver:3.8.1'
+    testImplementation 'com.squareup.okhttp3:mockwebserver:3.9.1'
     testImplementation "android.arch.core:core-testing:1.1.1"
 
     implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
 
     implementation "android.arch.persistence.room:runtime:$rootProject.room_version"
     kapt "android.arch.persistence.room:compiler:$rootProject.room_version"
-    implementation 'com.blankj:utilcode:1.16.0'
+    implementation 'com.blankj:utilcode:1.21.2'
     implementation "android.arch.persistence.room:rxjava2:$rootProject.room_version"
 
 
-    implementation 'com.github.bumptech.glide:glide:4.7.1'
-    kapt 'com.github.bumptech.glide:compiler:4.7.1'
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    kapt 'com.github.bumptech.glide:compiler:4.8.0'
     implementation 'android.arch.lifecycle:extensions:1.1.1'
     kapt "android.arch.lifecycle:compiler:1.1.1"
     implementation 'jp.wasabeef:glide-transformations:3.3.0'
 
     implementation "com.orhanobut:hawk:2.0.1"
     implementation 'com.github.clans:fab:1.6.4'
+
+    //App Inspection Tool
+    debugImplementation "com.github.Innovatube.Hyperion-Android:hyperion-core:v$rootProject.hyperion_version"
+    debugImplementation "com.github.Innovatube.Hyperion-Android:hyperion-attr:v$rootProject.hyperion_version"
+    debugImplementation "com.github.Innovatube.Hyperion-Android:hyperion-measurement:v$rootProject.hyperion_version"
+    debugImplementation "com.github.Innovatube.Hyperion-Android:hyperion-disk:v$rootProject.hyperion_version"
+    debugImplementation "com.github.Innovatube.Hyperion-Android:hyperion-recorder:v$rootProject.hyperion_version"
+    debugImplementation "com.github.Innovatube.Hyperion-Android:hyperion-phoenix:v$rootProject.hyperion_version"
+    debugImplementation "com.github.Innovatube.Hyperion-Android:hyperion-crash:v$rootProject.hyperion_version"
+    debugImplementation "com.github.Innovatube.Hyperion-Android:hyperion-shared-preferences:v$rootProject.hyperion_version"
+    debugImplementation "com.github.Innovatube.Hyperion-Android:hyperion-geiger-counter:v$rootProject.hyperion_version"
+    debugImplementation "com.github.Innovatube.Hyperion-Android:hyperion-timber:v$rootProject.hyperion_version"
+    debugImplementation "com.github.Innovatube.Hyperion-Android:hyperion-build-config:v$rootProject.hyperion_version"
 
 }
 
