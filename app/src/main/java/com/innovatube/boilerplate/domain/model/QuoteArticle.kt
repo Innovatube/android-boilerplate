@@ -10,4 +10,3 @@ interface QuoteArticle : Parcelable {
     fun getLikeCountQuote(): Int
     fun getTitleQuote(): String
 }
-

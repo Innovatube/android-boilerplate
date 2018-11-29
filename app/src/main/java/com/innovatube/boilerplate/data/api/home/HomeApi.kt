@@ -1,6 +1,7 @@
 package com.innovatube.boilerplate.data.api.home
 
-import com.innovatube.boilerplate.data.api.home.entity.*
+import com.innovatube.boilerplate.data.api.home.entity.ArticlesEntity
+import com.innovatube.boilerplate.data.api.home.entity.HeaderEntity
 import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -16,7 +17,7 @@ interface HomeApi {
 
     @GET("articles/features/hairsalon/{featureArticleId}/{page}")
     fun getFeatureArticles(
-            @Path("featureArticleId") featureArticleId: Long,
-            @Path("page") page: Int
+        @Path("featureArticleId") featureArticleId: Long,
+        @Path("page") page: Int
     ): Single<ArticlesEntity>
 }

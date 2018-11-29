@@ -1,6 +1,5 @@
 package com.innovatube.boilerplate.util.di.modules
 
-
 import android.app.Activity
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager

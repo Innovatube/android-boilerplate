@@ -1,10 +1,13 @@
 package com.innovatube.boilerplate.util.di.modules
 
-
-import com.innovatube.boilerplate.data.repository.*
+import com.innovatube.boilerplate.data.repository.FeatureArticleDataRepository
+import com.innovatube.boilerplate.data.repository.HeaderDataRepository
+import com.innovatube.boilerplate.data.repository.TopArticleDataRepository
 import com.innovatube.boilerplate.domain.AppSchedulerProvider
 import com.innovatube.boilerplate.domain.SchedulerProvider
-import com.innovatube.boilerplate.domain.repository.*
+import com.innovatube.boilerplate.domain.repository.FeatureArticleRepository
+import com.innovatube.boilerplate.domain.repository.HeaderRepository
+import com.innovatube.boilerplate.domain.repository.TopArticleRepository
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -29,8 +32,6 @@ class DomainModule {
     fun provideFeatureArticleRepository(featureArticleDataRepository: FeatureArticleDataRepository): FeatureArticleRepository {
         return featureArticleDataRepository
     }
-
-
 
     @Provides
     @Singleton

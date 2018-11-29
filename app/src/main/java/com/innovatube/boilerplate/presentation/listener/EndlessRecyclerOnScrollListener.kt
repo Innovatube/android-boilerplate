@@ -3,7 +3,8 @@ package com.innovatube.boilerplate.presentation.listener
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 
-abstract class EndlessRecyclerOnScrollListener(private val linearLayoutManager: LinearLayoutManager) : RecyclerView.OnScrollListener() {
+abstract class EndlessRecyclerOnScrollListener(private val linearLayoutManager: LinearLayoutManager) :
+    RecyclerView.OnScrollListener() {
     private var previousTotal = 0
     private var loading = true
     private val visibleThreshold = 5
@@ -26,7 +27,8 @@ abstract class EndlessRecyclerOnScrollListener(private val linearLayoutManager: 
             }
         }
         if (!loading && (totalItemCount - visibleItemCount)
-                <= (firstVisibleItem + visibleThreshold)) {
+            <= (firstVisibleItem + visibleThreshold)
+        ) {
 
             currentPage++
             onLoadMore(currentPage)

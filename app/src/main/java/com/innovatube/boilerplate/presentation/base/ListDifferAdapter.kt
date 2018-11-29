@@ -11,8 +11,10 @@ abstract class ListDifferAdapter<T, VH : RecyclerView.ViewHolder> : RecyclerView
     private val helper: AsyncListDiffer<T>
 
     protected constructor(diffCallback: DiffUtil.ItemCallback<T>) {
-        helper = AsyncListDiffer<T>(AdapterListUpdateCallback(this),
-                AsyncDifferConfig.Builder(diffCallback).build())
+        helper = AsyncListDiffer<T>(
+            AdapterListUpdateCallback(this),
+            AsyncDifferConfig.Builder(diffCallback).build()
+        )
     }
 
     protected constructor(config: AsyncDifferConfig<T>) {

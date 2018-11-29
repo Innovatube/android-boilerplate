@@ -25,8 +25,8 @@ class InnovatubeApplication : Application(), LifecycleObserver {
         RxJavaPlugins.setErrorHandler { e -> Timber.e(e.toString()) }
 
         appComponent = DaggerApplicationComponent.builder()
-                .application(this)
-                .build()
+            .application(this)
+            .build()
         Hawk.init(this).build()
 
         ProcessLifecycleOwner.get().lifecycle.addObserver(this)
@@ -40,6 +40,5 @@ class InnovatubeApplication : Application(), LifecycleObserver {
 
     @OnLifecycleEvent(Lifecycle.Event.ON_START)
     fun onAppForegrounded() {
-
     }
 }

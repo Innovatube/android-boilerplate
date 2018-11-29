@@ -10,12 +10,13 @@ import com.innovatube.boilerplate.presentation.common.RefreshListener
 import io.reactivex.functions.Consumer
 import timber.log.Timber
 import java.text.NumberFormat
-import java.util.*
+import java.util.Locale
 import javax.inject.Inject
 
-
-class TopViewModel @Inject constructor(private val useCase: GetTopArticlesUseCase,
-                                       private val getReviewAndLikeUseCase: GetReviewAndLikeUseCase) : RefreshListener {
+class TopViewModel @Inject constructor(
+    private val useCase: GetTopArticlesUseCase,
+    private val getReviewAndLikeUseCase: GetReviewAndLikeUseCase
+) : RefreshListener {
 
     val isLoading = ObservableBoolean()
     val isError = ObservableBoolean()
@@ -29,16 +30,17 @@ class TopViewModel @Inject constructor(private val useCase: GetTopArticlesUseCas
     fun loadArticles(page: Int = 1) {
         isLoading.set(true)
         useCase.execute(
-                Consumer {
-                    this.isLoading.set(false)
-                    this.isError.set(false)
-                    this.articles.value = it
-                },
-                Consumer {
-                    Timber.e(it.localizedMessage)
-                    this.isLoading.set(false)
-                    this.isError.set(true)
-                }, page)
+            Consumer {
+                this.isLoading.set(false)
+                this.isError.set(false)
+                this.articles.value = it
+            },
+            Consumer {
+                Timber.e(it.localizedMessage)
+                this.isLoading.set(false)
+                this.isError.set(true)
+            }, page
+        )
     }
 
     override fun onRefresh() {
@@ -49,12 +51,13 @@ class TopViewModel @Inject constructor(private val useCase: GetTopArticlesUseCas
 
     fun getReviewAndLikeInfo() {
         getReviewAndLikeUseCase.execute(
-                Consumer {
-                    review.set(NumberFormat.getInstance(Locale.ENGLISH).format(it.reviewCount))
-                    like.set(NumberFormat.getInstance(Locale.ENGLISH).format(it.likeCount))
-                },
-                Consumer { },
-                null)
+            Consumer {
+                review.set(NumberFormat.getInstance(Locale.ENGLISH).format(it.reviewCount))
+                like.set(NumberFormat.getInstance(Locale.ENGLISH).format(it.likeCount))
+            },
+            Consumer { },
+            null
+        )
     }
 
     fun destroy() {

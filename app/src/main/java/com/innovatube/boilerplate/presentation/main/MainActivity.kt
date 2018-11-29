@@ -11,7 +11,6 @@ import com.innovatube.boilerplate.presentation.home.HomeFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
 
-
 class MainActivity : BaseActivity() {
     @Inject
     lateinit var navigator: Navigator
@@ -26,6 +25,7 @@ class MainActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // FIXME testing android lint
         component.inject(this)
         binding.header = header
         setSupportActionBar(toolbar)
@@ -35,6 +35,4 @@ class MainActivity : BaseActivity() {
         fabMenu.setClosedOnTouchOutside(true)
         fragmentHelper.replaceFragment(HomeFragment.newInstance(), R.id.mainContent, false)
     }
-
-
 }

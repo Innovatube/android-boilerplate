@@ -28,18 +28,17 @@ class FeatureViewModelTest : UnitTest() {
     @Captor
     private lateinit var callbackOnError: ArgumentCaptor<Consumer<Throwable>>
 
-
     @Before
     fun setUp() {
         featureViewModel = FeatureViewModel(getFeatureArticlesUseCase)
-
     }
 
     @Test
     fun getArticles_success() {
         val article = Article(title = "Article title", url = "url")
         featureViewModel.loadArticles(1)
-        Mockito.verify(getFeatureArticlesUseCase).execute(capture(callbackOnSuccess), capture(callbackOnError), capture(param))
+        Mockito.verify(getFeatureArticlesUseCase)
+            .execute(capture(callbackOnSuccess), capture(callbackOnError), capture(param))
         Assert.assertTrue(featureViewModel.isLoading.get())
         Assert.assertFalse(featureViewModel.isError.get())
         callbackOnSuccess.value.accept(listOf(article))
@@ -52,7 +51,8 @@ class FeatureViewModelTest : UnitTest() {
     @Test
     fun getArticles_fail() {
         featureViewModel.loadArticles(1)
-        Mockito.verify(getFeatureArticlesUseCase).execute(capture(callbackOnSuccess), capture(callbackOnError), capture(param))
+        Mockito.verify(getFeatureArticlesUseCase)
+            .execute(capture(callbackOnSuccess), capture(callbackOnError), capture(param))
         Assert.assertTrue(featureViewModel.isLoading.get())
         Assert.assertFalse(featureViewModel.isError.get())
         callbackOnError.value.accept(Exception())
