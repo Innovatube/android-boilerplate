@@ -17,7 +17,7 @@ open class AppExecutors(
     @Inject
     constructor() : this(
         Executors.newSingleThreadExecutor(),
-        Executors.newFixedThreadPool(3),
+        Executors.newFixedThreadPool(DEFAULT_THREAD),
         MainThreadExecutor()
     )
 
@@ -38,5 +38,9 @@ open class AppExecutors(
         override fun execute(command: Runnable) {
             mainThreadHandler.post(command)
         }
+    }
+
+    companion object {
+        private const val DEFAULT_THREAD = 3
     }
 }
