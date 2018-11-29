@@ -2,12 +2,13 @@ package <%= package_name %>.util.ext
 
 import android.util.Patterns
 import java.text.SimpleDateFormat
-import java.util.*
+import java.util.Calendar
+import java.util.Date
+import java.util.Locale
 
 fun String.isEmailValid(): Boolean {
     return Patterns.EMAIL_ADDRESS.matcher(this).matches()
 }
-
 
 fun String.toAge(pattern: String = "yyyy-MM-dd", suffix: String = "歳"): String {
     val format = SimpleDateFormat(pattern, Locale.JAPAN)
@@ -22,14 +23,15 @@ fun String.toAge(pattern: String = "yyyy-MM-dd", suffix: String = "歳"): String
         }
 
         return age.toString() + suffix
-
     } catch (e: Exception) {
         e.printStackTrace()
         return suffix
     }
 }
 
-fun String.toDate(dateFormat: SimpleDateFormat
-                  = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.JAPAN)): Date {
+fun String.toDate(
+    dateFormat: SimpleDateFormat =
+        SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.JAPAN)
+): Date {
     return dateFormat.parse(this)
 }

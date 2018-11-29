@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Layout
+    absoluteFilePath="/Users/steve/android-boilerplate/app/src/main/res/layout/item_highlight.xml"
+    directory="layout" isMerge="false" layout="item_highlight"
+    modulePackage="com.innovatube.boilerplate">
+    <Variables name="like" declared="true" type="String">
+        <location endLine="8" endOffset="27" startLine="6" startOffset="8" />
+    </Variables>
+    <Variables name="review" declared="true" type="String">
+        <location endLine="12" endOffset="27" startLine="10" startOffset="8" />
+    </Variables>
+    <Targets>
+        <Target id="@+id/highLight" tag="layout/item_highlight_0" view="LinearLayout">
+            <Expressions />
+            <location endLine="104" endOffset="18" startLine="15" startOffset="4" />
+        </Target>
+        <Target tag="binding_1" view="TextView">
+            <Expressions>
+                <Expression attribute="android:text" text="like">
+                    <Location endLine="52" endOffset="37" startLine="52" startOffset="16" />
+                    <TwoWay>false</TwoWay>
+                    <ValueLocation endLine="52" endOffset="35" startLine="52" startOffset="32" />
+                </Expression>
+            </Expressions>
+            <location endLine="57" endOffset="41" startLine="48" startOffset="12" />
+        </Target>
+        <Target tag="binding_2" view="TextView">
+            <Expressions>
+                <Expression attribute="android:text" text="review">
+                    <Location endLine="97" endOffset="39" startLine="97" startOffset="16" />
+                    <TwoWay>false</TwoWay>
+                    <ValueLocation endLine="97" endOffset="37" startLine="97" startOffset="32" />
+                </Expression>
+            </Expressions>
+            <location endLine="102" endOffset="41" startLine="93" startOffset="12" />
+        </Target>
+    </Targets>
+</Layout>

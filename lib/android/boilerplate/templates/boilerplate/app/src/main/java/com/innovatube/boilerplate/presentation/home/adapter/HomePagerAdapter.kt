@@ -11,7 +11,11 @@ import <%= package_name %>.domain.model.Header.Type.TOP
 import <%= package_name %>.presentation.home.top.FeatureFragment
 import <%= package_name %>.presentation.home.top.TopFragment
 
-class HomePagerAdapter(private val context: Context?, fm: FragmentManager, private val fragmentTitles: List<Header>) : FragmentStatePagerAdapter(fm) {
+class HomePagerAdapter(
+    private val context: Context?,
+    fm: FragmentManager,
+    private val fragmentTitles: List<Header>
+) : FragmentStatePagerAdapter(fm) {
 
     override fun getItem(position: Int): Fragment {
         val header = fragmentTitles[getRealPosition(position)]
@@ -39,6 +43,4 @@ class HomePagerAdapter(private val context: Context?, fm: FragmentManager, priva
             FEATURE -> fragmentTitles[position % fragmentTitles.size].label
         }
     }
-
-
 }

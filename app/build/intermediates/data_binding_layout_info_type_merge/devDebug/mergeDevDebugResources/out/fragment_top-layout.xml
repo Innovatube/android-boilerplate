@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Layout absoluteFilePath="/Users/steve/android-boilerplate/app/src/main/res/layout/fragment_top.xml"
+    directory="layout" isMerge="false" layout="fragment_top"
+    modulePackage="com.innovatube.boilerplate">
+    <Variables name="viewModel" declared="true"
+        type="com.innovatube.boilerplate.presentation.home.top.TopViewModel">
+        <location endLine="9" endOffset="82" startLine="7" startOffset="8" />
+    </Variables>
+    <Imports name="View" type="android.view.View">
+        <location endLine="5" endOffset="42" startLine="5" startOffset="8" />
+    </Imports>
+    <Targets>
+        <Target id="@+id/content" tag="layout/fragment_top_0" view="RelativeLayout">
+            <Expressions />
+            <location endLine="53" endOffset="20" startLine="12" startOffset="4" />
+        </Target>
+        <Target tag="binding_1" view="android.support.design.widget.CoordinatorLayout">
+            <Expressions />
+            <location endLine="45" endOffset="57" startLine="18" startOffset="8" />
+        </Target>
+        <Target id="@+id/swipeRefreshLayout" tag="binding_2"
+            view="android.support.v4.widget.SwipeRefreshLayout">
+            <Expressions>
+                <Expression attribute="app:onRefreshListener" text="() -&gt; viewModel.onRefresh()">
+                    <Location endLine="27" endOffset="69" startLine="27" startOffset="16" />
+                    <TwoWay>false</TwoWay>
+                    <ValueLocation endLine="27" endOffset="67" startLine="27" startOffset="41" />
+                </Expression>
+                <Expression attribute="app:refreshing" text="viewModel.isLoading">
+                    <Location endLine="28" endOffset="54" startLine="28" startOffset="16" />
+                    <TwoWay>false</TwoWay>
+                    <ValueLocation endLine="28" endOffset="52" startLine="28" startOffset="34" />
+                </Expression>
+            </Expressions>
+            <location endLine="38" endOffset="58" startLine="22" startOffset="12" />
+        </Target>
+        <Target id="@+id/rvArticle" tag="binding_3" view="android.support.v7.widget.RecyclerView">
+            <Expressions>
+                <Expression attribute="android:visibility"
+                    text="viewModel.isError ? View.GONE : View.VISIBLE">
+                    <Location endLine="36" endOffset="87" startLine="36" startOffset="20" />
+                    <TwoWay>false</TwoWay>
+                    <ValueLocation endLine="36" endOffset="85" startLine="36" startOffset="42" />
+                </Expression>
+            </Expressions>
+            <location endLine="36" endOffset="90" startLine="30" startOffset="16" />
+        </Target>
+        <Target id="@+id/highLight" include="item_highlight" tag="binding_1">
+            <Expressions>
+                <Expression attribute="app:like" text="viewModel.like">
+                    <Location endLine="43" endOffset="43" startLine="43" startOffset="16" />
+                    <TwoWay>false</TwoWay>
+                    <ValueLocation endLine="43" endOffset="41" startLine="43" startOffset="28" />
+                </Expression>
+                <Expression attribute="app:review" text="viewModel.review">
+                    <Location endLine="44" endOffset="47" startLine="44" startOffset="16" />
+                    <TwoWay>false</TwoWay>
+                    <ValueLocation endLine="44" endOffset="45" startLine="44" startOffset="30" />
+                </Expression>
+            </Expressions>
+            <location endLine="44" endOffset="50" startLine="40" startOffset="12" />
+        </Target>
+        <Target include="view_error" tag="layout/fragment_top_0">
+            <Expressions>
+                <Expression attribute="app:callback" text="()-&gt;viewModel.onRefresh()">
+                    <Location endLine="49" endOffset="54" startLine="49" startOffset="12" />
+                    <TwoWay>false</TwoWay>
+                    <ValueLocation endLine="49" endOffset="52" startLine="49" startOffset="28" />
+                </Expression>
+                <Expression attribute="app:isError" text="viewModel.isError">
+                    <Location endLine="50" endOffset="45" startLine="50" startOffset="12" />
+                    <TwoWay>false</TwoWay>
+                    <ValueLocation endLine="50" endOffset="43" startLine="50" startOffset="27" />
+                </Expression>
+                <Expression attribute="app:message" text="@string/label_load_failed">
+                    <Location endLine="51" endOffset="53" startLine="51" startOffset="12" />
+                    <TwoWay>false</TwoWay>
+                    <ValueLocation endLine="51" endOffset="51" startLine="51" startOffset="27" />
+                </Expression>
+                <Expression attribute="app:paddingBottom" text="@dimen/ah_bottom_navigation_height">
+                    <Location endLine="52" endOffset="68" startLine="52" startOffset="12" />
+                    <TwoWay>false</TwoWay>
+                    <ValueLocation endLine="52" endOffset="66" startLine="52" startOffset="33" />
+                </Expression>
+            </Expressions>
+            <location endLine="52" endOffset="71" startLine="47" startOffset="8" />
+        </Target>
+    </Targets>
+</Layout>

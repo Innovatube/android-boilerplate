@@ -7,7 +7,6 @@ import android.widget.ImageView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 
-
 object ImageViewBindingAdapter {
     @BindingAdapter("app:imageUrl")
     @JvmStatic
@@ -15,7 +14,6 @@ object ImageViewBindingAdapter {
         if (url.isNullOrEmpty()) return
         Glide.with(view).load(url).into(view)
     }
-
 
     @BindingAdapter("app:imageUrl", "app:error")
     @JvmStatic

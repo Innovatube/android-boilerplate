@@ -8,16 +8,15 @@ import com.google.gson.annotations.SerializedName
 import <%= package_name %>.data.api.common.entity.LinksEntity
 import <%= package_name %>.data.repository.datasource.local.HeaderTypeConverter
 
-
 @Entity(tableName = "HeaderEntity")
 data class HeaderEntity(
-        @Ignore
-        @SerializedName("_links") var links: LinksEntity = LinksEntity(),
-        @TypeConverters(HeaderTypeConverter::class)
-        @SerializedName("article_features") var articleFeatures: List<ArticleFeatureEntity> = listOf(),
-        @SerializedName("review_count") var reviewCount: Long = 0,
-        @SerializedName("like_count") var likeCount: Long = 0,
-        @SerializedName("type") var type: String = "",
-        @PrimaryKey(autoGenerate = true)
-        var uid: Long = 0
+    @Ignore
+    @SerializedName("_links") var links: LinksEntity = LinksEntity(),
+    @TypeConverters(HeaderTypeConverter::class)
+    @SerializedName("article_features") var articleFeatures: List<ArticleFeatureEntity> = listOf(),
+    @SerializedName("review_count") var reviewCount: Long = 0,
+    @SerializedName("like_count") var likeCount: Long = 0,
+    @SerializedName("type") var type: String = "",
+    @PrimaryKey(autoGenerate = true)
+    var uid: Long = 0
 )

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Layout absoluteFilePath="/Users/steve/android-boilerplate/app/src/main/res/layout/view_error.xml"
+    directory="layout" isMerge="false" layout="view_error"
+    modulePackage="com.innovatube.boilerplate">
+    <Variables name="callback" declared="true"
+        type="com.innovatube.boilerplate.presentation.common.RefreshListener">
+        <location endLine="10" endOffset="83" startLine="8" startOffset="8" />
+    </Variables>
+    <Variables name="isError" declared="true" type="Boolean">
+        <location endLine="14" endOffset="28" startLine="12" startOffset="8" />
+    </Variables>
+    <Variables name="paddingBottom" declared="true" type="Float">
+        <location endLine="18" endOffset="26" startLine="16" startOffset="8" />
+    </Variables>
+    <Variables name="message" declared="true" type="String">
+        <location endLine="22" endOffset="27" startLine="20" startOffset="8" />
+    </Variables>
+    <Imports name="View" type="android.view.View">
+        <location endLine="6" endOffset="42" startLine="6" startOffset="8" />
+    </Imports>
+    <Targets>
+        <Target tag="layout/view_error_0" view="FrameLayout">
+            <Expressions>
+                <Expression attribute="android:paddingBottom" text="paddingBottom">
+                    <Location endLine="32" endOffset="47" startLine="32" startOffset="8" />
+                    <TwoWay>false</TwoWay>
+                    <ValueLocation endLine="32" endOffset="45" startLine="32" startOffset="33" />
+                </Expression>
+                <Expression attribute="android:visibility"
+                    text="isError ? View.VISIBLE : View.GONE, default = gone">
+                    <Location endLine="33" endOffset="81" startLine="33" startOffset="8" />
+                    <TwoWay>false</TwoWay>
+                    <ValueLocation endLine="33" endOffset="79" startLine="33" startOffset="30" />
+                </Expression>
+            </Expressions>
+            <location endLine="69" endOffset="17" startLine="26" startOffset="4" />
+        </Target>
+        <Target tag="binding_1" view="TextView">
+            <Expressions>
+                <Expression attribute="android:text" text="message">
+                    <Location endLine="50" endOffset="36" startLine="50" startOffset="12" />
+                    <TwoWay>false</TwoWay>
+                    <ValueLocation endLine="50" endOffset="34" startLine="50" startOffset="28" />
+                </Expression>
+            </Expressions>
+            <location endLine="52" endOffset="37" startLine="44" startOffset="8" />
+        </Target>
+        <Target id="@+id/errorLayout" tag="binding_2" view="Button">
+            <Expressions>
+                <Expression attribute="android:onClick" text="() -&gt; callback.onRefresh()">
+                    <Location endLine="65" endOffset="58" startLine="65" startOffset="12" />
+                    <TwoWay>false</TwoWay>
+                    <ValueLocation endLine="65" endOffset="56" startLine="65" startOffset="31" />
+                </Expression>
+            </Expressions>
+            <location endLine="68" endOffset="37" startLine="54" startOffset="8" />
+        </Target>
+    </Targets>
+</Layout>

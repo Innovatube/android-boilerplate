@@ -12,6 +12,5 @@ class HeaderMapper @Inject constructor() {
             headers.add(Header(entity))
         }
         return headers
-
     }
 }

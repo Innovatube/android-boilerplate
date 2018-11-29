@@ -33,6 +33,7 @@
                 android:id="@+id/img_article"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:contentDescription="TODO"
                 android:scaleType="centerCrop"
                 app:error="@{@drawable/innovatube}"
                 app:imageUrl="@{article.thumbnailImageUrl}" />
@@ -41,6 +42,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
+                android:contentDescription="TODO"
                 android:scaleType="fitXY"
                 android:src="@drawable/gradient_background" />
 
@@ -56,8 +58,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:lineSpacingExtra="5sp"
-                    android:paddingEnd="16dp"
                     android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
                     android:shadowColor="@color/header_gradient"
                     android:shadowDy="1"
                     android:shadowRadius="2"
@@ -72,8 +74,8 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
                     android:minHeight="35dp"
-                    android:paddingEnd="16dp"
-                    android:paddingStart="16dp">
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp">
 
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:layout_width="24dp"
@@ -85,8 +87,8 @@
                     <android.support.v7.widget.AppCompatTextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="20dp"
                         android:layout_marginStart="8dp"
+                        android:layout_marginEnd="20dp"
                         android:layout_weight="1"
                         android:gravity="center_vertical"
                         android:maxLines="2"
@@ -107,6 +109,7 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:contentDescription="TODO"
                             android:src="@drawable/icon_like_cover" />
 
                         <TextView

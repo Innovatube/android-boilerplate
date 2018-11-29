@@ -11,22 +11,20 @@ import <%= package_name %>.databinding.ItemHomeBinding
 import <%= package_name %>.domain.model.Article
 import <%= package_name %>.presentation.base.DataBoundListAdapter
 
-
 class FeatureArticleAdapter(
-        appExecutors: AppExecutors,
-        private val onItemClick: ((Article) -> Unit)?
+    appExecutors: AppExecutors,
+    private val onItemClick: ((Article) -> Unit)?
 ) : DataBoundListAdapter<Article, ItemHomeBinding>(
-        appExecutors,
-        diffCallback = object : DiffUtil.ItemCallback<Article>() {
-            override fun areContentsTheSame(oldItem: Article, newItem: Article): Boolean {
-                return oldItem == newItem
-            }
-
-            override fun areItemsTheSame(oldItem: Article, newItem: Article): Boolean {
-                return oldItem == newItem
-            }
-
+    appExecutors,
+    diffCallback = object : DiffUtil.ItemCallback<Article>() {
+        override fun areContentsTheSame(oldItem: Article, newItem: Article): Boolean {
+            return oldItem == newItem
         }
+
+        override fun areItemsTheSame(oldItem: Article, newItem: Article): Boolean {
+            return oldItem == newItem
+        }
+    }
 ) {
     override fun createBinding(parent: ViewGroup, viewType: Int): ItemHomeBinding {
         val layoutInflater = LayoutInflater.from(parent.context)

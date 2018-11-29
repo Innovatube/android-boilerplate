@@ -19,16 +19,17 @@ class FeatureViewModel @Inject constructor(private val useCase: GetFeatureArticl
         this.featureArticleId = featureArticleId
         isLoading.set(true)
         useCase.execute(
-                Consumer {
-                    this.articles.value = it
-                    this.isLoading.set(false)
-                    this.isError.set(false)
-                },
-                Consumer {
-                    Timber.e(it.localizedMessage)
-                    this.isLoading.set(false)
-                    this.isError.set(true)
-                }, GetFeatureArticlesUseCase.Param(featureArticleId, page))
+            Consumer {
+                this.articles.value = it
+                this.isLoading.set(false)
+                this.isError.set(false)
+            },
+            Consumer {
+                Timber.e(it.localizedMessage)
+                this.isLoading.set(false)
+                this.isError.set(true)
+            }, GetFeatureArticlesUseCase.Param(featureArticleId, page)
+        )
     }
 
     fun onRefresh() {
@@ -36,5 +37,4 @@ class FeatureViewModel @Inject constructor(private val useCase: GetFeatureArticl
         this.articles.value = emptyList()
         loadArticles(featureArticleId)
     }
-
 }

@@ -9,16 +9,16 @@ import javax.inject.Singleton
 
 @Singleton
 open class AppExecutors(
-        private val diskIO: Executor,
-        private val networkIO: Executor,
-        private val mainThread: Executor
+    private val diskIO: Executor,
+    private val networkIO: Executor,
+    private val mainThread: Executor
 ) {
 
     @Inject
     constructor() : this(
-            Executors.newSingleThreadExecutor(),
-            Executors.newFixedThreadPool(3),
-            MainThreadExecutor()
+        Executors.newSingleThreadExecutor(),
+        Executors.newFixedThreadPool(DEFAULT_THREAD),
+        MainThreadExecutor()
     )
 
     fun diskIO(): Executor {
@@ -38,5 +38,9 @@ open class AppExecutors(
         override fun execute(command: Runnable) {
             mainThreadHandler.post(command)
         }
+    }
+
+    companion object {
+        private const val DEFAULT_THREAD = 3
     }
 }

@@ -7,5 +7,4 @@ abstract class BaseFragment : Fragment() {
     val component by lazy {
         (activity as BaseActivity).component.plus(FragmentModule(this))
     }
-
 }

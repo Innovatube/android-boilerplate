@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Layout
+    absoluteFilePath="/Users/steve/android-boilerplate/app/src/main/res/layout/item_home_header.xml"
+    directory="layout" isMerge="false" layout="item_home_header"
+    modulePackage="com.innovatube.boilerplate">
+    <Variables name="article" declared="true"
+        type="com.innovatube.boilerplate.domain.model.Article">
+        <location endLine="9" endOffset="68" startLine="7" startOffset="8" />
+    </Variables>
+    <Targets>
+        <Target tag="layout/item_home_header_0" view="LinearLayout">
+            <Expressions />
+            <location endLine="129" endOffset="18" startLine="12" startOffset="4" />
+        </Target>
+        <Target id="@+id/img_article" tag="binding_1" view="ImageView">
+            <Expressions>
+                <Expression attribute="app:error" text="@drawable/innovatube">
+                    <Location endLine="37" endOffset="50" startLine="37" startOffset="16" />
+                    <TwoWay>false</TwoWay>
+                    <ValueLocation endLine="37" endOffset="48" startLine="37" startOffset="29" />
+                </Expression>
+                <Expression attribute="app:imageUrl" text="article.thumbnailImageUrl">
+                    <Location endLine="38" endOffset="58" startLine="38" startOffset="16" />
+                    <TwoWay>false</TwoWay>
+                    <ValueLocation endLine="38" endOffset="56" startLine="38" startOffset="32" />
+                </Expression>
+            </Expressions>
+            <location endLine="38" endOffset="61" startLine="31" startOffset="12" />
+        </Target>
+        <Target tag="binding_2" view="TextView">
+            <Expressions>
+                <Expression attribute="android:text" text="article.title">
+                    <Location endLine="65" endOffset="50" startLine="65" startOffset="20" />
+                    <TwoWay>false</TwoWay>
+                    <ValueLocation endLine="65" endOffset="48" startLine="65" startOffset="36" />
+                </Expression>
+            </Expressions>
+            <location endLine="68" endOffset="46" startLine="56" startOffset="16" />
+        </Target>
+        <Target tag="binding_3" view="de.hdodenhof.circleimageview.CircleImageView">
+            <Expressions>
+                <Expression attribute="app:error" text="@drawable/innovatube">
+                    <Location endLine="82" endOffset="58" startLine="82" startOffset="24" />
+                    <TwoWay>false</TwoWay>
+                    <ValueLocation endLine="82" endOffset="56" startLine="82" startOffset="37" />
+                </Expression>
+                <Expression attribute="app:imageUrl" text="article.contributor.imageUrl">
+                    <Location endLine="83" endOffset="69" startLine="83" startOffset="24" />
+                    <TwoWay>false</TwoWay>
+                    <ValueLocation endLine="83" endOffset="67" startLine="83" startOffset="40" />
+                </Expression>
+            </Expressions>
+            <location endLine="84" endOffset="58" startLine="79" startOffset="20" />
+        </Target>
+        <Target tag="binding_4" view="android.support.v7.widget.AppCompatTextView">
+            <Expressions>
+                <Expression attribute="android:text"
+                    text="article.contributor.name + article.preSlashJobTitle() + article.preSlashAffiliation()">
+                    <Location endLine="95" endOffset="126" startLine="95" startOffset="24" />
+                    <TwoWay>false</TwoWay>
+                    <ValueLocation endLine="95" endOffset="124" startLine="95" startOffset="40" />
+                </Expression>
+            </Expressions>
+            <location endLine="98" endOffset="48" startLine="86" startOffset="20" />
+        </Target>
+        <Target tag="binding_5" view="TextView">
+            <Expressions>
+                <Expression attribute="android:text" text="String.valueOf(article.likeCount)">
+                    <Location endLine="119" endOffset="78" startLine="119" startOffset="28" />
+                    <TwoWay>false</TwoWay>
+                    <ValueLocation endLine="119" endOffset="76" startLine="119" startOffset="44" />
+                </Expression>
+            </Expressions>
+            <location endLine="123" endOffset="46" startLine="114" startOffset="24" />
+        </Target>
+        <Target id="@+id/rl_container" view="FrameLayout">
+            <Expressions />
+            <location endLine="128" endOffset="21" startLine="24" startOffset="8" />
+        </Target>
+        <Target id="@+id/layoutProfile" view="LinearLayout">
+            <Expressions />
+            <location endLine="127" endOffset="26" startLine="48" startOffset="12" />
+        </Target>
+        <Target id="@+id/ln_share" view="LinearLayout">
+            <Expressions />
+            <location endLine="124" endOffset="34" startLine="101" startOffset="20" />
+        </Target>
+    </Targets>
+</Layout>

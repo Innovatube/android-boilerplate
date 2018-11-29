@@ -15,13 +15,11 @@ class GetHeadersUseCaseTest : UnitTest() {
     @Mock
     private lateinit var testSchedulerProvider: TestSchedulerProvider
 
-
     @Before
     @Throws(Exception::class)
     fun setup() {
         getHeadersUseCase = GetHeadersUseCase(testSchedulerProvider, headerRepository)
     }
-
 
     @Test
     fun testGetHeadersSuccess() {
@@ -29,8 +27,5 @@ class GetHeadersUseCaseTest : UnitTest() {
         Mockito.verify<HeaderRepository>(headerRepository).headers()
         Mockito.verifyNoMoreInteractions(headerRepository)
         Mockito.verifyZeroInteractions(testSchedulerProvider)
-
     }
-
-
 }

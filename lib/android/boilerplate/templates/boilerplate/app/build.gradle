@@ -7,6 +7,11 @@ apply plugin: 'deploygate'
 apply plugin: 'jacoco'
 // For Sonarqube
 apply plugin: 'org.sonarqube'
+apply plugin: "io.gitlab.arturbosch.detekt"
+//apply plugin: "io.gitlab.arturbosch.detekt"
+//apply plugin: "org.jlleitschuh.gradle.ktlint"
+apply from: '../gradle/findbugs.gradle'
+apply from: '../gradle/ktlint.gradle'
 
 sonarqube {
     properties {
@@ -124,6 +129,13 @@ android {
             }
         }
     }
+
+    android {
+        lintOptions {
+            xmlReport true
+            abortOnError false
+        }
+    }
 }
 
 dependencies {
@@ -131,7 +143,7 @@ dependencies {
 
     // kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.core:core-ktx:0.3'
+    //implementation 'androidx.core:core-ktx:1.0.0'
 
     // Support Library
     implementation "com.android.support:appcompat-v7:$rootProject.support_lib_version"
@@ -175,14 +187,14 @@ dependencies {
     testImplementation "org.robolectric:robolectric:3.8"
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    testImplementation 'com.squareup.okhttp3:mockwebserver:3.9.1'
+    testImplementation 'com.squareup.okhttp3:mockwebserver:3.10.0'
     testImplementation "android.arch.core:core-testing:1.1.1"
 
     implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
 
     implementation "android.arch.persistence.room:runtime:$rootProject.room_version"
     kapt "android.arch.persistence.room:compiler:$rootProject.room_version"
-    implementation 'com.blankj:utilcode:1.16.0'
+    implementation 'com.blankj:utilcode:1.21.2'
     implementation "android.arch.persistence.room:rxjava2:$rootProject.room_version"
 
 
@@ -196,11 +208,37 @@ dependencies {
     implementation 'com.github.clans:fab:1.6.4'
 
     //App Inspection Tool
-    debugImplementation 'com.willowtreeapps.hyperion:hyperion-core:0.9.24'
-    debugImplementation 'com.willowtreeapps.hyperion:hyperion-attr:0.9.24'
-    debugImplementation 'com.willowtreeapps.hyperion:hyperion-measurement:0.9.24'
-    debugImplementation 'com.willowtreeapps.hyperion:hyperion-crash:0.9.24'
-    debugImplementation 'com.willowtreeapps.hyperion:hyperion-recorder:0.9.24'
-    debugImplementation 'com.willowtreeapps.hyperion:hyperion-phoenix:0.9.24'
+    debugImplementation "com.github.Innovatube.Hyperion-Android:hyperion-core:v$rootProject.hyperion_version"
+    debugImplementation "com.github.Innovatube.Hyperion-Android:hyperion-attr:v$rootProject.hyperion_version"
+    debugImplementation "com.github.Innovatube.Hyperion-Android:hyperion-measurement:v$rootProject.hyperion_version"
+    debugImplementation "com.github.Innovatube.Hyperion-Android:hyperion-disk:v$rootProject.hyperion_version"
+    debugImplementation "com.github.Innovatube.Hyperion-Android:hyperion-recorder:v$rootProject.hyperion_version"
+    debugImplementation "com.github.Innovatube.Hyperion-Android:hyperion-phoenix:v$rootProject.hyperion_version"
+    debugImplementation "com.github.Innovatube.Hyperion-Android:hyperion-crash:v$rootProject.hyperion_version"
+    debugImplementation "com.github.Innovatube.Hyperion-Android:hyperion-shared-preferences:v$rootProject.hyperion_version"
+    debugImplementation "com.github.Innovatube.Hyperion-Android:hyperion-geiger-counter:v$rootProject.hyperion_version"
+    debugImplementation "com.github.Innovatube.Hyperion-Android:hyperion-timber:v$rootProject.hyperion_version"
+    debugImplementation "com.github.Innovatube.Hyperion-Android:hyperion-build-config:v$rootProject.hyperion_version"
+
 }
+
+
+detekt {
+    version = "1.0.0.RC8"
+    profile("main") {
+        input = "$projectDir"
+        config = "$project.rootDir/app/detekt-config.yml"
+        filters = ".*test.*,.*/resources/.*,.*/tmp/.*"
+        output = "${project.buildDir}/reports/detekt"
+        parallel = true
+        disableDefaultRuleSets = false
+
+    }
+}
+
+
+
+
+
+
 

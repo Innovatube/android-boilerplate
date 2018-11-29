@@ -3,18 +3,17 @@ package <%= package_name %>.domain.model
 import android.os.Parcel
 import android.os.Parcelable
 
-
 data class Salon(
-        val id: String,
-        val name: String,
-        val address: String = "",
-        val url: String = ""
+    val id: String,
+    val name: String,
+    val address: String = "",
+    val url: String = ""
 ) : Parcelable {
     constructor(source: Parcel) : this(
-            source.readString(),
-            source.readString(),
-            source.readString(),
-            source.readString()
+        source.readString(),
+        source.readString(),
+        source.readString(),
+        source.readString()
 
     )
 

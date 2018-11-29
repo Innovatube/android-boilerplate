@@ -39,6 +39,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="194dp"
+            android:contentDescription="TODO"
             android:src="@drawable/icon_error" />
 
         <TextView
@@ -56,12 +57,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="10dp"
             android:layout_marginTop="277dp"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/rounded_corner_button_border"
             android:gravity="center"
-            android:minHeight="38dp"
             android:minWidth="120dp"
+            android:minHeight="38dp"
             android:onClick="@{() -> callback.onRefresh()}"
             android:text="@string/label_retry"
             android:textColor="@color/colorAccent"

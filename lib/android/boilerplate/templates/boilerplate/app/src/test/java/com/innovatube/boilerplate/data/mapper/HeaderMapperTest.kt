@@ -14,7 +14,8 @@ import io.reactivex.Flowable
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
 import org.junit.After
-import org.junit.Assert.*
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertNotNull
 import org.junit.Before
 import org.junit.Test
 import org.mockito.Mock
@@ -33,7 +34,6 @@ class HeaderMapperTest : MockServerTest() {
     @Mock
     private lateinit var headerEntity: HeaderEntity
 
-
     @Before
     fun setUp() {
         mockWebServer = MockWebServer()
@@ -42,9 +42,9 @@ class HeaderMapperTest : MockServerTest() {
         headerMapper = HeaderMapper()
         headerRemoteDataSource = HeaderRemoteDataSource(homeApi)
         headerLocalDataSource = HeaderLocalDataSource(dao)
-        repository = HeaderDataRepository(headerRemoteDataSource, headerLocalDataSource, headerMapper)
+        repository =
+                HeaderDataRepository(headerRemoteDataSource, headerLocalDataSource, headerMapper)
     }
-
 
     @After
     @Throws(Exception::class)
@@ -58,9 +58,9 @@ class HeaderMapperTest : MockServerTest() {
         val dummy = TestUtils.getStringFromPath(this, "success_headers.json")
 
         val mockResponse = MockResponse()
-                .setResponseCode(200)
-                .setHeader("Content-Type", "application/json")
-                .setBody(dummy)
+            .setResponseCode(200)
+            .setHeader("Content-Type", "application/json")
+            .setBody(dummy)
         mockWebServer.enqueue(mockResponse)
 
         val result = repository.headers().blockingFirst()

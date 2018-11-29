@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Layout
+    absoluteFilePath="/Users/steve/android-boilerplate/app/src/main/res/layout/fragment_feature.xml"
+    directory="layout" isMerge="false" layout="fragment_feature"
+    modulePackage="com.innovatube.boilerplate">
+    <Variables name="viewModel" declared="true"
+        type="com.innovatube.boilerplate.presentation.home.top.FeatureViewModel">
+        <location endLine="9" endOffset="86" startLine="7" startOffset="8" />
+    </Variables>
+    <Imports name="View" type="android.view.View">
+        <location endLine="5" endOffset="42" startLine="5" startOffset="8" />
+    </Imports>
+    <Targets>
+        <Target tag="layout/fragment_feature_0" view="RelativeLayout">
+            <Expressions />
+            <location endLine="72" endOffset="20" startLine="12" startOffset="4" />
+        </Target>
+        <Target id="@+id/swipeRefreshLayout" tag="binding_1"
+            view="android.support.v4.widget.SwipeRefreshLayout">
+            <Expressions>
+                <Expression attribute="app:onRefreshListener" text="() -&gt; viewModel.onRefresh()">
+                    <Location endLine="22" endOffset="65" startLine="22" startOffset="12" />
+                    <TwoWay>false</TwoWay>
+                    <ValueLocation endLine="22" endOffset="63" startLine="22" startOffset="37" />
+                </Expression>
+                <Expression attribute="app:refreshing" text="viewModel.isLoading">
+                    <Location endLine="23" endOffset="50" startLine="23" startOffset="12" />
+                    <TwoWay>false</TwoWay>
+                    <ValueLocation endLine="23" endOffset="48" startLine="23" startOffset="30" />
+                </Expression>
+            </Expressions>
+            <location endLine="34" endOffset="54" startLine="17" startOffset="8" />
+        </Target>
+        <Target id="@+id/rvArticle" tag="binding_2" view="android.support.v7.widget.RecyclerView">
+            <Expressions>
+                <Expression attribute="android:visibility"
+                    text="viewModel.isError ? View.GONE : View.VISIBLE">
+                    <Location endLine="31" endOffset="83" startLine="31" startOffset="16" />
+                    <TwoWay>false</TwoWay>
+                    <ValueLocation endLine="31" endOffset="81" startLine="31" startOffset="38" />
+                </Expression>
+            </Expressions>
+            <location endLine="31" endOffset="86" startLine="25" startOffset="12" />
+        </Target>
+        <Target tag="binding_3" view="LinearLayout">
+            <Expressions>
+                <Expression attribute="android:visibility"
+                    text="viewModel.isError ? View.VISIBLE : View.GONE, default = gone">
+                    <Location endLine="42" endOffset="95" startLine="42" startOffset="12" />
+                    <TwoWay>false</TwoWay>
+                    <ValueLocation endLine="42" endOffset="93" startLine="42" startOffset="34" />
+                </Expression>
+            </Expressions>
+            <location endLine="71" endOffset="22" startLine="36" startOffset="8" />
+        </Target>
+        <Target id="@+id/errorLayout" tag="binding_4" view="Button">
+            <Expressions>
+                <Expression attribute="android:onClick" text="() -&gt; viewModel.onRefresh()">
+                    <Location endLine="67" endOffset="63" startLine="67" startOffset="16" />
+                    <TwoWay>false</TwoWay>
+                    <ValueLocation endLine="67" endOffset="61" startLine="67" startOffset="35" />
+                </Expression>
+            </Expressions>
+            <location endLine="70" endOffset="55" startLine="60" startOffset="12" />
+        </Target>
+    </Targets>
+</Layout>

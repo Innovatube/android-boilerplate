@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Layout
+    absoluteFilePath="/Users/steve/android-boilerplate/app/src/main/res/layout/activity_main.xml"
+    directory="layout" isMerge="false" layout="activity_main"
+    modulePackage="com.innovatube.boilerplate">
+    <Variables name="viewModel" declared="true"
+        type="com.innovatube.boilerplate.presentation.main.MainViewModel">
+        <location endLine="10" endOffset="79" startLine="8" startOffset="8" />
+    </Variables>
+    <Variables name="header" declared="true"
+        type="com.innovatube.boilerplate.presentation.main.MainHeaderViewModel">
+        <location endLine="14" endOffset="85" startLine="12" startOffset="8" />
+    </Variables>
+    <Targets>
+        <Target tag="layout/activity_main_0" view="RelativeLayout">
+            <Expressions />
+            <location endLine="103" endOffset="20" startLine="17" startOffset="4" />
+        </Target>
+        <Target id="@+id/navigationLayout" view="android.support.design.widget.AppBarLayout">
+            <Expressions />
+            <location endLine="42" endOffset="56" startLine="27" startOffset="12" />
+        </Target>
+        <Target id="@+id/toolbar" view="android.support.v7.widget.Toolbar">
+            <Expressions />
+            <location endLine="40" endOffset="67" startLine="34" startOffset="16" />
+        </Target>
+        <Target id="@+id/mainContent" view="FrameLayout">
+            <Expressions />
+            <location endLine="49" endOffset="78" startLine="44" startOffset="12" />
+        </Target>
+        <Target id="@+id/fabMenu" view="com.github.clans.fab.FloatingActionMenu">
+            <Expressions />
+            <location endLine="102" endOffset="49" startLine="53" startOffset="8" />
+        </Target>
+        <Target id="@+id/fabCamera" view="com.github.clans.fab.FloatingActionButton">
+            <Expressions />
+            <location endLine="81" endOffset="37" startLine="73" startOffset="12" />
+        </Target>
+        <Target id="@+id/fabEdit" view="com.github.clans.fab.FloatingActionButton">
+            <Expressions />
+            <location endLine="90" endOffset="37" startLine="83" startOffset="12" />
+        </Target>
+        <Target id="@+id/fabComment" view="com.github.clans.fab.FloatingActionButton">
+            <Expressions />
+            <location endLine="100" endOffset="37" startLine="92" startOffset="12" />
+        </Target>
+    </Targets>
+</Layout>

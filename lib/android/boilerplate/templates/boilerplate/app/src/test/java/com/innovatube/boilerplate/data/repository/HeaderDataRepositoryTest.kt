@@ -30,10 +30,10 @@ class HeaderDataRepositoryTest : UnitTest() {
     private lateinit var listHeadersWithoutFeatureArticles: List<Header>
     private lateinit var headerEntity: HeaderEntity
 
-
     @Before
     fun setup() {
-        headerRepository = HeaderDataRepository(headerLocalDataSource, headerRemoteDataSource, headerMapper)
+        headerRepository =
+                HeaderDataRepository(headerLocalDataSource, headerRemoteDataSource, headerMapper)
     }
 
     @Before
@@ -46,16 +46,19 @@ class HeaderDataRepositoryTest : UnitTest() {
         listHeaders = listOf(top, feature)
     }
 
-
     private fun setHeadersNotAvailable(dataSource: HeaderDataStore) {
         BDDMockito.given(dataSource.headers()).willReturn(Flowable.error(Error("Not available")))
     }
 
-    private fun setHeadersAvailable(dataSource: HeaderDataStore, headerEntity: HeaderEntity? = null) {
+    private fun setHeadersAvailable(
+        dataSource: HeaderDataStore,
+        headerEntity: HeaderEntity? = null
+    ) {
         if (headerEntity == null) {
             BDDMockito.given(dataSource.headers()).willReturn(Flowable.never())
         } else {
-            BDDMockito.given(dataSource.headers()).willReturn(Flowable.just(headerEntity).concatWith(Flowable.never()))
+            BDDMockito.given(dataSource.headers())
+                .willReturn(Flowable.just(headerEntity).concatWith(Flowable.never()))
         }
     }
 
@@ -95,7 +98,6 @@ class HeaderDataRepositoryTest : UnitTest() {
         testObserver.assertValue(listHeaders)
     }
 
-
     @Test
     fun getHeaders_fromRemoteDataSourceOnly() {
         setHeadersAvailable(headerRemoteDataSource, headerEntity)
@@ -123,7 +125,6 @@ class HeaderDataRepositoryTest : UnitTest() {
         Mockito.verify(headerLocalDataSource).headers()
         Mockito.verify(headerLocalDataSource).save(headerEntity)
         Mockito.verify(headerMapper).transform(listOfEntity)
-
     }
 
     @Test

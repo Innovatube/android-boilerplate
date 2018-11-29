@@ -7,7 +7,6 @@ import io.reactivex.Flowable
 
 interface HeaderRepository {
 
-
     fun headers(): Flowable<List<Header>>
 
     fun save(headerEntity: HeaderEntity)

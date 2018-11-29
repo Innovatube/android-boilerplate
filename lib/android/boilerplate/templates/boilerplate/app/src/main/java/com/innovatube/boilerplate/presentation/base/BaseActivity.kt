@@ -6,7 +6,6 @@ import <%= package_name %>.InnovatubeApplication
 import <%= package_name %>.util.di.components.ActivityComponent
 import <%= package_name %>.util.di.modules.ActivityModule
 
-
 abstract class BaseActivity : AppCompatActivity() {
 
     val component: ActivityComponent by lazy {

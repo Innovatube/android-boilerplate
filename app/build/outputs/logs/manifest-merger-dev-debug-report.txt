@@ -1,0 +1,534 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml:2:1-28:12
+MERGED from [com.android.databinding:adapters:3.2.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/adapters-3.2.1.aar/83289b868d685f84a3533ef164ed15f8/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.databinding:library:3.2.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/library-3.2.1.aar/cec0116d72781357da6cd0baffc58171/AndroidManifest.xml:17:1-24:12
+MERGED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/steve/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.4.aar/8a57d176f5810d90d6a83360b51ea6fb/AndroidManifest.xml:17:1-61:12
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-core:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-core-v0.9.24.aar/3facf1c1afede69ce52fc3caa8ad383c/AndroidManifest.xml:2:1-22:12
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-attr:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-attr-v0.9.24.aar/c73c64e3262733f7bc40299117ed6b9c/AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-measurement:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-measurement-v0.9.24.aar/fd8165051eee45b0f56c656e60754f57/AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-disk:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-disk-v0.9.24.aar/f1dac70a785055c9293a068f022d1996/AndroidManifest.xml:2:1-27:12
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-recorder:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-recorder-v0.9.24.aar/64efed0e0a70ea4af2635fef7472de4e/AndroidManifest.xml:2:1-25:12
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-phoenix:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-phoenix-v0.9.24.aar/80fb9daac764482d00b93529e190950f/AndroidManifest.xml:2:1-18:12
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-crash:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-crash-v0.9.24.aar/9035879200f3ad0ed6745d2de2153290/AndroidManifest.xml:2:1-20:12
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-shared-preferences:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-shared-preferences-v0.9.24.aar/b4da1cbc97b792be7ef8da5b1196cd4c/AndroidManifest.xml:2:1-22:12
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-geiger-counter:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-geiger-counter-v0.9.24.aar/4847d64d5fbd20b17499ec92d961f3cf/AndroidManifest.xml:2:1-13:12
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-timber:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-timber-v0.9.24.aar/b4f41e752e83d544b8fbd3b9ad3d7b85/AndroidManifest.xml:2:1-18:12
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-build-config:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-build-config-v0.9.24.aar/225fba2f7280b0e0ade46fe4977a7bf2/AndroidManifest.xml:2:1-18:12
+MERGED from [com.afollestad.material-dialogs:core:0.9.6.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/core-0.9.6.0.aar/83b4b27a8c3bdae39f3ea11744ada3d5/AndroidManifest.xml:2:1-15:12
+MERGED from [me.zhanghai.android.materialprogressbar:library:1.4.2] /Users/steve/.gradle/caches/transforms-1/files-1.1/library-1.4.2.aar/6ef0e4ab8aa93f17d798c6e9c55a87af/AndroidManifest.xml:6:1-16:12
+MERGED from [com.android.support:design:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/3fdf3d1536bcaf063df830f6a8c199ae/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/109faafc2a6fb8a08c13473a4b83be74/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-v4:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/30c4d1c0f32ab05896ad732eda6fcfd3/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/783cf9433689321d8e4f92bf5dd7747f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/d4b32cd605ee47779576ec7e48075852/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:exifinterface:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/exifinterface-28.0.0.aar/a708269df5bc837caaa1bc0d487afb2c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customtabs:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/customtabs-28.0.0.aar/a824cef81dff418f88841e2c2e1753b6/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/e7b38e7efef6c3eda82d70251ffb75b8/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/787e460f5ea23d9efda6440a55773399/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:extensions:1.1.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/extensions-1.1.1.aar/0aa923b18fe1c9f13f85df06a073be97/AndroidManifest.xml:17:1-30:12
+MERGED from [jp.wasabeef:glide-transformations:3.3.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/glide-transformations-3.3.0.aar/799f45cfdb6c07cf09ae3df11b403faa/AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.bumptech.glide:glide:4.8.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/glide-4.8.0.aar/51ec9208303153d61182ea6ae818656d/AndroidManifest.xml:2:1-12:12
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/6b63d7a43fb6dcc2dcdca5550d89c14e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/9e5f17dd231edd524cdbc9ddcc9a99fb/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/a11783d40704a3267cccb51f2e6e293f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/5d232dfe726eca8ce67af887f5e84e38/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/7c09e815c8dad08f50b9fb68f02709ea/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/d2998822a31c3fc0cf1a07d9137b2e0a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/065bdd25d15b16e77c7c5382a342cc8e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/094add31b8071b214ea774f79f1ab024/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/7e4cb8a995600c7ff17697f77f0b2c2a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/35212e2a41e706e0b67e8ac659a446d8/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/6f61e46aae4e3530fb4106a00f26897b/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.persistence.room:rxjava2:1.1.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/rxjava2-1.1.1.aar/5849ea87b3957a018c54fac9d480c6a4/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.persistence.room:runtime:1.1.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/cf131cfa67b795d63e925039af559ebd/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/e11f623b25d2fad80cd8324aa870bbf6/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/d8061b3a1cb35732ff56060e2cdfb326/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/a8ca93a9b490513ef72fa06e5ab4ac2d/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:interpolator:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/0242341066821ff0cb3817a3c9cbf296/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/226e92bb7513ab1d9be810603475e630/AndroidManifest.xml:17:1-25:12
+MERGED from [android.arch.persistence:db-framework:1.1.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/db-framework-1.1.1.aar/00b2a39ba9497907f80626b4380eeb50/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.persistence:db:1.1.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/db-1.1.1.aar/100007a6fe58552497e5e82b736e11f4/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/a02efcfaa3ca4e455e13c2370ee95ed7/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/35926ae42e9cda3593c5da5c2a82b52f/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/c3c0f2ab2f275737868eb093e51560b3/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/dd4391a2b2a0d5e3eb0c2abbd27b05e1/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/aab0d789525df192952d113c3240be06/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/6a7301bc8739b026e927c6e846da4815/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/8b99a56c96fe309ac3f5545b95f33b1a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/d961287785ec9a4564a1bdbaf62b9e13/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/5cf61a7f9694387ddc54b5d1b4e02611/AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.8.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.8.0.aar/ca10913fbd80cfa3f78da5c120f3878f/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:multidex:1.0.3] /Users/steve/.gradle/caches/transforms-1/files-1.1/multidex-1.0.3.aar/4c2e3282f5f7df43f8e00bd7760f220e/AndroidManifest.xml:17:1-22:12
+MERGED from [io.reactivex.rxjava2:rxandroid:2.1.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/rxandroid-2.1.0.aar/b64501bddd56daacc0b62c21bfaae303/AndroidManifest.xml:15:1-20:12
+MERGED from [com.orhanobut:hawk:2.0.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/hawk-2.0.1.aar/41f3c8b8966d35e2d3c153a1c4fc3fb8/AndroidManifest.xml:2:1-8:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/steve/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/4696e90522e02cc31b6c4b1d5a50d47b/AndroidManifest.xml:2:1-11:12
+MERGED from [de.hdodenhof:circleimageview:2.1.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/circleimageview-2.1.0.aar/459d7a56dc4e097bc2276e53cbdabeb9/AndroidManifest.xml:2:1-11:12
+MERGED from [com.jakewharton.timber:timber:4.7.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/timber-4.7.1.aar/6d7973e28f6ba6f1ffe7b55715173a68/AndroidManifest.xml:2:1-9:12
+MERGED from [com.blankj:utilcode:1.21.2] /Users/steve/.gradle/caches/transforms-1/files-1.1/utilcode-1.21.2.aar/007640a33f1289bf5f11b63d28d7ab76/AndroidManifest.xml:2:1-29:12
+MERGED from [com.github.clans:fab:1.6.4] /Users/steve/.gradle/caches/transforms-1/files-1.1/fab-1.6.4.aar/f2a5c08d1066b214c7d60bc713fb4c9c/AndroidManifest.xml:2:1-14:12
+MERGED from [com.squareup.leakcanary:leakcanary-analyzer:1.5.4] /Users/steve/.gradle/caches/transforms-1/files-1.1/leakcanary-analyzer-1.5.4.aar/94ac92c0b8aa95bca2eab17cdb43b22c/AndroidManifest.xml:17:1-25:12
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-plugin:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-plugin-v0.9.24.aar/4ed67d817e15955157f275098b1f9ca7/AndroidManifest.xml:2:1-11:12
+MERGED from [com.facebook.conceal:conceal:1.1.3] /Users/steve/.gradle/caches/transforms-1/files-1.1/conceal-1.1.3.aar/0106289fd743651e443a8ca925744cdc/AndroidManifest.xml:7:1-16:12
+INJECTED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml:2:1-28:12
+	package
+		ADDED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml:3:5-41
+		INJECTED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml
+		ADDED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml:2:1-28:12
+		INJECTED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml
+		ADDED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml:2:1-28:12
+		INJECTED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml:5:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml:6:5-79
+	android:name
+		ADDED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml:6:22-76
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml:7:5-76
+	android:name
+		ADDED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml:7:22-73
+application
+ADDED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml:9:5-26:19
+MERGED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/steve/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.4.aar/8a57d176f5810d90d6a83360b51ea6fb/AndroidManifest.xml:26:5-59:19
+MERGED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/steve/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.4.aar/8a57d176f5810d90d6a83360b51ea6fb/AndroidManifest.xml:26:5-59:19
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-core:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-core-v0.9.24.aar/3facf1c1afede69ce52fc3caa8ad383c/AndroidManifest.xml:11:5-20:19
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-core:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-core-v0.9.24.aar/3facf1c1afede69ce52fc3caa8ad383c/AndroidManifest.xml:11:5-20:19
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-disk:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-disk-v0.9.24.aar/f1dac70a785055c9293a068f022d1996/AndroidManifest.xml:11:5-25:19
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-disk:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-disk-v0.9.24.aar/f1dac70a785055c9293a068f022d1996/AndroidManifest.xml:11:5-25:19
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-recorder:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-recorder-v0.9.24.aar/64efed0e0a70ea4af2635fef7472de4e/AndroidManifest.xml:11:5-23:19
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-recorder:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-recorder-v0.9.24.aar/64efed0e0a70ea4af2635fef7472de4e/AndroidManifest.xml:11:5-23:19
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-phoenix:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-phoenix-v0.9.24.aar/80fb9daac764482d00b93529e190950f/AndroidManifest.xml:11:5-16:19
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-phoenix:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-phoenix-v0.9.24.aar/80fb9daac764482d00b93529e190950f/AndroidManifest.xml:11:5-16:19
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-crash:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-crash-v0.9.24.aar/9035879200f3ad0ed6745d2de2153290/AndroidManifest.xml:11:5-18:19
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-crash:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-crash-v0.9.24.aar/9035879200f3ad0ed6745d2de2153290/AndroidManifest.xml:11:5-18:19
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-shared-preferences:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-shared-preferences-v0.9.24.aar/b4da1cbc97b792be7ef8da5b1196cd4c/AndroidManifest.xml:11:5-20:19
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-shared-preferences:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-shared-preferences-v0.9.24.aar/b4da1cbc97b792be7ef8da5b1196cd4c/AndroidManifest.xml:11:5-20:19
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-timber:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-timber-v0.9.24.aar/b4f41e752e83d544b8fbd3b9ad3d7b85/AndroidManifest.xml:11:5-16:19
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-timber:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-timber-v0.9.24.aar/b4f41e752e83d544b8fbd3b9ad3d7b85/AndroidManifest.xml:11:5-16:19
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-build-config:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-build-config-v0.9.24.aar/225fba2f7280b0e0ade46fe4977a7bf2/AndroidManifest.xml:11:5-16:19
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-build-config:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-build-config-v0.9.24.aar/225fba2f7280b0e0ade46fe4977a7bf2/AndroidManifest.xml:11:5-16:19
+MERGED from [com.afollestad.material-dialogs:core:0.9.6.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/core-0.9.6.0.aar/83b4b27a8c3bdae39f3ea11744ada3d5/AndroidManifest.xml:13:5-20
+MERGED from [com.afollestad.material-dialogs:core:0.9.6.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/core-0.9.6.0.aar/83b4b27a8c3bdae39f3ea11744ada3d5/AndroidManifest.xml:13:5-20
+MERGED from [com.android.support:design:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/3fdf3d1536bcaf063df830f6a8c199ae/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/3fdf3d1536bcaf063df830f6a8c199ae/AndroidManifest.xml:22:5-20
+MERGED from [android.arch.lifecycle:extensions:1.1.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/extensions-1.1.1.aar/0aa923b18fe1c9f13f85df06a073be97/AndroidManifest.xml:22:5-28:19
+MERGED from [android.arch.lifecycle:extensions:1.1.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/extensions-1.1.1.aar/0aa923b18fe1c9f13f85df06a073be97/AndroidManifest.xml:22:5-28:19
+MERGED from [com.github.bumptech.glide:glide:4.8.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/glide-4.8.0.aar/51ec9208303153d61182ea6ae818656d/AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:glide:4.8.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/glide-4.8.0.aar/51ec9208303153d61182ea6ae818656d/AndroidManifest.xml:10:5-20
+MERGED from [com.android.support:support-compat:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/a8ca93a9b490513ef72fa06e5ab4ac2d/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/a8ca93a9b490513ef72fa06e5ab4ac2d/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/226e92bb7513ab1d9be810603475e630/AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/226e92bb7513ab1d9be810603475e630/AndroidManifest.xml:22:5-23:19
+MERGED from [com.github.bumptech.glide:gifdecoder:4.8.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.8.0.aar/ca10913fbd80cfa3f78da5c120f3878f/AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.8.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.8.0.aar/ca10913fbd80cfa3f78da5c120f3878f/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/steve/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/4696e90522e02cc31b6c4b1d5a50d47b/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/steve/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/4696e90522e02cc31b6c4b1d5a50d47b/AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:2.1.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/circleimageview-2.1.0.aar/459d7a56dc4e097bc2276e53cbdabeb9/AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:2.1.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/circleimageview-2.1.0.aar/459d7a56dc4e097bc2276e53cbdabeb9/AndroidManifest.xml:9:5-20
+MERGED from [com.jakewharton.timber:timber:4.7.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/timber-4.7.1.aar/6d7973e28f6ba6f1ffe7b55715173a68/AndroidManifest.xml:7:5-20
+MERGED from [com.jakewharton.timber:timber:4.7.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/timber-4.7.1.aar/6d7973e28f6ba6f1ffe7b55715173a68/AndroidManifest.xml:7:5-20
+MERGED from [com.blankj:utilcode:1.21.2] /Users/steve/.gradle/caches/transforms-1/files-1.1/utilcode-1.21.2.aar/007640a33f1289bf5f11b63d28d7ab76/AndroidManifest.xml:9:5-27:19
+MERGED from [com.blankj:utilcode:1.21.2] /Users/steve/.gradle/caches/transforms-1/files-1.1/utilcode-1.21.2.aar/007640a33f1289bf5f11b63d28d7ab76/AndroidManifest.xml:9:5-27:19
+MERGED from [com.github.clans:fab:1.6.4] /Users/steve/.gradle/caches/transforms-1/files-1.1/fab-1.6.4.aar/f2a5c08d1066b214c7d60bc713fb4c9c/AndroidManifest.xml:12:5-20
+MERGED from [com.github.clans:fab:1.6.4] /Users/steve/.gradle/caches/transforms-1/files-1.1/fab-1.6.4.aar/f2a5c08d1066b214c7d60bc713fb4c9c/AndroidManifest.xml:12:5-20
+MERGED from [com.squareup.leakcanary:leakcanary-analyzer:1.5.4] /Users/steve/.gradle/caches/transforms-1/files-1.1/leakcanary-analyzer-1.5.4.aar/94ac92c0b8aa95bca2eab17cdb43b22c/AndroidManifest.xml:23:5-20
+MERGED from [com.squareup.leakcanary:leakcanary-analyzer:1.5.4] /Users/steve/.gradle/caches/transforms-1/files-1.1/leakcanary-analyzer-1.5.4.aar/94ac92c0b8aa95bca2eab17cdb43b22c/AndroidManifest.xml:23:5-20
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/a8ca93a9b490513ef72fa06e5ab4ac2d/AndroidManifest.xml:22:18-91
+	android:supportsRtl
+		ADDED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml:14:9-35
+	android:label
+		ADDED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml:13:9-41
+	android:icon
+		ADDED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml:12:9-43
+	android:allowBackup
+		ADDED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml:11:9-35
+	android:theme
+		ADDED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml:15:9-40
+	android:name
+		ADDED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml:10:9-46
+activity#com.innovatube.boilerplate.presentation.main.MainActivity
+ADDED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml:16:9-25:20
+	android:label
+		ADDED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml:18:13-56
+	android:theme
+		ADDED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml:19:13-56
+	android:name
+		ADDED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml:17:13-59
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml:20:13-24:29
+action#android.intent.action.MAIN
+ADDED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml:21:17-69
+	android:name
+		ADDED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml:21:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml:23:17-77
+	android:name
+		ADDED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml:23:27-74
+uses-sdk
+INJECTED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml
+INJECTED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml
+MERGED from [com.android.databinding:adapters:3.2.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/adapters-3.2.1.aar/83289b868d685f84a3533ef164ed15f8/AndroidManifest.xml:22:5-44
+MERGED from [com.android.databinding:adapters:3.2.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/adapters-3.2.1.aar/83289b868d685f84a3533ef164ed15f8/AndroidManifest.xml:22:5-44
+MERGED from [com.android.databinding:library:3.2.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/library-3.2.1.aar/cec0116d72781357da6cd0baffc58171/AndroidManifest.xml:22:5-44
+MERGED from [com.android.databinding:library:3.2.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/library-3.2.1.aar/cec0116d72781357da6cd0baffc58171/AndroidManifest.xml:22:5-44
+MERGED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/steve/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.4.aar/8a57d176f5810d90d6a83360b51ea6fb/AndroidManifest.xml:20:5-44
+MERGED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/steve/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.4.aar/8a57d176f5810d90d6a83360b51ea6fb/AndroidManifest.xml:20:5-44
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-core:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-core-v0.9.24.aar/3facf1c1afede69ce52fc3caa8ad383c/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-core:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-core-v0.9.24.aar/3facf1c1afede69ce52fc3caa8ad383c/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-attr:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-attr-v0.9.24.aar/c73c64e3262733f7bc40299117ed6b9c/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-attr:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-attr-v0.9.24.aar/c73c64e3262733f7bc40299117ed6b9c/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-measurement:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-measurement-v0.9.24.aar/fd8165051eee45b0f56c656e60754f57/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-measurement:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-measurement-v0.9.24.aar/fd8165051eee45b0f56c656e60754f57/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-disk:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-disk-v0.9.24.aar/f1dac70a785055c9293a068f022d1996/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-disk:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-disk-v0.9.24.aar/f1dac70a785055c9293a068f022d1996/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-recorder:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-recorder-v0.9.24.aar/64efed0e0a70ea4af2635fef7472de4e/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-recorder:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-recorder-v0.9.24.aar/64efed0e0a70ea4af2635fef7472de4e/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-phoenix:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-phoenix-v0.9.24.aar/80fb9daac764482d00b93529e190950f/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-phoenix:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-phoenix-v0.9.24.aar/80fb9daac764482d00b93529e190950f/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-crash:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-crash-v0.9.24.aar/9035879200f3ad0ed6745d2de2153290/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-crash:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-crash-v0.9.24.aar/9035879200f3ad0ed6745d2de2153290/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-shared-preferences:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-shared-preferences-v0.9.24.aar/b4da1cbc97b792be7ef8da5b1196cd4c/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-shared-preferences:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-shared-preferences-v0.9.24.aar/b4da1cbc97b792be7ef8da5b1196cd4c/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-geiger-counter:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-geiger-counter-v0.9.24.aar/4847d64d5fbd20b17499ec92d961f3cf/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-geiger-counter:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-geiger-counter-v0.9.24.aar/4847d64d5fbd20b17499ec92d961f3cf/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-timber:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-timber-v0.9.24.aar/b4f41e752e83d544b8fbd3b9ad3d7b85/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-timber:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-timber-v0.9.24.aar/b4f41e752e83d544b8fbd3b9ad3d7b85/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-build-config:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-build-config-v0.9.24.aar/225fba2f7280b0e0ade46fe4977a7bf2/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-build-config:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-build-config-v0.9.24.aar/225fba2f7280b0e0ade46fe4977a7bf2/AndroidManifest.xml:7:5-9:41
+MERGED from [com.afollestad.material-dialogs:core:0.9.6.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/core-0.9.6.0.aar/83b4b27a8c3bdae39f3ea11744ada3d5/AndroidManifest.xml:8:5-11:75
+MERGED from [com.afollestad.material-dialogs:core:0.9.6.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/core-0.9.6.0.aar/83b4b27a8c3bdae39f3ea11744ada3d5/AndroidManifest.xml:8:5-11:75
+MERGED from [me.zhanghai.android.materialprogressbar:library:1.4.2] /Users/steve/.gradle/caches/transforms-1/files-1.1/library-1.4.2.aar/6ef0e4ab8aa93f17d798c6e9c55a87af/AndroidManifest.xml:12:5-14:41
+MERGED from [me.zhanghai.android.materialprogressbar:library:1.4.2] /Users/steve/.gradle/caches/transforms-1/files-1.1/library-1.4.2.aar/6ef0e4ab8aa93f17d798c6e9c55a87af/AndroidManifest.xml:12:5-14:41
+MERGED from [com.android.support:design:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/3fdf3d1536bcaf063df830f6a8c199ae/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/3fdf3d1536bcaf063df830f6a8c199ae/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/109faafc2a6fb8a08c13473a4b83be74/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/109faafc2a6fb8a08c13473a4b83be74/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/30c4d1c0f32ab05896ad732eda6fcfd3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/30c4d1c0f32ab05896ad732eda6fcfd3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/783cf9433689321d8e4f92bf5dd7747f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/783cf9433689321d8e4f92bf5dd7747f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/d4b32cd605ee47779576ec7e48075852/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/d4b32cd605ee47779576ec7e48075852/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:exifinterface:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/exifinterface-28.0.0.aar/a708269df5bc837caaa1bc0d487afb2c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:exifinterface:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/exifinterface-28.0.0.aar/a708269df5bc837caaa1bc0d487afb2c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customtabs:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/customtabs-28.0.0.aar/a824cef81dff418f88841e2c2e1753b6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customtabs:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/customtabs-28.0.0.aar/a824cef81dff418f88841e2c2e1753b6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/e7b38e7efef6c3eda82d70251ffb75b8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/e7b38e7efef6c3eda82d70251ffb75b8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/787e460f5ea23d9efda6440a55773399/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/787e460f5ea23d9efda6440a55773399/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:extensions:1.1.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/extensions-1.1.1.aar/0aa923b18fe1c9f13f85df06a073be97/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:extensions:1.1.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/extensions-1.1.1.aar/0aa923b18fe1c9f13f85df06a073be97/AndroidManifest.xml:20:5-44
+MERGED from [jp.wasabeef:glide-transformations:3.3.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/glide-transformations-3.3.0.aar/799f45cfdb6c07cf09ae3df11b403faa/AndroidManifest.xml:7:5-9:41
+MERGED from [jp.wasabeef:glide-transformations:3.3.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/glide-transformations-3.3.0.aar/799f45cfdb6c07cf09ae3df11b403faa/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.bumptech.glide:glide:4.8.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/glide-4.8.0.aar/51ec9208303153d61182ea6ae818656d/AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.8.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/glide-4.8.0.aar/51ec9208303153d61182ea6ae818656d/AndroidManifest.xml:6:5-8:41
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/6b63d7a43fb6dcc2dcdca5550d89c14e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/6b63d7a43fb6dcc2dcdca5550d89c14e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/9e5f17dd231edd524cdbc9ddcc9a99fb/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/9e5f17dd231edd524cdbc9ddcc9a99fb/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/a11783d40704a3267cccb51f2e6e293f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/a11783d40704a3267cccb51f2e6e293f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/5d232dfe726eca8ce67af887f5e84e38/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/5d232dfe726eca8ce67af887f5e84e38/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/7c09e815c8dad08f50b9fb68f02709ea/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/7c09e815c8dad08f50b9fb68f02709ea/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/d2998822a31c3fc0cf1a07d9137b2e0a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/d2998822a31c3fc0cf1a07d9137b2e0a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/065bdd25d15b16e77c7c5382a342cc8e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/065bdd25d15b16e77c7c5382a342cc8e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/094add31b8071b214ea774f79f1ab024/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/094add31b8071b214ea774f79f1ab024/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/7e4cb8a995600c7ff17697f77f0b2c2a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/7e4cb8a995600c7ff17697f77f0b2c2a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/35212e2a41e706e0b67e8ac659a446d8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/35212e2a41e706e0b67e8ac659a446d8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/6f61e46aae4e3530fb4106a00f26897b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/6f61e46aae4e3530fb4106a00f26897b/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.persistence.room:rxjava2:1.1.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/rxjava2-1.1.1.aar/5849ea87b3957a018c54fac9d480c6a4/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.persistence.room:rxjava2:1.1.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/rxjava2-1.1.1.aar/5849ea87b3957a018c54fac9d480c6a4/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.persistence.room:runtime:1.1.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/cf131cfa67b795d63e925039af559ebd/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.persistence.room:runtime:1.1.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/cf131cfa67b795d63e925039af559ebd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/e11f623b25d2fad80cd8324aa870bbf6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/e11f623b25d2fad80cd8324aa870bbf6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/d8061b3a1cb35732ff56060e2cdfb326/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/d8061b3a1cb35732ff56060e2cdfb326/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/a8ca93a9b490513ef72fa06e5ab4ac2d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/a8ca93a9b490513ef72fa06e5ab4ac2d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/0242341066821ff0cb3817a3c9cbf296/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/0242341066821ff0cb3817a3c9cbf296/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/226e92bb7513ab1d9be810603475e630/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/226e92bb7513ab1d9be810603475e630/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.persistence:db-framework:1.1.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/db-framework-1.1.1.aar/00b2a39ba9497907f80626b4380eeb50/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.persistence:db-framework:1.1.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/db-framework-1.1.1.aar/00b2a39ba9497907f80626b4380eeb50/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.persistence:db:1.1.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/db-1.1.1.aar/100007a6fe58552497e5e82b736e11f4/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.persistence:db:1.1.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/db-1.1.1.aar/100007a6fe58552497e5e82b736e11f4/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/a02efcfaa3ca4e455e13c2370ee95ed7/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/a02efcfaa3ca4e455e13c2370ee95ed7/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/35926ae42e9cda3593c5da5c2a82b52f/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/35926ae42e9cda3593c5da5c2a82b52f/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/c3c0f2ab2f275737868eb093e51560b3/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/c3c0f2ab2f275737868eb093e51560b3/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/dd4391a2b2a0d5e3eb0c2abbd27b05e1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/dd4391a2b2a0d5e3eb0c2abbd27b05e1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/aab0d789525df192952d113c3240be06/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/aab0d789525df192952d113c3240be06/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/6a7301bc8739b026e927c6e846da4815/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/6a7301bc8739b026e927c6e846da4815/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/8b99a56c96fe309ac3f5545b95f33b1a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/8b99a56c96fe309ac3f5545b95f33b1a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/d961287785ec9a4564a1bdbaf62b9e13/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/d961287785ec9a4564a1bdbaf62b9e13/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/5cf61a7f9694387ddc54b5d1b4e02611/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/5cf61a7f9694387ddc54b5d1b4e02611/AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:gifdecoder:4.8.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.8.0.aar/ca10913fbd80cfa3f78da5c120f3878f/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.8.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.8.0.aar/ca10913fbd80cfa3f78da5c120f3878f/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:multidex:1.0.3] /Users/steve/.gradle/caches/transforms-1/files-1.1/multidex-1.0.3.aar/4c2e3282f5f7df43f8e00bd7760f220e/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:multidex:1.0.3] /Users/steve/.gradle/caches/transforms-1/files-1.1/multidex-1.0.3.aar/4c2e3282f5f7df43f8e00bd7760f220e/AndroidManifest.xml:20:5-43
+MERGED from [io.reactivex.rxjava2:rxandroid:2.1.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/rxandroid-2.1.0.aar/b64501bddd56daacc0b62c21bfaae303/AndroidManifest.xml:18:5-43
+MERGED from [io.reactivex.rxjava2:rxandroid:2.1.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/rxandroid-2.1.0.aar/b64501bddd56daacc0b62c21bfaae303/AndroidManifest.xml:18:5-43
+MERGED from [com.orhanobut:hawk:2.0.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/hawk-2.0.1.aar/41f3c8b8966d35e2d3c153a1c4fc3fb8/AndroidManifest.xml:6:5-44
+MERGED from [com.orhanobut:hawk:2.0.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/hawk-2.0.1.aar/41f3c8b8966d35e2d3c153a1c4fc3fb8/AndroidManifest.xml:6:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/steve/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/4696e90522e02cc31b6c4b1d5a50d47b/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/steve/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/4696e90522e02cc31b6c4b1d5a50d47b/AndroidManifest.xml:5:5-7:41
+MERGED from [de.hdodenhof:circleimageview:2.1.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/circleimageview-2.1.0.aar/459d7a56dc4e097bc2276e53cbdabeb9/AndroidManifest.xml:5:5-7:41
+MERGED from [de.hdodenhof:circleimageview:2.1.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/circleimageview-2.1.0.aar/459d7a56dc4e097bc2276e53cbdabeb9/AndroidManifest.xml:5:5-7:41
+MERGED from [com.jakewharton.timber:timber:4.7.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/timber-4.7.1.aar/6d7973e28f6ba6f1ffe7b55715173a68/AndroidManifest.xml:5:5-43
+MERGED from [com.jakewharton.timber:timber:4.7.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/timber-4.7.1.aar/6d7973e28f6ba6f1ffe7b55715173a68/AndroidManifest.xml:5:5-43
+MERGED from [com.blankj:utilcode:1.21.2] /Users/steve/.gradle/caches/transforms-1/files-1.1/utilcode-1.21.2.aar/007640a33f1289bf5f11b63d28d7ab76/AndroidManifest.xml:7:5-44
+MERGED from [com.blankj:utilcode:1.21.2] /Users/steve/.gradle/caches/transforms-1/files-1.1/utilcode-1.21.2.aar/007640a33f1289bf5f11b63d28d7ab76/AndroidManifest.xml:7:5-44
+MERGED from [com.github.clans:fab:1.6.4] /Users/steve/.gradle/caches/transforms-1/files-1.1/fab-1.6.4.aar/f2a5c08d1066b214c7d60bc713fb4c9c/AndroidManifest.xml:8:5-10:41
+MERGED from [com.github.clans:fab:1.6.4] /Users/steve/.gradle/caches/transforms-1/files-1.1/fab-1.6.4.aar/f2a5c08d1066b214c7d60bc713fb4c9c/AndroidManifest.xml:8:5-10:41
+MERGED from [com.squareup.leakcanary:leakcanary-analyzer:1.5.4] /Users/steve/.gradle/caches/transforms-1/files-1.1/leakcanary-analyzer-1.5.4.aar/94ac92c0b8aa95bca2eab17cdb43b22c/AndroidManifest.xml:21:5-44
+MERGED from [com.squareup.leakcanary:leakcanary-analyzer:1.5.4] /Users/steve/.gradle/caches/transforms-1/files-1.1/leakcanary-analyzer-1.5.4.aar/94ac92c0b8aa95bca2eab17cdb43b22c/AndroidManifest.xml:21:5-44
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-plugin:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-plugin-v0.9.24.aar/4ed67d817e15955157f275098b1f9ca7/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.Innovatube.Hyperion-Android:hyperion-plugin:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-plugin-v0.9.24.aar/4ed67d817e15955157f275098b1f9ca7/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.conceal:conceal:1.1.3] /Users/steve/.gradle/caches/transforms-1/files-1.1/conceal-1.1.3.aar/0106289fd743651e443a8ca925744cdc/AndroidManifest.xml:12:5-14:41
+MERGED from [com.facebook.conceal:conceal:1.1.3] /Users/steve/.gradle/caches/transforms-1/files-1.1/conceal-1.1.3.aar/0106289fd743651e443a8ca925744cdc/AndroidManifest.xml:12:5-14:41
+INJECTED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml
+INJECTED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.afollestad.material-dialogs:core:0.9.6.0] /Users/steve/.gradle/caches/transforms-1/files-1.1/core-0.9.6.0.aar/83b4b27a8c3bdae39f3ea11744ada3d5/AndroidManifest.xml:11:9-72
+	android:targetSdkVersion
+		INJECTED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml
+		ADDED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml
+		ADDED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/steve/android-boilerplate/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/steve/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.4.aar/8a57d176f5810d90d6a83360b51ea6fb/AndroidManifest.xml:23:5-80
+	android:name
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/steve/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.4.aar/8a57d176f5810d90d6a83360b51ea6fb/AndroidManifest.xml:23:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/steve/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.4.aar/8a57d176f5810d90d6a83360b51ea6fb/AndroidManifest.xml:24:5-81
+	android:name
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/steve/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.4.aar/8a57d176f5810d90d6a83360b51ea6fb/AndroidManifest.xml:24:22-78
+service#com.squareup.leakcanary.internal.HeapAnalyzerService
+ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/steve/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.4.aar/8a57d176f5810d90d6a83360b51ea6fb/AndroidManifest.xml:27:9-30:45
+	android:process
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/steve/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.4.aar/8a57d176f5810d90d6a83360b51ea6fb/AndroidManifest.xml:30:13-42
+	android:enabled
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/steve/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.4.aar/8a57d176f5810d90d6a83360b51ea6fb/AndroidManifest.xml:29:13-36
+	android:name
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/steve/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.4.aar/8a57d176f5810d90d6a83360b51ea6fb/AndroidManifest.xml:28:13-80
+service#com.squareup.leakcanary.DisplayLeakService
+ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/steve/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.4.aar/8a57d176f5810d90d6a83360b51ea6fb/AndroidManifest.xml:31:9-34:45
+	android:process
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/steve/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.4.aar/8a57d176f5810d90d6a83360b51ea6fb/AndroidManifest.xml:34:13-42
+	android:enabled
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/steve/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.4.aar/8a57d176f5810d90d6a83360b51ea6fb/AndroidManifest.xml:33:13-36
+	android:name
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/steve/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.4.aar/8a57d176f5810d90d6a83360b51ea6fb/AndroidManifest.xml:32:13-70
+activity#com.squareup.leakcanary.internal.DisplayLeakActivity
+ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/steve/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.4.aar/8a57d176f5810d90d6a83360b51ea6fb/AndroidManifest.xml:36:9-49:20
+	android:process
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/steve/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.4.aar/8a57d176f5810d90d6a83360b51ea6fb/AndroidManifest.xml:41:13-42
+	android:enabled
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/steve/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.4.aar/8a57d176f5810d90d6a83360b51ea6fb/AndroidManifest.xml:38:13-36
+	android:label
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/steve/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.4.aar/8a57d176f5810d90d6a83360b51ea6fb/AndroidManifest.xml:40:13-71
+	android:icon
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/steve/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.4.aar/8a57d176f5810d90d6a83360b51ea6fb/AndroidManifest.xml:39:13-54
+	android:theme
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/steve/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.4.aar/8a57d176f5810d90d6a83360b51ea6fb/AndroidManifest.xml:43:13-63
+	android:taskAffinity
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/steve/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.4.aar/8a57d176f5810d90d6a83360b51ea6fb/AndroidManifest.xml:42:13-76
+	android:name
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/steve/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.4.aar/8a57d176f5810d90d6a83360b51ea6fb/AndroidManifest.xml:37:13-80
+activity#com.squareup.leakcanary.internal.RequestStoragePermissionActivity
+ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/steve/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.4.aar/8a57d176f5810d90d6a83360b51ea6fb/AndroidManifest.xml:50:9-58:68
+	android:process
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/steve/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.4.aar/8a57d176f5810d90d6a83360b51ea6fb/AndroidManifest.xml:56:13-42
+	android:enabled
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/steve/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.4.aar/8a57d176f5810d90d6a83360b51ea6fb/AndroidManifest.xml:52:13-36
+	android:label
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/steve/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.4.aar/8a57d176f5810d90d6a83360b51ea6fb/AndroidManifest.xml:55:13-82
+	android:excludeFromRecents
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/steve/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.4.aar/8a57d176f5810d90d6a83360b51ea6fb/AndroidManifest.xml:53:13-46
+	android:icon
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/steve/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.4.aar/8a57d176f5810d90d6a83360b51ea6fb/AndroidManifest.xml:54:13-54
+	android:theme
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/steve/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.4.aar/8a57d176f5810d90d6a83360b51ea6fb/AndroidManifest.xml:58:13-65
+	android:taskAffinity
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/steve/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.4.aar/8a57d176f5810d90d6a83360b51ea6fb/AndroidManifest.xml:57:13-76
+	android:name
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/steve/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.4.aar/8a57d176f5810d90d6a83360b51ea6fb/AndroidManifest.xml:51:13-93
+provider#com.willowtreeapps.hyperion.core.internal.HyperionInitProvider
+ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-core:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-core-v0.9.24.aar/3facf1c1afede69ce52fc3caa8ad383c/AndroidManifest.xml:12:9-15:40
+	android:authorities
+		ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-core:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-core-v0.9.24.aar/3facf1c1afede69ce52fc3caa8ad383c/AndroidManifest.xml:14:13-72
+	android:exported
+		ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-core:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-core-v0.9.24.aar/3facf1c1afede69ce52fc3caa8ad383c/AndroidManifest.xml:15:13-37
+	android:name
+		ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-core:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-core-v0.9.24.aar/3facf1c1afede69ce52fc3caa8ad383c/AndroidManifest.xml:13:13-90
+service#com.willowtreeapps.hyperion.core.internal.HyperionService
+ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-core:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-core-v0.9.24.aar/3facf1c1afede69ce52fc3caa8ad383c/AndroidManifest.xml:17:9-19:40
+	android:exported
+		ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-core:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-core-v0.9.24.aar/3facf1c1afede69ce52fc3caa8ad383c/AndroidManifest.xml:19:13-37
+	android:name
+		ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-core:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-core-v0.9.24.aar/3facf1c1afede69ce52fc3caa8ad383c/AndroidManifest.xml:18:13-85
+activity#com.willowtreeapps.hyperion.disk.FileExplorerActivity
+ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-disk:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-disk-v0.9.24.aar/f1dac70a785055c9293a068f022d1996/AndroidManifest.xml:12:9-14:67
+	android:theme
+		ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-disk:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-disk-v0.9.24.aar/f1dac70a785055c9293a068f022d1996/AndroidManifest.xml:14:13-64
+	android:name
+		ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-disk:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-disk-v0.9.24.aar/f1dac70a785055c9293a068f022d1996/AndroidManifest.xml:13:13-81
+provider#com.willowtreeapps.hyperion.disk.DiskFileProvider
+ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-disk:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-disk-v0.9.24.aar/f1dac70a785055c9293a068f022d1996/AndroidManifest.xml:16:9-24:20
+	android:grantUriPermissions
+		ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-disk:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-disk-v0.9.24.aar/f1dac70a785055c9293a068f022d1996/AndroidManifest.xml:20:13-47
+	android:authorities
+		ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-disk:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-disk-v0.9.24.aar/f1dac70a785055c9293a068f022d1996/AndroidManifest.xml:18:13-68
+	android:exported
+		ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-disk:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-disk-v0.9.24.aar/f1dac70a785055c9293a068f022d1996/AndroidManifest.xml:19:13-37
+	android:name
+		ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-disk:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-disk-v0.9.24.aar/f1dac70a785055c9293a068f022d1996/AndroidManifest.xml:17:13-77
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-disk:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-disk-v0.9.24.aar/f1dac70a785055c9293a068f022d1996/AndroidManifest.xml:21:13-23:57
+	android:resource
+		ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-disk:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-disk-v0.9.24.aar/f1dac70a785055c9293a068f022d1996/AndroidManifest.xml:23:17-54
+	android:name
+		ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-disk:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-disk-v0.9.24.aar/f1dac70a785055c9293a068f022d1996/AndroidManifest.xml:22:17-67
+activity#com.willowtreeapps.hyperion.recorder.RecordingsActivity
+ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-recorder:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-recorder-v0.9.24.aar/64efed0e0a70ea4af2635fef7472de4e/AndroidManifest.xml:12:9-92
+	android:name
+		ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-recorder:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-recorder-v0.9.24.aar/64efed0e0a70ea4af2635fef7472de4e/AndroidManifest.xml:12:19-89
+provider#com.willowtreeapps.hyperion.recorder.RecorderFileProvider
+ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-recorder:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-recorder-v0.9.24.aar/64efed0e0a70ea4af2635fef7472de4e/AndroidManifest.xml:14:9-22:20
+	android:grantUriPermissions
+		ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-recorder:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-recorder-v0.9.24.aar/64efed0e0a70ea4af2635fef7472de4e/AndroidManifest.xml:18:13-47
+	android:authorities
+		ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-recorder:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-recorder-v0.9.24.aar/64efed0e0a70ea4af2635fef7472de4e/AndroidManifest.xml:16:13-72
+	android:exported
+		ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-recorder:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-recorder-v0.9.24.aar/64efed0e0a70ea4af2635fef7472de4e/AndroidManifest.xml:17:13-37
+	android:name
+		ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-recorder:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-recorder-v0.9.24.aar/64efed0e0a70ea4af2635fef7472de4e/AndroidManifest.xml:15:13-85
+activity#com.willowtreeapps.hyperion.phoenix.ProcessPhoenix
+ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-phoenix:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-phoenix-v0.9.24.aar/80fb9daac764482d00b93529e190950f/AndroidManifest.xml:12:9-15:75
+	android:process
+		ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-phoenix:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-phoenix-v0.9.24.aar/80fb9daac764482d00b93529e190950f/AndroidManifest.xml:14:13-39
+	android:theme
+		ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-phoenix:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-phoenix-v0.9.24.aar/80fb9daac764482d00b93529e190950f/AndroidManifest.xml:15:13-72
+	android:name
+		ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-phoenix:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-phoenix-v0.9.24.aar/80fb9daac764482d00b93529e190950f/AndroidManifest.xml:13:13-78
+activity#com.willowtreeapps.hyperion.crash.CrashActivity
+ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-crash:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-crash-v0.9.24.aar/9035879200f3ad0ed6745d2de2153290/AndroidManifest.xml:12:9-17:55
+	android:process
+		ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-crash:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-crash-v0.9.24.aar/9035879200f3ad0ed6745d2de2153290/AndroidManifest.xml:16:13-37
+	android:excludeFromRecents
+		ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-crash:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-crash-v0.9.24.aar/9035879200f3ad0ed6745d2de2153290/AndroidManifest.xml:14:13-46
+	android:noHistory
+		ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-crash:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-crash-v0.9.24.aar/9035879200f3ad0ed6745d2de2153290/AndroidManifest.xml:15:13-37
+	android:theme
+		ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-crash:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-crash-v0.9.24.aar/9035879200f3ad0ed6745d2de2153290/AndroidManifest.xml:17:13-52
+	android:name
+		ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-crash:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-crash-v0.9.24.aar/9035879200f3ad0ed6745d2de2153290/AndroidManifest.xml:13:13-75
+activity#com.willowtreeapps.hyperion.sharedpreferences.list.SharedPreferencesListActivity
+ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-shared-preferences:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-shared-preferences-v0.9.24.aar/b4da1cbc97b792be7ef8da5b1196cd4c/AndroidManifest.xml:12:9-15:57
+	android:windowSoftInputMode
+		ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-shared-preferences:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-shared-preferences-v0.9.24.aar/b4da1cbc97b792be7ef8da5b1196cd4c/AndroidManifest.xml:15:13-54
+	android:theme
+		ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-shared-preferences:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-shared-preferences-v0.9.24.aar/b4da1cbc97b792be7ef8da5b1196cd4c/AndroidManifest.xml:14:13-70
+	android:name
+		ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-shared-preferences:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-shared-preferences-v0.9.24.aar/b4da1cbc97b792be7ef8da5b1196cd4c/AndroidManifest.xml:13:13-108
+activity#com.willowtreeapps.hyperion.sharedpreferences.detail.SharedPreferencesDetailActivity
+ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-shared-preferences:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-shared-preferences-v0.9.24.aar/b4da1cbc97b792be7ef8da5b1196cd4c/AndroidManifest.xml:16:9-19:57
+	android:windowSoftInputMode
+		ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-shared-preferences:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-shared-preferences-v0.9.24.aar/b4da1cbc97b792be7ef8da5b1196cd4c/AndroidManifest.xml:19:13-54
+	android:theme
+		ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-shared-preferences:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-shared-preferences-v0.9.24.aar/b4da1cbc97b792be7ef8da5b1196cd4c/AndroidManifest.xml:18:13-70
+	android:name
+		ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-shared-preferences:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-shared-preferences-v0.9.24.aar/b4da1cbc97b792be7ef8da5b1196cd4c/AndroidManifest.xml:17:13-112
+uses-permission#android.permission.VIBRATE
+ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-geiger-counter:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-geiger-counter-v0.9.24.aar/4847d64d5fbd20b17499ec92d961f3cf/AndroidManifest.xml:11:5-66
+	android:name
+		ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-geiger-counter:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-geiger-counter-v0.9.24.aar/4847d64d5fbd20b17499ec92d961f3cf/AndroidManifest.xml:11:22-63
+activity#com.willowtreeapps.hyperion.timber.list.TimberLogListActivity
+ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-timber:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-timber-v0.9.24.aar/b4f41e752e83d544b8fbd3b9ad3d7b85/AndroidManifest.xml:12:9-15:57
+	android:windowSoftInputMode
+		ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-timber:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-timber-v0.9.24.aar/b4f41e752e83d544b8fbd3b9ad3d7b85/AndroidManifest.xml:15:13-54
+	android:theme
+		ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-timber:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-timber-v0.9.24.aar/b4f41e752e83d544b8fbd3b9ad3d7b85/AndroidManifest.xml:14:13-59
+	android:name
+		ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-timber:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-timber-v0.9.24.aar/b4f41e752e83d544b8fbd3b9ad3d7b85/AndroidManifest.xml:13:13-89
+activity#com.willowtreeapps.hyperion.buildconfig.list.BuildConfigListActivity
+ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-build-config:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-build-config-v0.9.24.aar/225fba2f7280b0e0ade46fe4977a7bf2/AndroidManifest.xml:12:9-15:57
+	android:windowSoftInputMode
+		ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-build-config:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-build-config-v0.9.24.aar/225fba2f7280b0e0ade46fe4977a7bf2/AndroidManifest.xml:15:13-54
+	android:theme
+		ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-build-config:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-build-config-v0.9.24.aar/225fba2f7280b0e0ade46fe4977a7bf2/AndroidManifest.xml:14:13-64
+	android:name
+		ADDED from [com.github.Innovatube.Hyperion-Android:hyperion-build-config:v0.9.24] /Users/steve/.gradle/caches/transforms-1/files-1.1/hyperion-build-config-v0.9.24.aar/225fba2f7280b0e0ade46fe4977a7bf2/AndroidManifest.xml:13:13-96
+provider#android.arch.lifecycle.ProcessLifecycleOwnerInitializer
+ADDED from [android.arch.lifecycle:extensions:1.1.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/extensions-1.1.1.aar/0aa923b18fe1c9f13f85df06a073be97/AndroidManifest.xml:23:9-27:43
+	android:authorities
+		ADDED from [android.arch.lifecycle:extensions:1.1.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/extensions-1.1.1.aar/0aa923b18fe1c9f13f85df06a073be97/AndroidManifest.xml:25:13-68
+	android:multiprocess
+		ADDED from [android.arch.lifecycle:extensions:1.1.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/extensions-1.1.1.aar/0aa923b18fe1c9f13f85df06a073be97/AndroidManifest.xml:27:13-40
+	android:exported
+		ADDED from [android.arch.lifecycle:extensions:1.1.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/extensions-1.1.1.aar/0aa923b18fe1c9f13f85df06a073be97/AndroidManifest.xml:26:13-37
+	android:name
+		ADDED from [android.arch.lifecycle:extensions:1.1.1] /Users/steve/.gradle/caches/transforms-1/files-1.1/extensions-1.1.1.aar/0aa923b18fe1c9f13f85df06a073be97/AndroidManifest.xml:24:13-83
+activity#com.blankj.utilcode.util.PermissionUtils$PermissionActivity
+ADDED from [com.blankj:utilcode:1.21.2] /Users/steve/.gradle/caches/transforms-1/files-1.1/utilcode-1.21.2.aar/007640a33f1289bf5f11b63d28d7ab76/AndroidManifest.xml:10:9-15:75
+	android:multiprocess
+		ADDED from [com.blankj:utilcode:1.21.2] /Users/steve/.gradle/caches/transforms-1/files-1.1/utilcode-1.21.2.aar/007640a33f1289bf5f11b63d28d7ab76/AndroidManifest.xml:13:13-40
+	android:windowSoftInputMode
+		ADDED from [com.blankj:utilcode:1.21.2] /Users/steve/.gradle/caches/transforms-1/files-1.1/utilcode-1.21.2.aar/007640a33f1289bf5f11b63d28d7ab76/AndroidManifest.xml:15:13-72
+	android:configChanges
+		ADDED from [com.blankj:utilcode:1.21.2] /Users/steve/.gradle/caches/transforms-1/files-1.1/utilcode-1.21.2.aar/007640a33f1289bf5f11b63d28d7ab76/AndroidManifest.xml:12:13-74
+	android:theme
+		ADDED from [com.blankj:utilcode:1.21.2] /Users/steve/.gradle/caches/transforms-1/files-1.1/utilcode-1.21.2.aar/007640a33f1289bf5f11b63d28d7ab76/AndroidManifest.xml:14:13-55
+	android:name
+		ADDED from [com.blankj:utilcode:1.21.2] /Users/steve/.gradle/caches/transforms-1/files-1.1/utilcode-1.21.2.aar/007640a33f1289bf5f11b63d28d7ab76/AndroidManifest.xml:11:13-87
+provider#com.blankj.utilcode.util.Utils$FileProvider4UtilCode
+ADDED from [com.blankj:utilcode:1.21.2] /Users/steve/.gradle/caches/transforms-1/files-1.1/utilcode-1.21.2.aar/007640a33f1289bf5f11b63d28d7ab76/AndroidManifest.xml:17:9-26:20
+	android:grantUriPermissions
+		ADDED from [com.blankj:utilcode:1.21.2] /Users/steve/.gradle/caches/transforms-1/files-1.1/utilcode-1.21.2.aar/007640a33f1289bf5f11b63d28d7ab76/AndroidManifest.xml:21:13-47
+	android:authorities
+		ADDED from [com.blankj:utilcode:1.21.2] /Users/steve/.gradle/caches/transforms-1/files-1.1/utilcode-1.21.2.aar/007640a33f1289bf5f11b63d28d7ab76/AndroidManifest.xml:19:13-69
+	android:multiprocess
+		ADDED from [com.blankj:utilcode:1.21.2] /Users/steve/.gradle/caches/transforms-1/files-1.1/utilcode-1.21.2.aar/007640a33f1289bf5f11b63d28d7ab76/AndroidManifest.xml:22:13-40
+	android:exported
+		ADDED from [com.blankj:utilcode:1.21.2] /Users/steve/.gradle/caches/transforms-1/files-1.1/utilcode-1.21.2.aar/007640a33f1289bf5f11b63d28d7ab76/AndroidManifest.xml:20:13-37
+	android:name
+		ADDED from [com.blankj:utilcode:1.21.2] /Users/steve/.gradle/caches/transforms-1/files-1.1/utilcode-1.21.2.aar/007640a33f1289bf5f11b63d28d7ab76/AndroidManifest.xml:18:13-80

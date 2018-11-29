@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="2.5dp"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:tag="layout/item_home_header_0">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_divider" />
+
+    <FrameLayout
+        android:id="@+id/rl_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_header_height"
+        tools:height="200dp">
+
+
+        <ImageView
+            android:id="@+id/img_article"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="TODO"
+            android:scaleType="centerCrop"
+            android:tag="binding_1" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:contentDescription="TODO"
+            android:scaleType="fitXY"
+            android:src="@drawable/gradient_background" />
+
+        <LinearLayout
+            android:id="@+id/layoutProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="5sp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:shadowColor="@color/header_gradient"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:tag="binding_2"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:minHeight="35dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:tag="binding_3"
+
+                    tools:src="@drawable/innovatube" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:maxLines="2"
+                    android:minLines="2"
+                    android:tag="binding_4"
+                    android:textColor="@android:color/white"
+                    android:textSize="10sp"
+                    tools:ignore="SmallSp" />
+
+
+                <LinearLayout
+                    android:id="@+id/ln_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="TODO"
+                        android:src="@drawable/icon_like_cover" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:gravity="end"
+                        android:tag="binding_5"
+                        android:textColor="@android:color/white"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp"
+                        tools:text="100" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>
+
+         

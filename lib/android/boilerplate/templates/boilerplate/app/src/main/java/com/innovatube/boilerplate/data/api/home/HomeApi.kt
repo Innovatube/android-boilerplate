@@ -1,6 +1,7 @@
 package <%= package_name %>.data.api.home
 
-import <%= package_name %>.data.api.home.entity.*
+import <%= package_name %>.data .api.home.entity.ArticlesEntity
+import <%= package_name %>.data .api.home.entity.HeaderEntity
 import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -16,7 +17,7 @@ interface HomeApi {
 
     @GET("articles/features/hairsalon/{featureArticleId}/{page}")
     fun getFeatureArticles(
-            @Path("featureArticleId") featureArticleId: Long,
-            @Path("page") page: Int
+        @Path("featureArticleId") featureArticleId: Long,
+        @Path("page") page: Int
     ): Single<ArticlesEntity>
 }

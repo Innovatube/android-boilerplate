@@ -3,7 +3,6 @@ package <%= package_name %>.domain.usecase
 import <%= package_name %>.UnitTest
 import <%= package_name %>.domain.TestSchedulerProvider
 import <%= package_name %>.domain.repository.TopArticleRepository
-import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Test
 import org.mockito.Mock
@@ -16,13 +15,13 @@ class GetTopArticlesUseCaseTest : UnitTest() {
     @Mock
     private lateinit var testSchedulerProvider: TestSchedulerProvider
 
-
     @Before
     @Throws(Exception::class)
     fun setup() {
         getTopArticlesUseCase = GetTopArticlesUseCase(
-                testSchedulerProvider,
-                topArticleRepository)
+            testSchedulerProvider,
+            topArticleRepository
+        )
     }
 
     @Test

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:tag="layout/view_error_0"
+    android:visibility="gone"
+    tools:visibility="visible">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="194dp"
+        android:contentDescription="TODO"
+        android:src="@drawable/icon_error" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="234dp"
+        android:padding="0dp"
+        android:tag="binding_1"
+        android:textColor="@color/color_gray"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/errorLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="277dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rounded_corner_button_border"
+        android:gravity="center"
+        android:minWidth="120dp"
+        android:minHeight="38dp"
+        android:tag="binding_2"
+        android:text="@string/label_retry"
+        android:textColor="@color/colorAccent"
+        android:textSize="14sp" />
+</FrameLayout>
+         

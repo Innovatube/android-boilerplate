@@ -5,26 +5,25 @@ import android.os.Parcelable
 import <%= package_name %>.data.api.home.entity.ArticleFeatureEntity
 
 data class Header(
-        val type: Type = Type.TOP,
-        val label: String? = null,
-        val featureId: Long = 0
+    val type: Type = Type.TOP,
+    val label: String? = null,
+    val featureId: Long = 0
 ) : Parcelable {
 
     constructor(parcel: Parcel) : this(
-            parcel.readParcelable(Type::class.java.classLoader),
-            parcel.readString(),
-            parcel.readLong())
-
-    constructor(articleFeatureEntity: ArticleFeatureEntity) : this(
-            Type.FEATURE,
-            articleFeatureEntity.label,
-            articleFeatureEntity.id
+        parcel.readParcelable(Type::class.java.classLoader),
+        parcel.readString(),
+        parcel.readLong()
     )
 
+    constructor(articleFeatureEntity: ArticleFeatureEntity) : this(
+        Type.FEATURE,
+        articleFeatureEntity.label,
+        articleFeatureEntity.id
+    )
 
     enum class Type : Parcelable {
         TOP, FEATURE;
-
 
         override fun writeToParcel(parcel: Parcel, flags: Int) {
             parcel.writeInt(ordinal)
@@ -65,7 +64,4 @@ data class Header(
             return arrayOfNulls(size)
         }
     }
-
-
 }
-

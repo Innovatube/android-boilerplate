@@ -6,7 +6,7 @@ import io.reactivex.Flowable
 import javax.inject.Inject
 
 class HeaderLocalDataSource @Inject constructor(
-        private val headerDao: HeaderDao
+    private val headerDao: HeaderDao
 ) : HeaderDataStore {
 
     override fun headers(): Flowable<HeaderEntity> {

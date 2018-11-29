@@ -15,5 +15,4 @@ class DatabaseModule {
         val database = AppDatabase.getInstance(context)
         return database.articleFeatureDao()
     }
-
 }

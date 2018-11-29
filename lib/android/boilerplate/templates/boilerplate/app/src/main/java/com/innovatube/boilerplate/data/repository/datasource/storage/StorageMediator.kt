@@ -45,6 +45,4 @@ class StorageMediator @Inject constructor(private val hawkWrapper: HawkWrapper) 
     fun savePostGuide(isShownPostGuide: Boolean) {
         hawkWrapper.put(KEY_SHOWN_POST_GUIDE, isShownPostGuide)
     }
-
-
 }

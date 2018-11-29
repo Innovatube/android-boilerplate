@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Layout absoluteFilePath="/Users/steve/android-boilerplate/app/src/main/res/layout/item_home.xml"
+    directory="layout" isMerge="false" layout="item_home"
+    modulePackage="com.innovatube.boilerplate">
+    <Variables name="article" declared="true"
+        type="com.innovatube.boilerplate.domain.model.Article">
+        <location endLine="11" endOffset="68" startLine="9" startOffset="8" />
+    </Variables>
+    <Imports name="TextUtils" type="android.text.TextUtils">
+        <location endLine="7" endOffset="47" startLine="7" startOffset="8" />
+    </Imports>
+    <Targets>
+        <Target tag="layout/item_home_0" view="android.support.constraint.ConstraintLayout">
+            <Expressions />
+            <location endLine="130" endOffset="49" startLine="14" startOffset="4" />
+        </Target>
+        <Target id="@+id/img_article" tag="binding_1"
+            view="com.innovatube.boilerplate.presentation.view.RoundCornerImageView">
+            <Expressions>
+                <Expression attribute="app:error" text="@drawable/innovatube">
+                    <Location endLine="32" endOffset="46" startLine="32" startOffset="12" />
+                    <TwoWay>false</TwoWay>
+                    <ValueLocation endLine="32" endOffset="44" startLine="32" startOffset="25" />
+                </Expression>
+                <Expression attribute="app:imageUrl" text="article.thumbnailImageUrl">
+                    <Location endLine="33" endOffset="54" startLine="33" startOffset="12" />
+                    <TwoWay>false</TwoWay>
+                    <ValueLocation endLine="33" endOffset="52" startLine="33" startOffset="28" />
+                </Expression>
+            </Expressions>
+            <location endLine="38" endOffset="46" startLine="22" startOffset="8" />
+        </Target>
+        <Target id="@+id/tvArticle" tag="binding_2" view="TextView">
+            <Expressions>
+                <Expression attribute="android:text" text="article.title">
+                    <Location endLine="52" endOffset="42" startLine="52" startOffset="12" />
+                    <TwoWay>false</TwoWay>
+                    <ValueLocation endLine="52" endOffset="40" startLine="52" startOffset="28" />
+                </Expression>
+            </Expressions>
+            <location endLine="57" endOffset="55" startLine="40" startOffset="8" />
+        </Target>
+        <Target id="@+id/imgContributor" tag="binding_3"
+            view="de.hdodenhof.circleimageview.CircleImageView">
+            <Expressions>
+                <Expression attribute="app:error" text="@drawable/innovatube">
+                    <Location endLine="64" endOffset="46" startLine="64" startOffset="12" />
+                    <TwoWay>false</TwoWay>
+                    <ValueLocation endLine="64" endOffset="44" startLine="64" startOffset="25" />
+                </Expression>
+                <Expression attribute="app:imageUrl" text="article.contributor.imageUrl">
+                    <Location endLine="65" endOffset="57" startLine="65" startOffset="12" />
+                    <TwoWay>false</TwoWay>
+                    <ValueLocation endLine="65" endOffset="55" startLine="65" startOffset="28" />
+                </Expression>
+            </Expressions>
+            <location endLine="70" endOffset="46" startLine="59" startOffset="8" />
+        </Target>
+        <Target id="@+id/tvContributor" tag="binding_4" view="TextView">
+            <Expressions>
+                <Expression attribute="android:text"
+                    text="article.contributor.name + article.preSlashJobTitle() + article.preSlashAffiliation()">
+                    <Location endLine="86" endOffset="114" startLine="86" startOffset="12" />
+                    <TwoWay>false</TwoWay>
+                    <ValueLocation endLine="86" endOffset="112" startLine="86" startOffset="28" />
+                </Expression>
+            </Expressions>
+            <location endLine="92" endOffset="36" startLine="72" startOffset="8" />
+        </Target>
+        <Target id="@+id/tvArticleLike" tag="binding_5" view="TextView">
+            <Expressions>
+                <Expression attribute="android:text" text="Integer.toString(article.likeCount)">
+                    <Location endLine="112" endOffset="64" startLine="112" startOffset="12" />
+                    <TwoWay>false</TwoWay>
+                    <ValueLocation endLine="112" endOffset="62" startLine="112" startOffset="28" />
+                </Expression>
+            </Expressions>
+            <location endLine="119" endOffset="29" startLine="104" startOffset="8" />
+        </Target>
+    </Targets>
+</Layout>

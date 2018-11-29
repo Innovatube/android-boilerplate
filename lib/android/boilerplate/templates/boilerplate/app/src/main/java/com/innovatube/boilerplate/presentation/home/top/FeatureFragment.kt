@@ -40,8 +40,11 @@ class FeatureFragment : BaseFragment() {
         header = arguments!!.getParcelable(ARGS_HEADER) ?: return
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         component.inject(this)
         binding = FragmentFeatureBinding.inflate(inflater, container, false)
         binding.viewModel = viewModel
@@ -53,9 +56,8 @@ class FeatureFragment : BaseFragment() {
         rvArticle.layoutManager = layoutManager
         if (adapter == null) {
             adapter = FeatureArticleAdapter(
-                    appExecutors
+                appExecutors
             ) {
-
             }
         }
         rvArticle.adapter = adapter
@@ -76,7 +78,6 @@ class FeatureFragment : BaseFragment() {
                 adapter?.submitList(it)
             }
         })
-
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

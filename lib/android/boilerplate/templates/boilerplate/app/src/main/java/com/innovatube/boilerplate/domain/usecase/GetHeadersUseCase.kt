@@ -7,8 +7,8 @@ import io.reactivex.Flowable
 import javax.inject.Inject
 
 class GetHeadersUseCase @Inject constructor(
-        schedulerProvider: SchedulerProvider,
-        private val headersRepository: HeaderRepository
+    schedulerProvider: SchedulerProvider,
+    private val headersRepository: HeaderRepository
 ) : MergeDelayErrorUseCase<String?, List<Header>>(schedulerProvider) {
 
     public override fun buildUseCaseFlowable(param: String?): Flowable<List<Header>> {

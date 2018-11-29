@@ -5,25 +5,26 @@ import android.os.Parcelable
 import <%= package_name %>.data.api.home.entity.ContributorEntity
 
 data class Contributor(
-        val id: String = "",
-        val affiliation: String = "",
-        val imageUrl: String = "",
-        val jobTitle: String = "",
-        val name: String = ""
+    val id: String = "",
+    val affiliation: String = "",
+    val imageUrl: String = "",
+    val jobTitle: String = "",
+    val name: String = ""
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
-            parcel.readString(),
-            parcel.readString(),
-            parcel.readString(),
-            parcel.readString(),
-            parcel.readString())
+        parcel.readString(),
+        parcel.readString(),
+        parcel.readString(),
+        parcel.readString(),
+        parcel.readString()
+    )
 
     constructor(contributor: ContributorEntity) : this(
-            contributor.id,
-            contributor.affiliation,
-            contributor.imageUrl,
-            contributor.jobTitle,
-            contributor.name
+        contributor.id,
+        contributor.affiliation,
+        contributor.imageUrl,
+        contributor.jobTitle,
+        contributor.name
     )
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {

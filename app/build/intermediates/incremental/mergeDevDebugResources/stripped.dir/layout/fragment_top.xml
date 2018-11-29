@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:tag="layout/fragment_top_0">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:tag="binding_1">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:tag="binding_2">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvArticle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingTop="30dp"
+                android:tag="binding_3" />
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <include
+            android:id="@+id/highLight"
+            layout="@layout/item_highlight"
+
+            />
+    </android.support.design.widget.CoordinatorLayout>
+
+    <include layout="@layout/view_error"
+
+
+        />
+</RelativeLayout>
+
+         
+
+
+

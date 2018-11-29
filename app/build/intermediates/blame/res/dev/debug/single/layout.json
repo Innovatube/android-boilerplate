@@ -1,0 +1,38 @@
+[
+  {
+    "merged": "/Users/steve/android-boilerplate/app/build/intermediates/incremental/mergeDevDebugResources/stripped.dir/layout/item_home_header.xml",
+    "source": "/Users/steve/android-boilerplate/app/src/main/res/layout/item_home_header.xml"
+  },
+  {
+    "merged": "/Users/steve/android-boilerplate/app/build/intermediates/incremental/mergeDevDebugResources/stripped.dir/layout/item_header.xml",
+    "source": "/Users/steve/android-boilerplate/app/src/main/res/layout/item_header.xml"
+  },
+  {
+    "merged": "/Users/steve/android-boilerplate/app/build/intermediates/incremental/mergeDevDebugResources/stripped.dir/layout/fragment_feature.xml",
+    "source": "/Users/steve/android-boilerplate/app/src/main/res/layout/fragment_feature.xml"
+  },
+  {
+    "merged": "/Users/steve/android-boilerplate/app/build/intermediates/incremental/mergeDevDebugResources/stripped.dir/layout/item_highlight.xml",
+    "source": "/Users/steve/android-boilerplate/app/src/main/res/layout/item_highlight.xml"
+  },
+  {
+    "merged": "/Users/steve/android-boilerplate/app/build/intermediates/incremental/mergeDevDebugResources/stripped.dir/layout/activity_main.xml",
+    "source": "/Users/steve/android-boilerplate/app/src/main/res/layout/activity_main.xml"
+  },
+  {
+    "merged": "/Users/steve/android-boilerplate/app/build/intermediates/incremental/mergeDevDebugResources/stripped.dir/layout/fragment_top.xml",
+    "source": "/Users/steve/android-boilerplate/app/src/main/res/layout/fragment_top.xml"
+  },
+  {
+    "merged": "/Users/steve/android-boilerplate/app/build/intermediates/incremental/mergeDevDebugResources/stripped.dir/layout/view_error.xml",
+    "source": "/Users/steve/android-boilerplate/app/src/main/res/layout/view_error.xml"
+  },
+  {
+    "merged": "/Users/steve/android-boilerplate/app/build/intermediates/incremental/mergeDevDebugResources/stripped.dir/layout/fragment_home.xml",
+    "source": "/Users/steve/android-boilerplate/app/src/main/res/layout/fragment_home.xml"
+  },
+  {
+    "merged": "/Users/steve/android-boilerplate/app/build/intermediates/incremental/mergeDevDebugResources/stripped.dir/layout/item_home.xml",
+    "source": "/Users/steve/android-boilerplate/app/src/main/res/layout/item_home.xml"
+  }
+]
