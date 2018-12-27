@@ -55,7 +55,11 @@ class FeatureFragment : BaseFragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        binding.rvArticle.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
+        binding.rvArticle.layoutManager = LinearLayoutManager(
+            activity,
+            LinearLayoutManager.VERTICAL,
+            false
+        )
         if (adapter == null) {
             adapter = FeatureArticleAdapter(
                 appExecutors
@@ -64,7 +68,9 @@ class FeatureFragment : BaseFragment() {
         }
         binding.rvArticle.adapter = adapter
 
-        val scrollListener = object : EndlessRecyclerOnScrollListener(binding.rvArticle.layoutManager as LinearLayoutManager) {
+        val scrollListener = object : EndlessRecyclerOnScrollListener(
+            binding.rvArticle.layoutManager as LinearLayoutManager
+        ) {
             override fun onLoadMore(currentPage: Int) {
                 viewModel.loadArticles(header.featureId, currentPage)
             }

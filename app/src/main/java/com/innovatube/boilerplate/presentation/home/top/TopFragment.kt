@@ -45,7 +45,9 @@ class TopFragment : BaseFragment() {
             }
         }
         binding.rvArticle.adapter = adapter
-        val scrollListener = object : EndlessRecyclerOnScrollListener(binding.rvArticle.layoutManager as LinearLayoutManager) {
+        val scrollListener = object : EndlessRecyclerOnScrollListener(
+            binding.rvArticle.layoutManager as LinearLayoutManager
+        ) {
             override fun onLoadMore(currentPage: Int) {
                 viewModel.loadArticles(currentPage)
             }

@@ -23,14 +23,21 @@ object DomainModule {
     fun provideSchedulerProvider(): SchedulerProvider = AppSchedulerProvider()
 
     @Singleton @Provides @JvmStatic
-    fun provideFeatureArticleRepository(homeApi: HomeApi, mapper: ArticleMapper): FeatureArticleRepository =
-            FeatureArticleDataRepository(homeApi, mapper)
+    fun provideFeatureArticleRepository(
+        homeApi: HomeApi,
+        mapper: ArticleMapper
+    ): FeatureArticleRepository = FeatureArticleDataRepository(homeApi, mapper)
 
     @Singleton @Provides @JvmStatic
-    fun provideHeaderRepository(@Local local: HeaderDataStore, @Remote remote: HeaderDataStore, mapper: HeaderMapper): HeaderRepository =
-            HeaderDataRepository(local, remote, mapper)
+    fun provideHeaderRepository(
+        @Local local: HeaderDataStore,
+        @Remote remote: HeaderDataStore,
+        mapper: HeaderMapper
+    ): HeaderRepository = HeaderDataRepository(local, remote, mapper)
 
     @Singleton @Provides @JvmStatic
-    fun provideTopArticleRepository(homeApi: HomeApi, mapper: ArticleMapper): TopArticleRepository =
-            TopArticleDataRepository(homeApi, mapper)
+    fun provideTopArticleRepository(
+        homeApi: HomeApi,
+        mapper: ArticleMapper
+    ): TopArticleRepository = TopArticleDataRepository(homeApi, mapper)
 }
