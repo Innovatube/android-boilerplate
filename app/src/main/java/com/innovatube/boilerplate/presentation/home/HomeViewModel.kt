@@ -10,28 +10,26 @@ import timber.log.Timber
 import javax.inject.Inject
 
 class HomeViewModel @Inject constructor(
-        val context: Context,
-        private val headersUseCase: GetHeadersUseCase
-): ViewModel() {
+    val context: Context,
+    private val headersUseCase: GetHeadersUseCase
+) : ViewModel() {
 
     var headers: MutableLiveData<List<Header>> = MutableLiveData()
 
     fun getHeaders() {
 
         headersUseCase.execute(
-                Consumer {
-                    headers.value = it
-                },
-                Consumer {
-                    Timber.e(it)
-                },
-                null)
+            Consumer {
+                headers.value = it
+            },
+            Consumer {
+                Timber.e(it)
+            },
+            null
+        )
     }
 
     fun destroy() {
         headersUseCase.dispose()
-
     }
-
-
 }

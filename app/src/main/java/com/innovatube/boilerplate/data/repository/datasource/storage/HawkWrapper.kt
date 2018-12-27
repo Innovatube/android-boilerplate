@@ -51,7 +51,6 @@ class HawkWrapper @Inject constructor() {
             Timber.e(e)
             defValue
         }
-
     }
 
     fun put(key: String, value: String?): Boolean {

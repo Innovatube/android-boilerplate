@@ -1,6 +1,5 @@
 package com.innovatube.boilerplate.util
 
-
 import android.arch.lifecycle.Lifecycle
 import android.arch.lifecycle.LifecycleObserver
 import android.arch.lifecycle.OnLifecycleEvent
@@ -27,7 +26,7 @@ class AutoClearedValue<T : Any>(val fragment: Fragment) : ReadWriteProperty<Frag
 
     override fun getValue(thisRef: Fragment, property: KProperty<*>): T {
         return this.value ?: throw IllegalStateException(
-                "should never call auto-cleared-value get when it might not be available"
+            "should never call auto-cleared-value get when it might not be available"
         )
     }
 

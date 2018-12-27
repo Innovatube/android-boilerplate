@@ -6,13 +6,10 @@ import android.os.Bundle
 import com.innovatube.boilerplate.R
 import com.innovatube.boilerplate.databinding.ActivityMainBinding
 import com.innovatube.boilerplate.presentation.base.BaseActivity
-import com.innovatube.boilerplate.presentation.helper.FragmentHelper
 import com.innovatube.boilerplate.presentation.helper.Navigator
-import com.innovatube.boilerplate.presentation.home.HomeFragment
 import com.innovatube.boilerplate.util.di.ViewModelFactory
 import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
-
 
 class MainActivity : BaseActivity() {
     @Inject

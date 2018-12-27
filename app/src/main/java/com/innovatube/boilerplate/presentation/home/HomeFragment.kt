@@ -1,6 +1,5 @@
 package com.innovatube.boilerplate.presentation.home
 
-
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
@@ -12,9 +11,7 @@ import com.innovatube.boilerplate.domain.model.Header
 import com.innovatube.boilerplate.presentation.base.BaseFragment
 import com.innovatube.boilerplate.presentation.home.adapter.HomePagerAdapter
 import com.innovatube.boilerplate.util.di.ViewModelFactory
-import kotlinx.android.synthetic.main.fragment_home.*
 import javax.inject.Inject
-
 
 class HomeFragment : BaseFragment() {
     private var currentIndex: Int = 0
@@ -27,7 +24,11 @@ class HomeFragment : BaseFragment() {
         ViewModelProviders.of(this, viewModelFactory).get(HomeViewModel::class.java)
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
         binding.viewModel = viewModel
         return binding.root
@@ -45,15 +46,14 @@ class HomeFragment : BaseFragment() {
 
     private fun setupViewPager(headers: List<Header>) {
         homeAdapter = HomePagerAdapter(this.activity, childFragmentManager, headers)
-        vpHome.adapter = homeAdapter
-        tabLayout.setupWithViewPager(vpHome)
+        binding.vpHome.adapter = homeAdapter
+        binding.tabLayout.setupWithViewPager(binding.vpHome)
     }
 
     override fun onDestroy() {
         viewModel.destroy()
         super.onDestroy()
     }
-
 
     companion object {
         fun newInstance(): HomeFragment {

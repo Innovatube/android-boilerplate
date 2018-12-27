@@ -7,8 +7,8 @@ import io.reactivex.Flowable
 import javax.inject.Inject
 
 class GetReviewAndLikeUseCase @Inject constructor(
-        schedulerProvider: SchedulerProvider,
-        private val headersRepository: HeaderRepository
+    schedulerProvider: SchedulerProvider,
+    private val headersRepository: HeaderRepository
 ) : FlowableUseCase<String?, HeaderInfo>(schedulerProvider) {
 
     public override fun buildUseCaseFlowable(param: String?): Flowable<HeaderInfo> {

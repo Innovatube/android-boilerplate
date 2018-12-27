@@ -18,7 +18,7 @@ import javax.inject.Singleton
     DomainModule::class,
     NetworkModule::class
 ])
-interface AppComponent: AndroidInjector<InnovatubeApplication> {
+interface AppComponent : AndroidInjector<InnovatubeApplication> {
 
     @Component.Builder
     interface Builder {

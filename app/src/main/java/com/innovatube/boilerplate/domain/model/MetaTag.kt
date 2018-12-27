@@ -4,14 +4,14 @@ import android.os.Parcel
 import android.os.Parcelable
 import com.innovatube.boilerplate.data.api.home.entity.MetaTagEntity
 
-
 data class MetaTag(
-        val tagName: String,
-        val taggedAt: String
+    val tagName: String,
+    val taggedAt: String
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
-            parcel.readString(),
-            parcel.readString())
+        parcel.readString(),
+        parcel.readString()
+    )
 
     constructor(metaTagEntity: MetaTagEntity) : this(metaTagEntity.tagName, metaTagEntity.taggedAt)
 

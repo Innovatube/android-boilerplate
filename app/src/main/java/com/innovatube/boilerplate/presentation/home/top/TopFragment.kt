@@ -10,10 +10,8 @@ import android.view.ViewGroup
 import com.innovatube.boilerplate.AppExecutors
 import com.innovatube.boilerplate.databinding.FragmentTopBinding
 import com.innovatube.boilerplate.presentation.base.BaseFragment
-import com.innovatube.boilerplate.presentation.helper.Navigator
 import com.innovatube.boilerplate.presentation.listener.EndlessRecyclerOnScrollListener
 import com.innovatube.boilerplate.util.di.ViewModelFactory
-import kotlinx.android.synthetic.main.fragment_top.*
 import javax.inject.Inject
 
 class TopFragment : BaseFragment() {
@@ -29,8 +27,11 @@ class TopFragment : BaseFragment() {
         ViewModelProviders.of(this, viewModelFactory).get(TopViewModel::class.java)
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         binding = FragmentTopBinding.inflate(inflater, container, false)
         binding.viewModel = viewModel
         return binding.root
@@ -38,19 +39,18 @@ class TopFragment : BaseFragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        rvArticle.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
+        binding.rvArticle.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
         if (adapter == null) {
             adapter = TopRecyclerViewAdapter(appExecutors) {
-
             }
         }
-        rvArticle.adapter = adapter
-        val scrollListener = object : EndlessRecyclerOnScrollListener(rvArticle.layoutManager as LinearLayoutManager) {
+        binding.rvArticle.adapter = adapter
+        val scrollListener = object : EndlessRecyclerOnScrollListener(binding.rvArticle.layoutManager as LinearLayoutManager) {
             override fun onLoadMore(currentPage: Int) {
                 viewModel.loadArticles(currentPage)
             }
         }
-        rvArticle.addOnScrollListener(scrollListener)
+        binding.rvArticle.addOnScrollListener(scrollListener)
         viewModel.onRefresh.observe(this, Observer {
             it?.let { scrollListener.reset() }
         })
@@ -62,14 +62,12 @@ class TopFragment : BaseFragment() {
                 adapter?.submitList(it)
             }
         })
-
     }
 
     override fun onDestroy() {
         viewModel.destroy()
         super.onDestroy()
     }
-
 
     companion object {
         fun newInstance() = TopFragment()

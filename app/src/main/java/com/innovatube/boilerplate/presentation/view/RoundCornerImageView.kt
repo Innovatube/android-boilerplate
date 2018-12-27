@@ -8,7 +8,6 @@ import android.support.v7.widget.AppCompatImageView
 import android.util.AttributeSet
 import com.innovatube.boilerplate.R
 
-
 class RoundCornerImageView : AppCompatImageView {
 
     private val path = Path()
@@ -18,13 +17,17 @@ class RoundCornerImageView : AppCompatImageView {
         private set
     private var roundedCorners: Int = 0
 
-    constructor(context: Context) : super(context) {}
+    constructor(context: Context) : super(context)
 
     constructor(context: Context, attrs: AttributeSet?) : super(context, attrs) {
         init(context, attrs)
     }
 
-    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
+    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(
+        context,
+        attrs,
+        defStyleAttr
+    ) {
         init(context, attrs)
     }
 
@@ -74,7 +77,12 @@ class RoundCornerImageView : AppCompatImageView {
             val width = width
             val height = height
             val twoRadius = (radius * 2).toFloat()
-            cornerRect.set((-radius).toFloat(), (-radius).toFloat(), radius.toFloat(), radius.toFloat())
+            cornerRect.set(
+                (-radius).toFloat(),
+                (-radius).toFloat(),
+                radius.toFloat(),
+                radius.toFloat()
+            )
 
             if (isRounded(CORNER_TOP_LEFT)) {
                 cornerRect.offsetTo(0f, 0f)

@@ -11,7 +11,7 @@ import javax.inject.Singleton
 class DatabaseModule {
 
     @Provides @Singleton
-    fun provideDatabase(app: Application) =  AppDatabase.getInstance(app)
+    fun provideDatabase(app: Application) = AppDatabase.getInstance(app)
 
     @Provides @Singleton
     fun provideArticleFeatureDao(db: AppDatabase): HeaderDao = db.articleFeatureDao()

@@ -15,7 +15,6 @@ import timber.log.Timber
 
 class InnovatubeApplication : DaggerApplication(), LifecycleObserver {
 
-
     override fun onCreate() {
         super.onCreate()
 
@@ -25,21 +24,17 @@ class InnovatubeApplication : DaggerApplication(), LifecycleObserver {
 
         RxJavaPlugins.setErrorHandler { e -> Timber.e(e.toString()) }
 
-//        appComponent = DaggerApplicationComponent.builder()
-//                .application(this)
-//                .build()
         Hawk.init(this).build()
 
         ProcessLifecycleOwner.get().lifecycle.addObserver(this)
     }
 
-
     override fun applicationInjector(): AndroidInjector<out DaggerApplication> {
         return DaggerAppComponent.builder()
-                .application(this)
-                .networkModule(NetworkModule())
-                .databaseModule(DatabaseModule())
-                .build()
+            .application(this)
+            .networkModule(NetworkModule())
+            .databaseModule(DatabaseModule())
+            .build()
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
@@ -48,6 +43,5 @@ class InnovatubeApplication : DaggerApplication(), LifecycleObserver {
 
     @OnLifecycleEvent(Lifecycle.Event.ON_START)
     fun onAppForegrounded() {
-
     }
 }

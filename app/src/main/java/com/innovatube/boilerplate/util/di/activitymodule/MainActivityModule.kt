@@ -27,12 +27,12 @@ interface MainActivityModule {
     @Binds @IntoMap
     @ViewModelKey(HomeViewModel::class)
     fun bindHomeViewModel(
-            homeViewModel: HomeViewModel
+        homeViewModel: HomeViewModel
     ): ViewModel
 
     @Binds @IntoMap
     @ViewModelKey(MainViewModel::class)
     fun bindMainViewModel(
-            mainViewModel: MainViewModel
+        mainViewModel: MainViewModel
     ): ViewModel
 }

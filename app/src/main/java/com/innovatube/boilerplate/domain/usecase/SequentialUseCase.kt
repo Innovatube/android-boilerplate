@@ -6,15 +6,15 @@ import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.functions.Consumer
 
 abstract class SequentialUseCase<in PARAM, RESPONSE> protected constructor(
-        private val schedulerProvider: SchedulerProvider
+    private val schedulerProvider: SchedulerProvider
 ) {
     private val compositeDisposable = CompositeDisposable()
 
     fun execute(onSuccess: Consumer<RESPONSE>, onError: Consumer<Throwable>, param: PARAM) {
         val disposable = buildUseCaseSingle(param)
-                .subscribeOn(schedulerProvider.io())
-                .observeOn(schedulerProvider.ui())
-                .subscribe(onSuccess, onError)
+            .subscribeOn(schedulerProvider.io())
+            .observeOn(schedulerProvider.ui())
+            .subscribe(onSuccess, onError)
         compositeDisposable.add(disposable)
     }
 

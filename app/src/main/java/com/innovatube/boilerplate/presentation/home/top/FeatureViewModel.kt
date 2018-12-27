@@ -9,7 +9,7 @@ import io.reactivex.functions.Consumer
 import timber.log.Timber
 import javax.inject.Inject
 
-class FeatureViewModel @Inject constructor(private val useCase: GetFeatureArticlesUseCase): ViewModel() {
+class FeatureViewModel @Inject constructor(private val useCase: GetFeatureArticlesUseCase) : ViewModel() {
     val isLoading = ObservableBoolean()
     val isError = ObservableBoolean()
     val articles: MutableLiveData<List<Article>> = MutableLiveData()
@@ -20,16 +20,17 @@ class FeatureViewModel @Inject constructor(private val useCase: GetFeatureArticl
         this.featureArticleId = featureArticleId
         isLoading.set(true)
         useCase.execute(
-                Consumer {
-                    this.articles.value = it
-                    this.isLoading.set(false)
-                    this.isError.set(false)
-                },
-                Consumer {
-                    Timber.e(it.localizedMessage)
-                    this.isLoading.set(false)
-                    this.isError.set(true)
-                }, GetFeatureArticlesUseCase.Param(featureArticleId, page))
+            Consumer {
+                this.articles.value = it
+                this.isLoading.set(false)
+                this.isError.set(false)
+            },
+            Consumer {
+                Timber.e(it.localizedMessage)
+                this.isLoading.set(false)
+                this.isError.set(true)
+            }, GetFeatureArticlesUseCase.Param(featureArticleId, page)
+        )
     }
 
     fun onRefresh() {
@@ -37,5 +38,4 @@ class FeatureViewModel @Inject constructor(private val useCase: GetFeatureArticl
         this.articles.value = emptyList()
         loadArticles(featureArticleId)
     }
-
 }

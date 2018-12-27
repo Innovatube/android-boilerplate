@@ -18,7 +18,6 @@ import com.innovatube.boilerplate.presentation.helper.Navigator
 import com.innovatube.boilerplate.presentation.home.adapter.FeatureArticleAdapter
 import com.innovatube.boilerplate.presentation.listener.EndlessRecyclerOnScrollListener
 import com.innovatube.boilerplate.util.di.ViewModelFactory
-import kotlinx.android.synthetic.main.fragment_feature.*
 import javax.inject.Inject
 
 class FeatureFragment : BaseFragment() {
@@ -41,11 +40,14 @@ class FeatureFragment : BaseFragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        header = arguments!!.getParcelable(ARGS_HEADER) ?: return
+        header = arguments?.getParcelable(ARGS_HEADER) ?: return
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         binding = FragmentFeatureBinding.inflate(inflater, container, false)
         binding.viewModel = viewModel
         return binding.root
@@ -53,22 +55,21 @@ class FeatureFragment : BaseFragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        rvArticle.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
+        binding.rvArticle.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
         if (adapter == null) {
             adapter = FeatureArticleAdapter(
-                    appExecutors
+                appExecutors
             ) {
-
             }
         }
-        rvArticle.adapter = adapter
+        binding.rvArticle.adapter = adapter
 
-        val scrollListener = object : EndlessRecyclerOnScrollListener(rvArticle.layoutManager as LinearLayoutManager) {
+        val scrollListener = object : EndlessRecyclerOnScrollListener(binding.rvArticle.layoutManager as LinearLayoutManager) {
             override fun onLoadMore(currentPage: Int) {
                 viewModel.loadArticles(header.featureId, currentPage)
             }
         }
-        rvArticle.addOnScrollListener(scrollListener)
+        binding.rvArticle.addOnScrollListener(scrollListener)
 
         viewModel.onRefresh.observe(this, Observer {
             it?.let { scrollListener.reset() }
@@ -79,7 +80,6 @@ class FeatureFragment : BaseFragment() {
                 adapter?.submitList(it)
             }
         })
-
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

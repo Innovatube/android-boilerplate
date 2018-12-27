@@ -26,12 +26,12 @@ interface HomeFragmentModule {
     @Binds @IntoMap
     @ViewModelKey(TopViewModel::class)
     fun bindTopViewModel(
-            topViewModel: TopViewModel
+        topViewModel: TopViewModel
     ): ViewModel
 
     @Binds @IntoMap
     @ViewModelKey(FeatureViewModel::class)
     fun bindFeatureViewModel(
-            featureViewModel: FeatureViewModel
+        featureViewModel: FeatureViewModel
     ): ViewModel
 }
