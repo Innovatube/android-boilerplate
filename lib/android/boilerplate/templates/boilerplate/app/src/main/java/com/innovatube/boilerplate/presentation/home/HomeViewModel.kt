@@ -1,6 +1,7 @@
 package <%= package_name %>.presentation.home
 
 import android.arch.lifecycle.MutableLiveData
+import android.arch.lifecycle.ViewModel
 import android.content.Context
 import <%= package_name %>.domain.model.Header
 import <%= package_name %>.domain.usecase.GetHeadersUseCase
@@ -11,7 +12,7 @@ import javax.inject.Inject
 class HomeViewModel @Inject constructor(
     val context: Context,
     private val headersUseCase: GetHeadersUseCase
-) {
+) : ViewModel() {
 
     var headers: MutableLiveData<List<Header>> = MutableLiveData()
 
