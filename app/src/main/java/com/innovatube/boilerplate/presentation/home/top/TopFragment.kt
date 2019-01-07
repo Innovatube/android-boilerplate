@@ -63,7 +63,7 @@ class TopFragment : BaseFragment() {
         viewModel.loadArticles()
         viewModel.getReviewAndLikeInfo()
 
-        viewModel.articles.observe(this, Observer {
+        viewModel.articles.observe(this, Observer { it ->
             it?.let {
                 adapter?.submitList(it)
             }

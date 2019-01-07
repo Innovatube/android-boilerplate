@@ -36,7 +36,7 @@ class HomeFragment : BaseFragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel.headers.observe(this, Observer<List<Header>> {
+        viewModel.headers.observe(this, Observer<List<Header>> { it ->
             it?.let {
                 setupViewPager(it)
             }
