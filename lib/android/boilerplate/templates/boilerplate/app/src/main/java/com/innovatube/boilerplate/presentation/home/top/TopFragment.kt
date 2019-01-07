@@ -1,6 +1,7 @@
 package <%= package_name %>.presentation.home.top
 
 import android.arch.lifecycle.Observer
+import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
@@ -10,26 +11,27 @@ import <%= package_name %>.AppExecutors
 import <%= package_name %>.databinding.FragmentTopBinding
 import <%= package_name %>.presentation.base.BaseFragment
 import <%= package_name %>.presentation.listener.EndlessRecyclerOnScrollListener
-import kotlinx.android.synthetic.main.fragment_top.*
+import <%= package_name %>.util.di.ViewModelFactory
 import javax.inject.Inject
 
 class TopFragment : BaseFragment() {
 
     private lateinit var binding: FragmentTopBinding
     @Inject
-    lateinit var viewModel: TopViewModel
-    @Inject
-    lateinit var layoutManager: LinearLayoutManager
+    lateinit var viewModelFactory: ViewModelFactory
     @Inject
     lateinit var appExecutors: AppExecutors
     private var adapter: TopRecyclerViewAdapter? = null
+
+    val viewModel by lazy {
+        ViewModelProviders.of(this, viewModelFactory).get(TopViewModel::class.java)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        component.inject(this)
         binding = FragmentTopBinding.inflate(inflater, container, false)
         binding.viewModel = viewModel
         return binding.root
@@ -37,18 +39,24 @@ class TopFragment : BaseFragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        rvArticle.layoutManager = layoutManager
+        binding.rvArticle.layoutManager = LinearLayoutManager(
+            activity,
+            LinearLayoutManager.VERTICAL,
+            false
+        )
         if (adapter == null) {
             adapter = TopRecyclerViewAdapter(appExecutors) {
             }
         }
-        rvArticle.adapter = adapter
-        val scrollListener = object : EndlessRecyclerOnScrollListener(layoutManager) {
+        binding.rvArticle.adapter = adapter
+        val scrollListener = object : EndlessRecyclerOnScrollListener(
+            binding.rvArticle.layoutManager as LinearLayoutManager
+        ) {
             override fun onLoadMore(currentPage: Int) {
                 viewModel.loadArticles(currentPage)
             }
         }
-        rvArticle.addOnScrollListener(scrollListener)
+        binding.rvArticle.addOnScrollListener(scrollListener)
         viewModel.onRefresh.observe(this, Observer {
             it?.let { scrollListener.reset() }
         })

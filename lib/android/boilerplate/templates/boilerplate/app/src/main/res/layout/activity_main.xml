@@ -9,10 +9,6 @@
         <variable
             name="viewModel"
             type="<%= package_name %>.presentation.main.MainViewModel" />
-
-        <variable
-            name="header"
-            type="<%= package_name %>.presentation.main.MainHeaderViewModel" />
     </data>
 
     <RelativeLayout
@@ -43,7 +39,7 @@
             </android.support.design.widget.AppBarLayout>
 
             <FrameLayout
-                android:id="@+id/mainContent"
+                android:id="@+id/container"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"

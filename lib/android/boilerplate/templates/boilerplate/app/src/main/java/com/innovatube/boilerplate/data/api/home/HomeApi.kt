@@ -1,7 +1,7 @@
 package <%= package_name %>.data.api.home
 
-import <%= package_name %>.data .api.home.entity.ArticlesEntity
-import <%= package_name %>.data .api.home.entity.HeaderEntity
+import <%= package_name %>.data.api.home.entity.ArticlesEntity
+import <%= package_name %>.data.api.home.entity.HeaderEntity
 import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Path

@@ -1,6 +1,7 @@
 package <%= package_name %>.presentation.home.top
 
 import android.arch.lifecycle.MutableLiveData
+import android.arch.lifecycle.ViewModel
 import android.databinding.ObservableBoolean
 import android.databinding.ObservableField
 import <%= package_name %>.domain.model.Article
@@ -16,7 +17,7 @@ import javax.inject.Inject
 class TopViewModel @Inject constructor(
     private val useCase: GetTopArticlesUseCase,
     private val getReviewAndLikeUseCase: GetReviewAndLikeUseCase
-) : RefreshListener {
+) : ViewModel(), RefreshListener {
 
     val isLoading = ObservableBoolean()
     val isError = ObservableBoolean()
