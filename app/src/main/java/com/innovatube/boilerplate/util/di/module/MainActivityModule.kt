@@ -1,10 +1,11 @@
-package com.innovatube.boilerplate.presentation.main
+package com.innovatube.boilerplate.util.di.module
 
 import android.arch.lifecycle.ViewModel
 import android.support.v7.app.AppCompatActivity
 import com.innovatube.boilerplate.presentation.home.HomeFragment
-import com.innovatube.boilerplate.presentation.home.HomeFragmentModule
 import com.innovatube.boilerplate.presentation.home.HomeViewModel
+import com.innovatube.boilerplate.presentation.main.MainActivity
+import com.innovatube.boilerplate.presentation.main.MainViewModel
 import com.innovatube.boilerplate.util.di.ViewModelKey
 import com.innovatube.boilerplate.util.di.scope.FragmentScoped
 import dagger.Binds

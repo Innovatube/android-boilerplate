@@ -1,4 +1,4 @@
-package com.innovatube.boilerplate.presentation.home
+package com.innovatube.boilerplate.util.di.module
 
 import android.arch.lifecycle.ViewModel
 import com.innovatube.boilerplate.presentation.home.top.FeatureFragment

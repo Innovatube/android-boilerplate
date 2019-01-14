@@ -2,6 +2,7 @@ package com.innovatube.boilerplate.util.di
 
 import android.app.Application
 import com.innovatube.boilerplate.InnovatubeApplication
+import com.innovatube.boilerplate.util.di.module.ActivityBindingModule
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjector

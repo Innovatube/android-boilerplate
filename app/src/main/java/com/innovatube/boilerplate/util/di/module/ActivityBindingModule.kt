@@ -1,7 +1,7 @@
-package com.innovatube.boilerplate.util.di
+package com.innovatube.boilerplate.util.di.module
 
 import com.innovatube.boilerplate.presentation.main.MainActivity
-import com.innovatube.boilerplate.presentation.main.MainActivityModule
+import com.innovatube.boilerplate.util.di.module.MainActivityModule
 import com.innovatube.boilerplate.util.di.scope.ActivityScoped
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
