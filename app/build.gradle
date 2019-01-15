@@ -134,7 +134,6 @@ android {
         lintOptions {
             xmlReport true
             abortOnError false
-            lintConfig rootProject.file('../gradle/android-lint-config.xml')
         }
     }
 }
