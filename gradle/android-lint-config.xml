@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <lint>
     <issue id="GoogleAppIndexWarning" severity="ignore" />
+    <issue id="MissingTranslation" severity="ignore" />
+    <issue id="OldTargetApi" severity="informational" />
+    <!-- Lint only flags only missing content descriptions in XML ImageViews but we rarely put content descriptions here -->
+    <issue id="ContentDescription" severity="ignore" />
+    <!-- As of RxLint 1.6.x, it's still using the Lint 1 API -->
+    <issue id="ObsoleteLintCustomCheck">
+        <ignore path="*rxlint*" />
+    </issue>
+
 </lint>
