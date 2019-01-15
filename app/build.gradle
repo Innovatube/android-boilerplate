@@ -134,6 +134,7 @@ android {
         lintOptions {
             xmlReport true
             abortOnError false
+            disable 'GoogleAppIndexingWarning'
         }
     }
 }
