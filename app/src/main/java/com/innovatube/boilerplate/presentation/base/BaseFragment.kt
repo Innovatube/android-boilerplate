@@ -1,10 +1,5 @@
 package com.innovatube.boilerplate.presentation.base
 
-import android.support.v4.app.Fragment
-import com.innovatube.boilerplate.util.di.modules.FragmentModule
+import dagger.android.support.DaggerFragment
 
-abstract class BaseFragment : Fragment() {
-    val component by lazy {
-        (activity as BaseActivity).component.plus(FragmentModule(this))
-    }
-}
+abstract class BaseFragment : DaggerFragment()

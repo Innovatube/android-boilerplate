@@ -1,4 +1,4 @@
-package com.innovatube.boilerplate.util.di.modules
+package com.innovatube.boilerplate.util.di
 
 import android.content.Context
 import com.innovatube.boilerplate.BuildConfig
@@ -15,7 +15,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
 @Module
-class ApiModule {
+class NetworkModule {
 
     @Provides
     @Singleton
