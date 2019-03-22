@@ -11,7 +11,7 @@ import com.innovatube.boilerplate.presentation.common.RefreshListener
 import io.reactivex.functions.Consumer
 import timber.log.Timber
 import java.text.NumberFormat
-import java.util.*
+import java.util.Locale
 import javax.inject.Inject
 
 class TopViewModel @Inject constructor(
