@@ -1,6 +1,6 @@
 package com.innovatube.boilerplate.util.di.module
 
-import android.arch.lifecycle.ViewModel
+import androidx.lifecycle.ViewModel
 import com.innovatube.boilerplate.presentation.home.top.FeatureFragment
 import com.innovatube.boilerplate.presentation.home.top.FeatureViewModel
 import com.innovatube.boilerplate.presentation.home.top.TopFragment

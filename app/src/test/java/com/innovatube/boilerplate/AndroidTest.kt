@@ -17,7 +17,6 @@ import org.robolectric.annotation.Config
  */
 @RunWith(RobolectricTestRunner::class)
 @Config(
-    constants = BuildConfig::class,
     application = AndroidTest.ApplicationStub::class,
     sdk = [21]
 )

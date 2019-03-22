@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/code
     docker:
-      - image: circleci/android:api-24-alpha
+      - image: circleci/android:api-28-alpha
     environment:
       JVM_OPTS: -Xmx4800m
     steps:
@@ -13,6 +13,10 @@ jobs:
       - run:
           name: chmod permissions
           command: chmod +x ./gradlew
+      - run: sdkmanager --licenses && sdkmanager --update
+      - run:
+          name: Approve license for build tools
+          command: (echo y; echo y; echo y; echo y; echo y; echo y) | $ANDROID_HOME/tools/bin/sdkmanager --licenses
       - run:
           name: Download Dependencies
           command: ./gradlew androidDependencies

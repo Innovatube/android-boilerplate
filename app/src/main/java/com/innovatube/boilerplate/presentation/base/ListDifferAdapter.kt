@@ -1,10 +1,10 @@
 package com.innovatube.boilerplate.presentation.base
 
-import android.support.v7.recyclerview.extensions.AsyncDifferConfig
-import android.support.v7.recyclerview.extensions.AsyncListDiffer
-import android.support.v7.util.AdapterListUpdateCallback
-import android.support.v7.util.DiffUtil
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.AsyncDifferConfig
+import androidx.recyclerview.widget.AsyncListDiffer
+import androidx.recyclerview.widget.AdapterListUpdateCallback
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.RecyclerView
 
 @Suppress("LeakingThis")
 abstract class ListDifferAdapter<T, VH : RecyclerView.ViewHolder> : RecyclerView.Adapter<VH> {

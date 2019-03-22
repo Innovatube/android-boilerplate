@@ -15,7 +15,7 @@
         android:layout_height="match_parent"
         android:background="@android:color/white">
 
-        <android.support.v4.widget.SwipeRefreshLayout
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
             android:id="@+id/swipeRefreshLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -23,7 +23,7 @@
             app:onRefreshListener="@{() -> viewModel.onRefresh()}"
             app:refreshing="@{viewModel.isLoading}">
 
-            <android.support.v7.widget.RecyclerView
+            <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvArticle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -32,7 +32,7 @@
                 android:visibility="@{viewModel.isError ? View.GONE : View.VISIBLE}" />
 
 
-        </android.support.v4.widget.SwipeRefreshLayout>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"

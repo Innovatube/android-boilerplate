@@ -1,7 +1,7 @@
 package com.innovatube.boilerplate.util.di.module
 
-import android.arch.lifecycle.ViewModel
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModel
 import com.innovatube.boilerplate.presentation.home.HomeFragment
 import com.innovatube.boilerplate.presentation.home.HomeViewModel
 import com.innovatube.boilerplate.presentation.main.MainActivity
