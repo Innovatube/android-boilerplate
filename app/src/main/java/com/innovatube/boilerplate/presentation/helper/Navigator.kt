@@ -1,8 +1,8 @@
 package com.innovatube.boilerplate.presentation.helper
 
-import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentManager
-import android.support.v7.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.appcompat.app.AppCompatActivity
 import com.innovatube.boilerplate.R
 import com.innovatube.boilerplate.presentation.home.HomeFragment
 import javax.inject.Inject

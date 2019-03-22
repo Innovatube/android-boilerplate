@@ -1,9 +1,9 @@
 package com.innovatube.boilerplate.presentation.home.top
 
-import android.arch.lifecycle.MutableLiveData
-import android.arch.lifecycle.ViewModel
-import android.databinding.ObservableBoolean
-import android.databinding.ObservableField
+import androidx.databinding.ObservableBoolean
+import androidx.databinding.ObservableField
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import com.innovatube.boilerplate.domain.model.Article
 import com.innovatube.boilerplate.domain.usecase.GetReviewAndLikeUseCase
 import com.innovatube.boilerplate.domain.usecase.GetTopArticlesUseCase
@@ -11,7 +11,7 @@ import com.innovatube.boilerplate.presentation.common.RefreshListener
 import io.reactivex.functions.Consumer
 import timber.log.Timber
 import java.text.NumberFormat
-import java.util.Locale
+import java.util.*
 import javax.inject.Inject
 
 class TopViewModel @Inject constructor(

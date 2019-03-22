@@ -15,20 +15,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <android.support.design.widget.CoordinatorLayout
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@android:color/white"
             android:orientation="vertical">
 
-            <android.support.design.widget.AppBarLayout
+            <com.google.android.material.appbar.AppBarLayout
                 android:id="@+id/navigationLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:theme="@style/AppTheme.AppBarOverlay"
                 app:elevation="4dp">
 
-                <android.support.v7.widget.Toolbar
+                <androidx.appcompat.widget.Toolbar
                     android:id="@+id/toolbar"
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"
@@ -36,7 +36,7 @@
                     app:layout_scrollFlags="scroll|enterAlways"
                     app:popupTheme="@style/AppTheme.PopupOverlay" />
 
-            </android.support.design.widget.AppBarLayout>
+            </com.google.android.material.appbar.AppBarLayout>
 
             <FrameLayout
                 android:id="@+id/container"
@@ -45,7 +45,7 @@
                 android:orientation="vertical"
                 app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
-        </android.support.design.widget.CoordinatorLayout>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
         <com.github.clans.fab.FloatingActionMenu
             android:id="@+id/fabMenu"

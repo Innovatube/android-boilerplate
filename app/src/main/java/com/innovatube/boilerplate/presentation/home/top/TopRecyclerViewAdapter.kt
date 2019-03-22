@@ -1,8 +1,8 @@
 package com.innovatube.boilerplate.presentation.home.top
 
-import android.databinding.DataBindingUtil
-import android.databinding.ViewDataBinding
-import android.support.v7.util.DiffUtil
+import androidx.databinding.DataBindingUtil
+import androidx.databinding.ViewDataBinding
+import androidx.recyclerview.widget.DiffUtil
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.innovatube.boilerplate.AppExecutors

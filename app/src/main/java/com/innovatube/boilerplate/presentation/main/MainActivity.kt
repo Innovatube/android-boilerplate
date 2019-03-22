@@ -1,7 +1,7 @@
 package com.innovatube.boilerplate.presentation.main
 
-import android.arch.lifecycle.ViewModelProviders
-import android.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModelProviders
+import androidx.databinding.DataBindingUtil
 import android.os.Bundle
 import com.innovatube.boilerplate.R
 import com.innovatube.boilerplate.databinding.ActivityMainBinding

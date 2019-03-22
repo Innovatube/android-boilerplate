@@ -1,8 +1,8 @@
 package com.innovatube.boilerplate.presentation.home
 
-import android.arch.lifecycle.MutableLiveData
-import android.arch.lifecycle.ViewModel
 import android.content.Context
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import com.innovatube.boilerplate.domain.model.Header
 import com.innovatube.boilerplate.domain.usecase.GetHeadersUseCase
 import io.reactivex.functions.Consumer
@@ -17,7 +17,6 @@ class HomeViewModel @Inject constructor(
     var headers: MutableLiveData<List<Header>> = MutableLiveData()
 
     fun getHeaders() {
-
         headersUseCase.execute(
             Consumer {
                 headers.value = it

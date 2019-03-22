@@ -1,9 +1,9 @@
 package com.innovatube.boilerplate
 
-import android.arch.lifecycle.Lifecycle
-import android.arch.lifecycle.LifecycleObserver
-import android.arch.lifecycle.OnLifecycleEvent
-import android.arch.lifecycle.ProcessLifecycleOwner
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleObserver
+import androidx.lifecycle.OnLifecycleEvent
+import androidx.lifecycle.ProcessLifecycleOwner
 import com.innovatube.boilerplate.util.di.DaggerAppComponent
 import com.innovatube.boilerplate.util.di.DatabaseModule
 import com.innovatube.boilerplate.util.di.NetworkModule

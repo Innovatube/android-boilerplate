@@ -16,11 +16,11 @@
         android:layout_height="match_parent"
         android:background="@android:color/white">
 
-        <android.support.design.widget.CoordinatorLayout
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <android.support.v4.widget.SwipeRefreshLayout
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
                 android:id="@+id/swipeRefreshLayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -28,7 +28,7 @@
                 app:onRefreshListener="@{() -> viewModel.onRefresh()}"
                 app:refreshing="@{viewModel.isLoading}">
 
-                <android.support.v7.widget.RecyclerView
+                <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rvArticle"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -36,14 +36,14 @@
                     android:paddingTop="30dp"
                     android:visibility="@{viewModel.isError ? View.GONE : View.VISIBLE}" />
 
-            </android.support.v4.widget.SwipeRefreshLayout>
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
             <include
                 android:id="@+id/highLight"
                 layout="@layout/item_highlight"
                 app:like="@{viewModel.like}"
                 app:review="@{viewModel.review}" />
-        </android.support.design.widget.CoordinatorLayout>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
         <include
             layout="@layout/view_error"

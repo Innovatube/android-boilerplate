@@ -1,11 +1,11 @@
 package com.innovatube.boilerplate.presentation.home
 
-import android.arch.lifecycle.Observer
-import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
 import com.innovatube.boilerplate.databinding.FragmentHomeBinding
 import com.innovatube.boilerplate.domain.model.Header
 import com.innovatube.boilerplate.presentation.base.BaseFragment

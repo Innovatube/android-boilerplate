@@ -1,6 +1,6 @@
 package com.innovatube.boilerplate.presentation.home.top
 
-import android.arch.core.executor.testing.InstantTaskExecutorRule
+import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.innovatube.boilerplate.UnitTest
 import com.innovatube.boilerplate.capture
 import com.innovatube.boilerplate.domain.model.Article
