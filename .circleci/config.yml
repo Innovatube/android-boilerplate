@@ -41,6 +41,9 @@ jobs:
       - run:
           name: Build apk
           command: ./gradlew :app:assembleDebug
+      - run:
+          name: Generate licenses
+          command: ./gradlew licenseDevDebugReport
       - store_artifacts:
           path: app/build/outputs/apk/app-debug.apk
           destination: app-debug.apk
